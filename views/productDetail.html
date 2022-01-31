@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de producto - Geek Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <div class="up-bar">
+        <div class="logo">
+        <img src="/img/logo.png" alt="Logo de Geek Store" >
+        </div>
+    <div class="mid-bar">
+        <h2 class="envios">
+            <i class="fas fa-truck"></i>
+            ENVÍOS PREMIUM Y STANDARD
+        </h2>
+     
+        <h2 class="mejoresPrecios">
+            <i class="fas fa-dollar-sign"></i>
+            LOS MEJORES PRECIOS
+        </h2>
+
+        <h2 class="asesoramiento">
+            <i class="fas fa-user-check"></i>
+            ASESORAMIENTO PERSONALIZADO
+        </h2>
+    </div>
+        <div class="login">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div> 
+    <nav class="navbar">
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+
+        <ul>
+            <li><a href=# > PRODUCTOS </a></li>
+            <li><a href=# >OFERTAS</a></li>
+            <li><a href=# >CONTACTO</a></li>
+            <li><a href=# >SOBRE NOSOTROS</a></li>
+        </ul>
+        <div class="carrito">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+</header>
+    <main>
+        <section class= "main-view">
+    <div class="productoX">
+            <article>
+        <div class="parte1">
+                <img src="/img/remeraGOT.png" alt="Imágen de una remera de Game Of Thrones">
+            <div class= "articulo">
+                <p class="descripcion">Game Of Thrones - White Walker</p>
+            </div>
+        </div>
+            <div class="detallesProd">
+        <form action="/productCart" method="GET">
+            <label>Elegí el color:</label> 
+            <select name="color">
+                 <option value="#000000">Negro</option>
+                 <option value="#ffffff">Blanco</option>
+                 <option value="#e5e5e5">Gris</option>
+                 <option value="#14213d">Azul</option>
+                 <option value="#1b4332">Verde</option>
+            </select>
+
+            <label>Elegí el talle:</label> 
+            <select name="talle">
+                 <option value="XS">XS</option>
+                 <option value="S">S</option>
+                 <option value="M">M</option>
+                 <option value="L">L</option>
+                 <option value="XL">XL</option>
+            </select>
+        
+                <label>CANTIDAD</label> 
+                <input type="number" name="cantidad" value="1" min="0" max="10" step="1">
+
+            <h2 class="total">TOTAL: $1000</h2>
+            <h2>
+                <button type="submit" class="enviar">AGREGAR AL CARRITO</button>
+            </h2>
+        </div>
+    </form>
+            </article>
+    </div>
+        </section>
+
+        <section class="productosRelacionados">
+            <h3 class="subtitulo">Productos relacionados:</h3>
+        <div class="productos">
+            <article class="spider">
+                <img src="/img/remeraSpiderBlack.png" alt="Imágen de una remera de Spiderman">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Remera de Superman</h4>
+            </div>
+            </article>
+
+            <article>
+                <img src="/img/remeraBigBangBlack.png" alt="Imágen de una remera de Big Bang Theory">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Remera de Big Bang Theory</h4>
+            </div>
+            </article>
+
+            <article>
+                <img src="/img/gorraGoT1.png" alt="Imágen de una gorra de Game Of Thrones">
+            <div class="articulo">
+                <p class="precio">$800</p>
+                <p class="descuento">10% OFF</p>
+                <h4 class="descripciones">Gorra de Game Of Thrones</h4>
+            </div>
+            </article>
+
+            <article>
+                <img src="/img/mateGoT.png" alt="Imágen de un mate de Game Of Thrones">
+            <div class="articulo"></div>
+                <p class="precio">$600</p>
+                <p class="descuento">5% OFF</p>
+                <h4 class="descripciones">Mate de Game Of Thrones</h4>
+            </div>
+            </article>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div class="sinCopyright">
+    <div class="primeraParte">
+        <section class= informacionLegal>
+            <h1>INFORMACIÓN LEGAL</h1>
+            <ul>
+                <li><a href=# >Aviso Legal</a></li>
+                <li><a href=# >Politica de privacidad</a></li>
+                <li><a href=# >Politica de cookies</a></li>
+                <li><a href=# >Configuración de cookies</a></li>
+                <li><a href=# >Términos y condiciones</a></li>
+            </ul>
+        </section>
+
+        <section class= "asesoramiento">
+            <h1>ASESORAMIENTO</h1>
+            <ul>
+                <li><a href=# >Quiénes somos</a></li>
+                <li><a href=# >Ayuda</a></li>
+                <li><a href=# >Contacto</a></li>
+            </ul>
+        </section>
+    </div>
+        <section class="redes">
+            <h5>Encontranos también en:</h5>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+        </section>
+    </div>
+        <section class="Copyright">
+            
+            <p>Copyright © 2020-2022 GeekStore S.R.L.</p>
+
+        </section>
+        
+    </footer>
+</body>
+</html>
+
+
+

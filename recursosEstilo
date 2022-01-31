@@ -1,0 +1,19 @@
+Tipografía:
+ROBOTO MONO
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+PALETA DE COLORES:
+#F4F1DE - Beige (barra superior, fondo de página, texto del footer)
+#E07A5F - Naranja (barra de productos, sobre nosotros y etc)
+#3D405B - Azul Oscuro (footer y burger-menu para edicion mobile)
+#FFF - Blanco (Fondo de producto, lineas de burger-menu)
+#ebebeb- Gris Claro (fondo de opciones en formularios)
+#383536 - Negro grisaseo (todo extra de tipografia, íconos y detalles)
+#6EDD72- Verde Oscuro  (Botones sin hover)
+#9EE8A1- Verde Claro (botones con hover)
+
+
+
+íconos de: Font awesome
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
