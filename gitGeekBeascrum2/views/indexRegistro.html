@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de producto - Geek Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/cssCreaCuenta.css">
+</head>
+<body>
+
+<header>
+    <div class="up-bar">
+        <div class="logo">
+        <img src="/img/logo.png" alt="Logo de Geek Store" >
+        </div>
+    <div class="mid-bar">
+        <h2 class="envios">
+            <i class="fas fa-truck"></i>
+            ENVÍOS PREMIUM Y STANDARD
+        </h2>
+
+        <h2 class="mejoresPrecios">
+            <i class="fas fa-dollar-sign"></i>
+            LOS MEJORES PRECIOS
+        </h2>
+
+        <h2 class="asesoramiento">
+            <i class="fas fa-user-check"></i>
+            ASESORAMIENTO PERSONALIZADO
+        </h2>
+    </div>
+        <div class="login">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div> 
+    <nav class="navbar">
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+
+        <ul>
+            <li><a href=# > PRODUCTOS </a></li>
+            <li><a href=# >OFERTAS</a></li>
+            <li><a href=# >CONTACTO</a></li>
+            <li><a href=# >SOBRE NOSOTROS</a></li>
+        </ul>
+        <div class="carrito">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+</header>
+<main>   
+    <form action="/" method="GET" enctype="multipart/form-data">
+        <div class="saludoDiv">
+        <h2 id="saludo">Bienvenido al Mundo Geek</h2>
+        <div class="saludoDivImages">
+        <p><img src="/img/Big Bang Theory.jpg"></p>
+        <span><img src="/img/Got.jpg"></span>
+        <span><img src="/img/Spiderman.jpg"></span>
+        <span><img src="/img/Superman.jpg"></span>
+        </div>
+        </div>
+        <br/>       
+        <nav>
+        <h2>Sé parte: completá el formulario </h2>
+        <div class="nombre">         
+            <label for="name"></label>
+            <input placeholder="Nombre y apellido" type="text" name="nombre" id="nombre" pattern="[A-Za-z ]{1,32}">
+            <label for="user"></label>
+            <input placeholder="Nombre de Usuari@" type="text" name="user" id="user" required "[[A-Za-z ]{1,6}">
+            <label></label>
+            <input placeholder="Email:" type="text" name="email" id="email" required> 
+        </div>                    
+        <div class="fechaNacimiento">
+           <h2>Fecha de Nacimiento</h2>
+            <label for="fechaNacimiento"></label>   
+            <input placeholder="Fecha de Nacimiento" type="date" name="fechaNacimiento" id="fechaNacimiento" 
+            min="1910-01-01" max="2005-01-01"required>          
+            <br/>         
+            <label for="domicilio"></label>
+            <input placeholder="Domicilio" type="text" name="domicilio" id="domicilio">
+        </div>       
+            <div class="perfil">
+            <h2>Perfil de usuario</h2>        
+            <p><label for="comprar">Cons.Final</label>
+            <input type="radio" id="comprar" name="comprar" value="comprar"></p>
+            <p><label for="vender">Empresa</label>           
+            <input type="radio" id="vender" name="vender" value="vender"></p>
+           
+        </div>
+        <br/>
+        <div class="intereses">
+            <h2>Sos fan de ?</h2>    
+            <p><input type="checkbox" id = "sheldom" name="sheldom" value="sheldom" >
+            <label for="sheldom">BIG BAN<img src="/img/Big Bang Theory.jpg"></label></p>            
+            <p><input type="checkbox" id="trones" name="trones" value="trones">
+            <label for="trones">THRONES<img src="/img/got.jpg"></label></p>           
+            <p><input type="checkbox" id="spiderman" name="supiderman" value="spiderman">
+            <label for="spiderman">SPIDERMAN<img src="/img/Spiderman.jpg"></label></p>            
+            <p><input type="checkbox" id ="superman" name="superman" value="superman">
+            <label for="superman">SUPERMAN<img src="/img/Superman.jpg"></label></p>               
+        </div>  
+        <br/>
+        <div>                  
+        <label id="tituloOpcion" for="file">Foto de usuario</label>
+        <input type="file" name="archivo" id="archivo" accept="image/png, .jpeg, .jpg, image/gif" sytle="display:none">        
+        </div>
+        <br/>
+        <div class="clave">
+            <label id="tituloOpcion" for ="password">Elegí tu contraseña:</label>       
+            <p><input placeholder="" type="password" name="password" id="password" required></p>
+            <br/>
+            <label id="tituloOpcion" for ="password">Repetí tu contraseña:</label>       
+            <p><input placeholder="" type="password" name="password_confirm" id="password_confirm" required></p>  
+        </div>
+        <br/> 
+        <div class="submit">      
+            <input type="submit" name="submit" id="enviar" value="ENVIAR"> </input>
+            <br/>
+            <input type="reset" name="reset" id="borrar" value="BORRAR"> </input>
+            <br/>
+        </div>       
+        </nav>
+    </form>    
+        <a href="/"><button id="vuelvo">Volver a Pagina Principal</button></a>
+</main>       
+</body>
+</html>
+

@@ -1,0 +1,490 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+  
+body{
+    font-family: 'Roboto Mono', sans-serif;
+    background-color: #F4F1DE;
+}
+  
+header div.logo img{
+    width: 100px;
+    text-align: center;
+}
+  
+header .up-bar{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:2px;
+    background-color: #F4F1DE;
+}
+  
+header .mid-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+}
+  
+header .mid-bar h2{
+    font-size: 14px;
+    font-weight: 300;
+    color: #383536
+}
+  
+header div.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    align-self: center;
+}
+  
+header div.login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    padding-right: 20px;
+}
+  
+header div.login i{
+    font-size: 2em;
+}
+  
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: #E07A5F;
+    padding: 20px;
+    align-items: center
+}
+  
+div.burger-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+  
+div.burger-menu i{
+    background-color: #3D405B;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+  
+.navbar ul{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:center;
+    width: 60%;
+    margin-left: 90px;
+}
+.navbar ul li{
+    list-style-type: none;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #F4F1DE;
+    font-weight: 900;
+}
+  
+.navbar div.carrito i{
+    font-size: 1.5em;
+}
+  
+.navbar div.carrito{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+}
+/*termina el header*/
+/*empieza el main*/
+/*main{
+    width: 50%;
+    height: 10%;
+    display: flex; 
+    margin: 15px 15px 15px 15px;
+
+}
+main nav div.loginU{
+    display: flex;      
+    flex-wrap: wrap;
+    margin:3rem;   
+    align-content: center;
+    color: #383536;    
+}
+ main nav div.submitMasEnviar{    
+    display: flex;
+    flex-wrap: wrap;   
+    flex-direction:column;
+    margin: 10px 1px 10px 18px;
+    background-color: #F4F1DE;
+    align-content: space-around;  
+    color: #383536;
+}
+
+#enviar{    
+    background-color: #81b29a;
+    width: 5rem;
+    height: auto;
+    color: white;
+    font-weight: strong;
+    border-radius: 10px;
+    margin: 10px 0px 10px 20px;   
+}
+#vuelvo{      
+    width: 15rem;  
+    height: auto;  
+    font-size: 1rem;
+    border-radius: 10px;     
+    text-align: center; 
+    background-color: #f2cc8f;        
+    border-radius:20px;
+    color:black;
+    font-weight: strong;     
+}
+input{
+    background-color:#F4F1DE ;
+    border-radius: 10px;
+}
+input:hover{
+    background-color:#9EE8A1;
+}*/
+/*---------------------AQUÍ TERMINA LA PARTE MÍA DE LOGIN *-------------------------------*/
+   
+main form{          
+    display: flex;
+    background-color: #3D405B;
+    width: 80%;
+    flex-wrap: wrap;    
+    align-content: space-between;   
+/*      background-color:rgba(124, 124, 121, 0.5);   */   
+    padding-left:25px; 
+  /*  padding: 25px;*/
+    align-content: center;
+    flex-direction:column;
+    box-sizing: border-box;
+    margin:auto;
+}
+main form img{   
+ width:45px;
+ height: 45px;
+ border-radius: 50%;
+ padding-left:8px;
+ -webkit-animation:spin 10s linear infinite;
+ -moz-animation:spin 7s linear infinite;
+ animation:spin2 7s linear infinite;
+}
+@-moz-keyframes spin2 { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin2 { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+main form nav{   
+    align-content: center;
+    padding-block: 1rem;
+    margin:auto;      
+}
+main form div{   
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}   
+form{
+    margin: 0px 2rem 0px 2rem; 
+ /*   padding-block: 1rem;*/
+}
+label {
+    font-weight: bold;
+    text-align: left;
+}
+/*
+div .nombre{
+    flex-direction: column;    
+}*/
+div.saludoDiv{
+
+ display:flex;
+ flex-wrap:wrap;
+}
+div.fechaNacimiento{
+    flex-direction: column;
+}
+div.perfil{
+    flex-direction:column;
+    margin-left:10px;
+}
+div.intereses{
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;  
+    margin-left: 10px; 
+}
+div.intereses img{   
+     width:45px;
+     height: 45px;
+/*       border-radius: 50%;*/
+     -webkit-animation:spin 15s linear infinite;
+     -moz-animation:spin 12s linear infinite;
+     animation:spin 12s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform:translateX(80px); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: translateX(80px); } }
+@keyframes spin { 100% { -webkit-transform: translateX(80px); transform:translateX(40px); } }
+
+div.clave, div.submit{
+    flex-direction:column;
+    margin-left:10px;
+}
+#sheldom, #trones,#spiderman, #superman{
+    padding:4px;
+    margin-left:2px;
+}    
+.nombre input, .fechaNacimiento input, .domicilio input, .password input, .password_confirm input {
+    outline:none;
+}
+/*saludo es BIENVENIDO A MUNDO GEEK*/
+#saludo{
+ color:#e07a5f;
+ font-weight:bold;
+}
+h2{
+ color:#f2cc8f;
+ text-align: left;
+ font-weight: bold;
+}
+#tituloOpcion{
+ color:#f2cc8f;
+ text-align: left;
+}
+input{
+    background-color: #F4F1DE;
+}
+#nombre, #user, #email, #domicilio, #fechaNacimiento, #password, #password_confirm {
+    width: 70%;  
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color:#383536;
+    font-size: 12px;
+    border: none;
+}
+#archivo{
+ opacity: 1;
+ width:125px;
+ height: 100px;
+ text-align: center;
+ border-radius:50%;
+}
+#enviar, #borrar{
+ background-color:#81b29a;
+ width: 11rem;
+ color:white;
+ border-radius:10px;
+ margin-left:15px;
+ margin-right: 15px;
+}
+/*div.volver{
+    width: 100%;
+    height: 30px;   
+    background-color: #e07a5f;       
+}*/
+#vuelvo{      
+ width: 15rem;  
+ height: auto;  
+ font-size: 1rem;
+ border-radius: 10px;
+ margin-left: 5rem;   
+ text-align: center; 
+ background-color: #f2cc8f;        
+ border-radius:20px;
+ color:black;
+ font-weight: strong;
+ margin-bottom: 40rem;        
+}
+input:visited{
+    color:black;
+    background-color: #EAC926;
+}
+input:focus{    
+    background-color:#81b29a;
+    border-bottom: black;
+}
+input:hover{
+    background-color:#9EE8A1;
+    border-bottom:#9EE8A1; 
+}
+/*
+input:invalid{
+    background-color: orangered;
+}*
+    
+/*
+:placeholder-shown {   
+    background-color:white;
+    color:black;
+    border-radius: 4px;
+}*/
+/*Botón de envío de formulario con gráfico. Se debe usar el atributo src para definir 
+el origen de la imagen y el atributo alt para definir un texto alternativo.
+ Se puede usar los atributos height y width para definir el tamaño de la imagen en píxeles*/
+@media (max-width:361px){
+ #saludo{display:none} 
+ main form img{display:none} 
+ }
+/*@media(min-width:361px) and (max-width:600){
+  
+ }*/
+/*  <label id="tituloOpcion" for="file">Foto de usuario <i class="fas fa-user-circle"></i></label>*/
+/*<a href="#"><i class="fas fa-user-circle"></i>Foto de usuario </a>-- este NO sirvióooo */
+/*----------------- aqui termina lo mío del login y empieza el footer---*/
+/*cambio mi body por main ---------------------///// */
+ 
+footer{
+    background-color: #3D405B;
+    color: #F4F1DE;
+    padding: 20px;
+}
+  
+.sinCopyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.sinCopyright h1{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+  
+.sinCopyright li{
+    font-size: 14px;
+}
+  
+.sinCopyright h5{
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+  
+.sinCopyright section i{
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+  
+.sinCopyright .redes{
+    padding-right: 70px;
+}
+  
+footer .primeraParte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 50%;
+}
+  
+footer .informacionLegal{
+    margin-bottom: 20px;
+}
+footer .primeraParte a{
+     text-decoration: none;
+     color: #F4F1DE
+}
+  
+.Copyright{
+    font-style: italic;
+    font-size: 14px;
+    text-align: end;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+  
+.primeraParte ul li{
+    list-style-type: none;
+}
+ 
+  
+@media (max-width: 769px){
+    header .mid-bar{
+      display:none;
+    }
+    .navbar ul {
+      display:none;
+    }
+    main .productosRelacionados article{
+    width: 100%;
+    }
+}
+  
+@media (min-width: 769px){
+ /*   main section .productoX article{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }*/
+    header .up-bar{
+      display:flex;
+      justify-content: space-between;
+      padding: 5px;
+    }
+    header div.logo{
+      width: 20%;
+      padding-left: 40px;
+    }
+    .navbar .burger-menu{
+      display:none;
+    }
+    header div.login{
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar{
+      justify-content: space-around;
+    }
+    main .main-view .productoX .detallesProd{
+      align-self: flex-start;
+      width:20%
+    }
+   /* main .productosRelacionados .productos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+     } */
+     .sinCopyright {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    footer .primeraParte{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      width: 50%;
+    }
+    header div.login{
+      width: 20%;
+      align-self: center
+  }
+}
