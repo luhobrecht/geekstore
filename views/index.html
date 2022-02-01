@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de producto - Geek Store</title>
+    <title>Página principal de Geek Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/styles.css">
@@ -40,18 +40,90 @@
         </div>
 
         <ul>
-            <li><a href=# > PRODUCTOS </a></li>
-            <li><a href=# >OFERTAS</a></li>
-            <li><a href=# >CONTACTO</a></li>
-            <li><a href=# >SOBRE NOSOTROS</a></li>
+            <li><a href="/productos.html">PRODUCTOS</a> </li>
+            <li><a href="/ofertas.html">OFERTAS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
         </ul>
         <div class="carrito">
             <i class="fas fa-shopping-cart"></i>
         </div>
     </nav>
 </header>
-    <main>
+<main>
+    <section class="slide">
+        <div class="slide-inner">
+            <input class="slide-open" type="radio" id="slide-1" 
+                  name="slide" aria-hidden="true" hidden="" checked="checked">
+            <div class="slide-item">
+                <img src=/img/bienvenidos.png>
+            </div>
+            <input class="slide-open" type="radio" id="slide-2" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="/img/banner-2.png">
+            </div>
+            <input class="slide-open" type="radio" id="slide-3" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="/img/sale.png">
+            </div>
+            <label for="slide-3" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3">‹</label>
+            <label for="slide-1" class="slide-control next control-3">›</label>
+            <ol class="slide-indicador">
+                <li>
+                    <label for="slide-1" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-2" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-3" class="slide-circulo">•</label>
+                </li>
+            </ol>
+        </div>
+    </section>
     
+    <section class="search-bar">
+        <div class="form" action="#" method="GET">
+            <input type="search" name="busqueda" placeholder="Buscar productos, licencias y más">
+            <button type="submit" aria-placeholder="fa fa-search"><i class="fa fa-search"></i></button>                
+        </div>
+    </section>    
+    <br>
+    <section class="productosRelacionados">
+        <h3 class="subtitulo">Algunos de nuestros productos:</h3>
+        <div class="productos">
+            <article class="spider">
+                <img src="/img/gorraSpiderman.png" alt="Imágen de una gorra de Spiderman">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Gorra de Spiderman</h4>
+            </div>
+            </article>
+            <article>
+                <img src="/img/mateBigBang.png" alt="Imagen de un mate de Big Bang Theory">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Mate de Big Bang Theory</h4>
+            </div>
+            </article>
+            <article>
+                <img src="/img/remeraGOT.png" alt="Imágen de una remer de Game Of Thrones">
+            <div class="articulo">
+                <p class="precio">$800</p>
+                <p class="descuento">10% OFF</p>
+                <h4 class="descripciones">Remera de Game Of Thrones</h4>
+            </div>
+            </article>        
+        </div>
+    </section>
     </main>
     <footer>
         <div class="sinCopyright">

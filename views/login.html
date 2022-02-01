@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciá Sesión - Geek Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styleLogin.css">
+</head>
+<body>
+<header>
+    <div class="up-bar">
+        <div class="logo">
+        <img src="/img/logo.png" alt="Logo de Geek Store" >
+        </div>
+    <div class="mid-bar">
+        <h2 class="envios">
+            <i class="fas fa-truck"></i>
+            ENVÍOS PREMIUM Y STANDARD
+        </h2>
+
+        <h2 class="mejoresPrecios">
+            <i class="fas fa-dollar-sign"></i>
+            LOS MEJORES PRECIOS
+        </h2>
+
+        <h2 class="asesoramiento">
+            <i class="fas fa-user-check"></i>
+            ASESORAMIENTO PERSONALIZADO
+        </h2>
+    </div>
+        <div class="login">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div> 
+    <nav class="navbar">
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+
+        <ul>
+            <li><a href="/productos.html">PRODUCTOS</a> </li>
+            <li><a href="/ofertas.html">OFERTAS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+        </ul>
+        <div class="carrito">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+</header>
+<main>
+<form action="/" method="GET">
+    <nav>
+    <div class="loginU">
+            <p><label id="">USUARIO</label>
+            <input placeholder="" type="text" name="user" id="user" required "[[A-Za-z ]{1,6}"></p>            
+            <p><label id="" for ="password">CONTRASEÑA</label>       
+            <input placeholder="" type="password" name="password" id="password" required></p>
+    </div>
+    <div class="submitMasEnviar">          
+            <input type="submit" name="submit" id="enviar" value="ENVIAR"> </input>            
+            <a href="/"><button id="vuelvo">Volver a Pagina Principal</button></a>       
+    </div>
+    </nav>
+</form>
+</main>
+<footer>
+        <div class="sinCopyright">
+    <div class="primeraParte">
+        <section class= informacionLegal>
+            <h1>INFORMACIÓN LEGAL</h1>
+            <ul>
+                <li><a href=# >Aviso Legal</a></li>
+                <li><a href=# >Politica de privacidad</a></li>
+                <li><a href=# >Politica de cookies</a></li>
+                <li><a href=# >Configuración de cookies</a></li>
+                <li><a href=# >Términos y condiciones</a></li>
+            </ul>
+        </section>
+
+        <section class= "asesoramiento">
+            <h1>ASESORAMIENTO</h1>
+            <ul>
+                <li><a href=# >Quiénes somos</a></li>
+                <li><a href=# >Ayuda</a></li>
+                <li><a href=# >Contacto</a></li>
+            </ul>
+        </section>
+    </div>
+        <section class="redes">
+            <h5>Encontranos también en:</h5>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+        </section>
+    </div>
+        <section class="Copyright">
+
+            <p>Copyright © 2020-2022 GeekStore S.R.L.</p>
+    </footer>
+    </body>
+    </html>
