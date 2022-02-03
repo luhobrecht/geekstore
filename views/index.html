@@ -12,7 +12,7 @@
 <header>
     <div class="up-bar">
         <div class="logo">
-        <img src="/img/logo.png" alt="Logo de Geek Store" >
+            <button id="home"><a href="/"><img src="/img/logo.png" alt="Logo de Geek Store" ></a></button>
         </div>
     <div class="mid-bar">
         <h2 class="envios">
@@ -31,7 +31,7 @@
         </h2>
     </div>
         <div class="login">
-            <i class="fas fa-user-circle"></i>
+            <button id="home"><a href="/login"><i class="fas fa-user-circle"></i></a></button>   
         </div>
     </div> 
     <nav class="navbar">
@@ -46,7 +46,7 @@
             <li><a href="nosotros.html">NOSOTROS</a></li>
         </ul>
         <div class="carrito">
-            <i class="fas fa-shopping-cart"></i>
+            <button id="boton"><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></button>
         </div>
     </nav>
 </header>
@@ -98,6 +98,7 @@
     <section class="productosRelacionados">
         <h3 class="subtitulo">Algunos de nuestros productos:</h3>
         <div class="productos">
+                <button id="producto"><a href="/productDetail">
             <article class="spider">
                 <img src="/img/gorraSpiderman.png" alt="Imágen de una gorra de Spiderman">
             <div class="articulo">
@@ -106,6 +107,8 @@
                 <h4 class="descripciones">Gorra de Spiderman</h4>
             </div>
             </article>
+                </a></button>  
+                <button id="producto"><a href="/productDetail">
             <article>
                 <img src="/img/mateBigBang.png" alt="Imagen de un mate de Big Bang Theory">
             <div class="articulo">
@@ -114,6 +117,8 @@
                 <h4 class="descripciones">Mate de Big Bang Theory</h4>
             </div>
             </article>
+            </a></button> 
+            <button id="producto"><a href="/productDetail">
             <article>
                 <img src="/img/remeraGOT.png" alt="Imágen de una remer de Game Of Thrones">
             <div class="articulo">
@@ -121,7 +126,8 @@
                 <p class="descuento">10% OFF</p>
                 <h4 class="descripciones">Remera de Game Of Thrones</h4>
             </div>
-            </article>        
+            </article> 
+            </a></button>        
         </div>
     </section>
     </main>

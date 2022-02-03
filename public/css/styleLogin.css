@@ -13,7 +13,45 @@ body{
 header div.logo img{
     width: 100px;
     text-align: center;
+    background-color: #F4F1DE;
+
 }
+
+header div.logo img{
+    background-color: #F4F1DE;
+    border:none;
+  }
+  
+  header div #home{
+    border: 1px solid #F4F1DE;
+    background-color: #F4F1DE;
+  }
+  
+  header div #home a{
+   color: #383536;
+   font-size: 1.5em;
+   background-color: #F4F1DE;
+  }
+  
+  header div #boton{
+    border: 1px solid #E07A5F;
+    background-color: #E07A5F;
+  }
+  
+  header div #boton a{
+   color: #383536;
+   font-size: 1.5em;
+   background-color: #E07A5F;
+  }
+
+  .productos #producto{
+    border: 1px solid #F4F1DE;
+    background-color: #F4F1DE;
+  }
+  
+  .productos #producto a{
+   background-color: #F4F1DE;
+  }
   
 header .up-bar{
     display:flex;
@@ -113,56 +151,112 @@ div.burger-menu i{
 /*termina el header*/
 /*empieza el main*/
 main{
-    width: 50%;
+    width: 100%;
     height: 10%;
     display: flex; 
-    margin: 15px 15px 15px 15px;
-
+    justify-content: center;
 }
+
+main nav h2{
+    font-size: 20px;
+    color: #E07A5F;
+    text-align: left;   
+    padding-right: 20px; 
+}
+
+main nav {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 60px;
+    background-color:#FFF;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
 main nav div.loginU{
     display: flex;      
     flex-wrap: wrap;
-    margin:3rem;   
-    align-content: center;
+    margin: 20px 0px;  
+    align-content: left;
     color: #383536;    
 }
+
+main nav div.loginU #user{
+    width: 90%;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #383536;
+    background-color:#F4F1DE;
+    margin-bottom: 10px;
+}
+
+main nav div.loginU #password{
+    width: 90%;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #383536;
+    background-color:#F4F1DE;
+}
+
  main nav div.submitMasEnviar{    
     display: flex;
     flex-wrap: wrap;   
     flex-direction:column;
-    margin: 10px 1px 10px 18px;
-    background-color: #F4F1DE;
-    align-content: space-around;  
+    background-color: #FFF;
+    align-content: left;  
     color: #383536;
 }
 
 #enviar{    
-    background-color: #81b29a;
-    width: 5rem;
+    background-color: #6EDD72;
+    width: 60%;
     height: auto;
     color: white;
-    font-weight: strong;
-    border-radius: 10px;
-    margin: 10px 0px 10px 20px;   
+    font-weight: bold; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #6EDD72;
+    padding: 10px;
+}
+
+#enviar:hover{
+    border: 1px solid #9EE8A1;
+    background-color: #9EE8A1;
 }
 #vuelvo{      
-    width: 15rem;  
+    width: 100%;  
     height: auto;  
     font-size: 1rem;
-    border-radius: 10px;     
+    border-radius: 5px;  
     text-align: center; 
     background-color: #f2cc8f;        
-    border-radius:20px;
-    color:black;
-    font-weight: strong;     
+    color:white;   
+    border: 1px solid #f2cc8f;
+    padding: 10px;
+    align-self:center;
 }
-input{
-    background-color:#F4F1DE ;
-    border-radius: 10px;
+#vuelvo:hover{
+    border: 1px solid #f0c175;
+    background-color: #f0c175;
+    color:#383536
 }
-input:hover{
-    background-color:#9EE8A1;
+
+#boton {
+    font-size: 14px;
+    color: #FFF;
+    padding: 5px;
+    background-color: white;
 }
+
+#boton a {
+    text-decoration: none;
+    color:#383536
+}
+/*empieza el footer*/
  
 footer{
     background-color: #3D405B;
@@ -242,11 +336,9 @@ footer .primeraParte a{
 }
   
 @media (min-width: 769px){
- /*   main section .productoX article{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-    }*/
+    main nav {
+        padding: 60px 200px;
+    }
     header .up-bar{
       display:flex;
       justify-content: space-between;
@@ -269,15 +361,7 @@ footer .primeraParte a{
     .navbar{
       justify-content: space-around;
     }
-    main .main-view .productoX .detallesProd{
-      align-self: flex-start;
-      width:20%
-    }
-   /* main .productosRelacionados .productos {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-     } */
+
      .sinCopyright {
       display: flex;
       flex-direction: row;

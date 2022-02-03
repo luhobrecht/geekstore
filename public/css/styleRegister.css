@@ -13,7 +13,45 @@ body{
 header div.logo img{
     width: 100px;
     text-align: center;
+    background-color: #F4F1DE;
+
 }
+
+header div.logo img{
+    background-color: #F4F1DE;
+    border:none;
+  }
+  
+  header div #home{
+    border: 1px solid #F4F1DE;
+    background-color: #F4F1DE;
+  }
+  
+  header div #home a{
+   color: #383536;
+   font-size: 1.5em;
+   background-color: #F4F1DE;
+  }
+  
+  header div #boton{
+    border: 1px solid #E07A5F;
+    background-color: #E07A5F;
+  }
+  
+  header div #boton a{
+   color: #383536;
+   font-size: 1.5em;
+   background-color: #E07A5F;
+  }
+
+  .productos #producto{
+    border: 1px solid #F4F1DE;
+    background-color: #F4F1DE;
+  }
+  
+  .productos #producto a{
+   background-color: #F4F1DE;
+  }
   
 header .up-bar{
     display:flex;
@@ -204,6 +242,8 @@ main form div{
     display: flex;
     flex-wrap: wrap;
 }   
+
+
 form{
     margin: 0px 2rem 0px 2rem; 
  /*   padding-block: 1rem;*/

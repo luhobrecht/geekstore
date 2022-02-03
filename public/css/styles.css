@@ -14,6 +14,26 @@ header div.logo img{
   text-align: center;
 }
 
+header div #boton{
+  border: 1px solid #E07A5F;
+  background-color: #E07A5F;
+}
+
+header div #boton a{
+ color: #383536;
+ font-size: 1.5em;
+ background-color: #E07A5F;
+}
+
+.productos #producto{
+  border: 1px solid #F4F1DE;
+  background-color: #F4F1DE;
+}
+
+.productos #producto a{
+ background-color: #F4F1DE;
+}
+
 header .up-bar{
   display:flex;
   flex-wrap: wrap;
@@ -43,6 +63,22 @@ header div.logo{
   align-self: center;
 }
 
+header div.logo img{
+  background-color: #F4F1DE;
+  border:none;
+}
+
+header div #home{
+  border: 1px solid #F4F1DE;
+  background-color: #F4F1DE;
+}
+
+header div #home a{
+ color: #383536;
+ font-size: 1.5em;
+ background-color: #F4F1DE;
+}
+
 header div.login{
   display: flex;
   justify-content: flex-end;
@@ -51,6 +87,13 @@ header div.login{
   padding-right: 20px;
 }
 
+header div.login button a{
+  text-decoration: none;
+  color:#383536;
+  border:none;
+  font-size: 1.5em;
+  background-color: #F4F1DE;
+}
 header div.login i{
   font-size: 2em;
 }
