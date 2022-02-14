@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de producto - Geek Store</title>
+    <title>Tu carrito de compras - Geek Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="/css/productCart2.css" rel="stylesheet">
+    <link href="/css/productCart.css" rel="stylesheet">
     <link href="/css/normalize.css" rel="stylesheet">
     <link href="/css/roboto.css" rel="stylesheet">
 </head>
@@ -33,7 +33,7 @@
             </h2>
         </div>
         <div class="login">
-            <button id="home"><a href="/login"><i class="fas fa-user-circle"></i></a></button>   
+            <button id="home"><a href="/user/login"><i class="fas fa-user-circle"></i></a></button>   
         </div>
         </div> 
         <nav class="navbar">
@@ -42,107 +42,91 @@
             </div>
     
             <ul>
-                <li><a href=# > PRODUCTOS </a></li>
-                <li><a href=# >OFERTAS</a></li>
-                <li><a href=# >CONTACTO</a></li>
-                <li><a href=# >SOBRE NOSOTROS</a></li>
+                <li><a href="/productos">PRODUCTOS</a> </li>
+                <li><a href="/productos/ofertas">OFERTAS</a></li>
+                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/about-us">NOSOTROS</a></li>
             </ul>
             <div class="carrito">
-                <button id="boton"><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></button>
+                <button id="boton"><a href="/productos/productCart"><i class="fas fa-shopping-cart"></i></a></button>
             </div>
         </nav>
     </header>
-
 <main>
+    <form  action="/productos/productCart/part-2" method="get">
     <h1>Tu carrito de compras</h1>
     <div class="subtitulo">
         <p class="subtitulo-1">Gestiona tus compras</p>
          <p>Finalizacion de compra</p>
-        
-
     </div>
-
     <article class="main-article">
-        
-
         <img class="producto" src="/img/remera-big-bang.png" alt="Remera" >
         <nav>
-        <p>Producto: Remera Big Bang Theory</p>
-        <p>Disponibilidad: En Stock</p>
+        <p>Remera Big Bang Theory</p>
+        <p>En Stock</p>
         <p>Cantidad: 1</p>
-        <p class="total">TOTAL: $1000</p>
-        <button class="boton-comprar" type="submit" >CONFIRMAR COMPRA</button>
+        <h2 class="total">TOTAL: $1000</h2>
+        <button class="boton-comprar" type="submit" >COMPRAR</button>
         </nav> 
     </article>
-
-    <br>
-        
-    <h3 id="subtitulo-2">Tipo de envío</h3>
-    <article class="tipo-envio">
-        
-        <form action="/views/productCart.html" method="post">
-             
-                 <label for="tipo-envio">Premium</label>
-                <input type="radio" name="tipo-envio" value="Premium">
-                <label for="tipo-envio">Standard</label>
-                <input type="radio" name="tipo-envio" value="Standard">
-            
-            
-        </form>
-    </article>
-    <h3 id="subtitulo-2">Método de pago</h3>
-    <article class="pago">
-        
-        <form  action="/views/productCart.html" method="post">
+    <br>    
+    <h3 id="subtitulo-2">Tarjeta de regalo</h3>
+    <article class="gift-card">
+        <div id="form">
              <div>
-                <input type="text" name="banco" placeholder="Entidad financiera" >  
+                <input type="text" name="giftcard" placeholder="Codigo Tarjeta de regalo" >  
             </div>
+            <br>
             <div>
-                <input type="tel" name="numero" placeholder="Numero de tarjeta " >  
+                <button class="boton-tarjeta" type="submit">Agregar Tarjeta de regalo</button>
             </div>
-            <div>
-                <input type="text" name="nombre" placeholder="Nombre y Apellido del titular" >  
-            </div>
-            <div>
-                <input type="text" name="cauducidad" placeholder="mm/aa"  >  
-            </div>
-            <div>
-                <input type="text" name="codigo-seguridad" placeholder="CCV" >  
-            </div>
-            
-            
-        </form>
-
-
-
+        </div>
     </article>
-
-
-
+    <h3 id="subtitulo-2">Detalles de envío</h3>
+    <article class="envios">
+        <div id="form">
+            <div>
+                <input type="text" name="nombre" placeholder="Nombre Completo" required>  
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Correo Electronico" required>  
+            </div>
+            <div>
+                <input type="text" name="direccion" placeholder="Direccion" required>  
+            </div>
+            <div>
+                <input type="text" name="ciudad" placeholder="Ciudad" required>  
+            </div>
+            <div>
+                <input type="text" name="codigopostal" placeholder="Cod.Postal" required>  
+            </div>
+            <div>
+                <input type="text" name="provincia" placeholder="Provincia" required>  
+            </div> 
+        </div>
+    </article>
+</form>
 </main>
-
-
-
 <footer>
     <div class="sinCopyright">
 <div class="primeraParte">
     <section class= informacionLegal>
         <h1>INFORMACIÓN LEGAL</h1>
         <ul>
-            <li><a href=# >Aviso Legal</a></li>
-            <li><a href=# >Politica de privacidad</a></li>
-            <li><a href=# >Politica de cookies</a></li>
-            <li><a href=# >Configuración de cookies</a></li>
-            <li><a href=# >Términos y condiciones</a></li>
+            <li><a href=/informacion-legal >Aviso Legal</a></li>
+            <li><a href=/informacion-legal >Politica de privacidad</a></li>
+            <li><a href=/informacion-legal >Politica de cookies</a></li>
+            <li><a href=/informacion-legal >Configuración de cookies</a></li>
+            <li><a href=/informacion-legal >Términos y condiciones</a></li>
         </ul>
     </section>
 
     <section class= "asesoramiento">
         <h1>ASESORAMIENTO</h1>
         <ul>
-            <li><a href=# >Quiénes somos</a></li>
-            <li><a href=# >Ayuda</a></li>
-            <li><a href=# >Contacto</a></li>
+            <li><a href=/about-us >Quiénes somos</a></li>
+            <li><a href=/ayuda >Ayuda</a></li>
+            <li><a href=/contacto >Contacto</a></li>
         </ul>
     </section>
 </div>
@@ -160,5 +144,23 @@
     </section>
     
 </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 </body>
 </html>

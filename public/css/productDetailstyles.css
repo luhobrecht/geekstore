@@ -282,7 +282,7 @@ main .productosRelacionados p{
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
-  color: #383536
+  color: #383536;
 }
 
 main .productosRelacionados .descuento{
@@ -293,11 +293,16 @@ main .productosRelacionados .descuento{
 
 main .productosRelacionados .descripciones{
   font-size: 14px;
-  color: #383536
+  color: #383536;
+  padding-bottom: 10px;
 }
 
 main .productosRelacionados{
   margin-bottom: 40px;
+}
+
+main .productosRelacionados a{
+  text-decoration: none;
 }
 
 footer{
