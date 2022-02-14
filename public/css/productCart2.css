@@ -148,64 +148,65 @@
   }
   main{
     width: 90%;
-    margin: 0 auto; 
-
+    margin: 0 auto;
     }
+
   main .subtitulo{
       display:flex;
-      font-size: 10px;
-      
+      font-size: 10px;    
   }
+
   main .subtitulo .subtitulo-1{
       background-color: #ebebeb;
       padding: 10px;
       margin-right: 5px;
   }
+
   main .subtitulo p{
     background-color: rgb(177, 176, 176); 
       padding: 10px;
   }
+
   main .main-article{
     background-color: #fff;    
     margin: 25px 0px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    text-align: center;
     padding-bottom: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    }
+    justify-content: space-between;
+  }
 
-    
-    main .main-article .producto{
-        width: 60%;
-    }
-    main .main-article p{
-        padding-bottom: 15px;
+  main .main-article .producto{
+    width: 50%;
+  }
 
+  main .main-article p{
+    padding-bottom: 15px;
+  }
 
-    }
-    main .main-article nav{
-        align-self: center;
+  main .main-article nav{
+    align-self: center;
+    width:40%
+  }
 
-    }
-    main .main-article .total{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        font-weight: 900;
-        font-style: italic;
-    }
-main .main-article .boton-comprar{
-    
-        padding: 20px;
-        border-radius: 5px;
-        background-color: #6EDD72;
-        color:white;
-        border: #6EDD72;
-        font-size: 20px;
-        font-weight: 400;
-        margin-top: 20px;
-    }
+  main .main-article .total{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 900;
+  }
+
+  main .main-article .boton-comprar{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #6EDD72;
+    color:white;
+    border: #6EDD72;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px;
+    width:70%
+  }
+
     main .main-article .boton-comprar:hover{
         padding:20px;
         border-radius: 5px;
@@ -251,6 +252,7 @@ main .main-article .boton-comprar{
             font-size: 16px;
             font-weight: 600;
         }
+
         main .tipo-envio input{
             background-color: #ebebeb;
             border:#ebebeb;
@@ -259,25 +261,27 @@ main .main-article .boton-comprar{
             padding: 10px;
 
         }
+
         main .tipo-envio form{
             width: 90%;
         }
+
         main .pago{
             background-color: #fff;    
             margin: 25px 0px;
             box-shadow: 0px 0px 10px rgb(100, 100, 100);
-            text-align: center;
             padding-bottom: 20px;
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            padding-top: 20px;
-
+            flex-direction: column;
+            padding-top: 20px
         }
-        main .pago form{
+        
+        main .pago #form{
             width: 90%;
+            align-self: center;
         }
-        main .pago div input {
+
+        main form .pago #form div input {
             background-color: #ebebeb;
             border:#ebebeb;
             border-radius: 5px;
@@ -285,6 +289,7 @@ main .main-article .boton-comprar{
             padding: 10px;
             margin-bottom: 20px;
         }
+
         main #subtitulo-2{
             font-size: 14px;
             font-weight: 700;

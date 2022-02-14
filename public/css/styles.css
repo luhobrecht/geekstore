@@ -362,6 +362,10 @@ main .productosRelacionados{
   margin-bottom: 40px;
 }
 
+main .productosRelacionados a{
+  text-decoration: none;
+}
+
 main .productosRelacionados h3{
   font-size: 20px;
   font-weight: 800;

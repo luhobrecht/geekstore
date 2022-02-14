@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/productCart.css">
+<body>
+    <%- include("partials/header.ejs") %>
+<main>
+    <form  action="/productos/productCart/part-2" method="get">
+    <h1>Tu carrito de compras</h1>
+    <div class="subtitulo">
+        <p class="subtitulo-1">Gestiona tus compras</p>
+         <p>Finalizacion de compra</p>
+    </div>
+    <article class="main-article">
+        <img class="producto" src="/img/remera-big-bang.png" alt="Remera" >
+        <nav>
+        <p>Remera Big Bang Theory</p>
+        <p>En Stock</p>
+        <p>Cantidad: 1</p>
+        <h2 class="total">TOTAL: $1000</h2>
+        <button class="boton-comprar" type="submit" >COMPRAR</button>
+        </nav> 
+    </article>
+    <br>    
+    <h3 id="subtitulo-2">Tarjeta de regalo</h3>
+    <article class="gift-card">
+        <div id="form">
+             <div>
+                <input type="text" name="giftcard" placeholder="Codigo Tarjeta de regalo" >  
+            </div>
+            <br>
+            <div>
+                <button class="boton-tarjeta" type="submit">Agregar Tarjeta de regalo</button>
+            </div>
+        </div>
+    </article>
+    <h3 id="subtitulo-2">Detalles de envío</h3>
+    <article class="envios">
+        <div id="form">
+            <div>
+                <input type="text" name="nombre" placeholder="Nombre Completo" required>  
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Correo Electronico" required>  
+            </div>
+            <div>
+                <input type="text" name="direccion" placeholder="Direccion" required>  
+            </div>
+            <div>
+                <input type="text" name="ciudad" placeholder="Ciudad" required>  
+            </div>
+            <div>
+                <input type="text" name="codigopostal" placeholder="Cod.Postal" required>  
+            </div>
+            <div>
+                <input type="text" name="provincia" placeholder="Provincia" required>  
+            </div> 
+        </div>
+    </article>
+</form>
+</main>
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+</body>
+</html>

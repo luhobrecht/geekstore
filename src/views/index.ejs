@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("partials/head.ejs") %>
+<body>
+<%- include("partials/header.ejs") %>
+<main>
+    <section class="slide">
+        <div class="slide-inner">
+            <input class="slide-open" type="radio" id="slide-1" 
+                  name="slide" aria-hidden="true" hidden="" checked="checked">
+            <div class="slide-item">
+                <img src=/img/bienvenidos.png>
+            </div>
+            <input class="slide-open" type="radio" id="slide-2" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="/img/banner-2.png">
+            </div>
+            <input class="slide-open" type="radio" id="slide-3" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="/img/sale.png">
+            </div>
+            <label for="slide-3" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3">‹</label>
+            <label for="slide-1" class="slide-control next control-3">›</label>
+            <ol class="slide-indicador">
+                <li>
+                    <label for="slide-1" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-2" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-3" class="slide-circulo">•</label>
+                </li>
+            </ol>
+        </div>
+    </section>
+    
+    <section class="search-bar">
+        <div class="form" action="#" method="GET">
+            <input type="search" name="busqueda" placeholder="Buscar productos, licencias y más">
+            <button type="submit" aria-placeholder="fa fa-search"><i class="fa fa-search"></i></button>                
+        </div>
+    </section>    
+    <br>
+    <section class="productosRelacionados">
+        <h3 class="subtitulo">Algunos de nuestros productos:</h3>
+        <div class="productos">
+                <button id="producto"><a href="/productos/productDetail/1">
+            <article class="spider">
+                <img src="/img/gorraSpiderman.png" alt="Imágen de una gorra de Spiderman">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Gorra de Spiderman</h4>
+            </div>
+            </article>
+                </a></button>  
+                <button id="producto"><a href="/productos/productDetail/2">
+            <article>
+                <img src="/img/mateBigBang.png" alt="Imagen de un mate de Big Bang Theory">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Mate de Big Bang Theory</h4>
+            </div>
+            </article>
+            </a></button> 
+            <button id="producto"><a href="/productos/productDetail/3">
+            <article>
+                <img src="/img/remeraGOT.png" alt="Imágen de una remer de Game Of Thrones">
+            <div class="articulo">
+                <p class="precio">$800</p>
+                <p class="descuento">10% OFF</p>
+                <h4 class="descripciones">Remera de Game Of Thrones</h4>
+            </div>
+            </article> 
+            </a></button>        
+        </div>
+    </section>
+    </main>
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
+
+
+

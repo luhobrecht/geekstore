@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <body>
+    <%- include("partials/header.ejs") %>
+    <main>
+        <section class= "main-view">
+    <div class="productoX">
+            <article>
+        <div class="parte1">
+                <img src="/img/remeraGOT.png" alt="Imágen de una remera de Game Of Thrones">
+            <div class= "articulo">
+                <p class="descripcion">Game Of Thrones - White Walker</p>
+            </div>
+        </div>
+            <div class="detallesProd">
+        <form action="/productos/productCart" method="GET">
+            <label>Elegí el color:</label> 
+            <select name="color">
+                 <option value="#000000">Negro</option>
+                 <option value="#ffffff">Blanco</option>
+                 <option value="#e5e5e5">Gris</option>
+                 <option value="#14213d">Azul</option>
+                 <option value="#1b4332">Verde</option>
+            </select>
+
+            <label>Elegí el talle:</label> 
+            <select name="talle">
+                 <option value="XS">XS</option>
+                 <option value="S">S</option>
+                 <option value="M">M</option>
+                 <option value="L">L</option>
+                 <option value="XL">XL</option>
+            </select>
+        
+                <label>CANTIDAD</label> 
+                <input type="number" name="cantidad" value="1" min="0" max="10" step="1">
+
+            <h2 class="total">TOTAL: $1000</h2>
+            <h2>
+                <button type="submit" class="enviar">AGREGAR AL CARRITO</button>
+            </h2>
+        </div>
+    </form>
+            </article>
+    </div>
+        </section>
+
+        <section class="productosRelacionados">
+            <h3 class="subtitulo">Productos relacionados:</h3>
+        <div class="productos">
+        <button id="producto"><a href="/productos/productDetail/4">
+            <article class="spider">
+                <img src="/img/remeraSpiderBlack.png" alt="Imágen de una remera de Spiderman">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Remera de Superman</h4>
+            </div>
+            </article>
+        </button>
+        <button id="producto"><a href="/productos/productDetail/5">
+            <article>
+                <img src="/img/remera-big-bang.png" alt="Imágen de una remera de Big Bang Theory">
+            <div class="articulo">
+                <p class="precio">$1000</p>
+                <p class="descuento">20% OFF</p>
+                <h4 class="descripciones">Remera de Big Bang Theory</h4>
+            </div>
+            </article>
+        </button>
+        <button id="producto"><a href="/productos/productDetail/6">
+            <article>
+                <img src="/img/gorraGoT1.png" alt="Imágen de una gorra de Game Of Thrones">
+            <div class="articulo">
+                <p class="precio">$800</p>
+                <p class="descuento">10% OFF</p>
+                <h4 class="descripciones">Gorra de Game Of Thrones</h4>
+            </div>
+            </article>
+        </button>
+        <button id="producto"><a href="/productos/productDetail/7">
+            <article>
+                <img src="/img/mateGoT.png" alt="Imágen de un mate de Game Of Thrones">
+            <div class="articulo"></div>
+                <p class="precio">$600</p>
+                <p class="descuento">5% OFF</p>
+                <h4 class="descripciones">Mate de Game Of Thrones</h4>
+            </div>
+            </article>
+        </button>
+        </div>
+        </section>
+    </main>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>
+
+
+
