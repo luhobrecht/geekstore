@@ -16,6 +16,7 @@ router.get("/productCart/part-2", productController.carrito2)
 
 router.get("/productCart/confirmCompra", productController.finalizar)
 
+router.get("/productCart/editar-producto", productController.editar)
 
 
 module.exports = router;

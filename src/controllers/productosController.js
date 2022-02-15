@@ -23,6 +23,9 @@ const productController = {
     finalizar: (req, res) => {
         res.render("confirmacionCompra");
     },
-};
+    editar:(req, res) => {
+        res.render("edit")
+    }
+}
 
 module.exports = productController
