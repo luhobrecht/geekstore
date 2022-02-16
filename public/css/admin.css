@@ -181,6 +181,19 @@ main form nav{
     margin:auto;      
 }
 
+main nav #codigo{
+  width: 70%;  
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color:#383536;
+  font-size: 14px;
+  border: 1px solid #F4F1DE;
+  background-color: #F4F1DE;
+  padding:10px;
+}
+
 main form div{   
     margin-top: 12px;
     margin-bottom: 12px;

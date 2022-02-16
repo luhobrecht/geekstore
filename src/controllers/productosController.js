@@ -6,7 +6,7 @@ const productController = {
         res.render("productos")
     },
     crear: (req,res) => {
-        res.render("admin")
+        res.render("crearProducto")
     },
     ofertas: (req,res) => {
         res.render("ofertas")
@@ -23,6 +23,12 @@ const productController = {
     finalizar: (req, res) => {
         res.render("confirmacionCompra");
     },
+    editar: (req,res) => {
+        res.render("editarProducto")
+    },
+    editar2: (req,res) => {
+        res.render("editarProducto2")
+    }
 };
 
 module.exports = productController

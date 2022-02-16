@@ -4,7 +4,7 @@
   "description": "Proyecto Integrador",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",

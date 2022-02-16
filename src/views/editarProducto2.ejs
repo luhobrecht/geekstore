@@ -3,52 +3,12 @@
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/admin.css">
 <body>
-<header>
-    <div class="up-bar">
-        <div class="logo">
-            <button id="home"><a href="/"><img src="/img/logo.png" alt="Logo de Geek Store" ></a></button>
-        </div>
-    <div class="mid-bar">
-        <h2 class="envios">
-            <i class="fas fa-truck"></i>
-            ENVÍOS PREMIUM Y STANDARD
-        </h2>
-     
-        <h2 class="mejoresPrecios">
-            <i class="fas fa-dollar-sign"></i>
-            LOS MEJORES PRECIOS
-        </h2>
-
-        <h2 class="asesoramiento">
-            <i class="fas fa-user-check"></i>
-            ASESORAMIENTO PERSONALIZADO
-        </h2>
-    </div>
-        <div class="login">
-            <button id="home"><a href="/user/login"><i class="fas fa-user-circle"></i></a></button>   
-        </div>
-    </div> 
-    <nav class="navbar">
-        <div class="burger-menu">
-            <i class="fa fa-bars burger"></i>
-        </div>
-
-        <ul>
-            <li><a href="/productos">PRODUCTOS</a> </li>
-            <li><a href="/productos/ofertas">OFERTAS</a></li>
-            <li><a href="/contacto">CONTACTO</a></li>
-            <li><a href="/about-us">NOSOTROS</a></li>
-        </ul>
-        <div class="carrito">
-            <button id="boton"><a href="/productos/productCart"><i class="fas fa-shopping-cart"></i></a></button>
-        </div>
-    </nav>
-</header>
+    <%- include("partials/header.ejs") %>
 <main>   
     <form action="/" method="GET">
         <br/>       
         <nav>
-        <h2>Agregar o editar productos</h2>
+        <h2>EDITAR PRODUCTO</h2>
         <div class="nombre">         
             <label for="name"></label>
             <input placeholder="Nombre del producto" type="text" name="nombre" id="nombre">
@@ -104,44 +64,9 @@
         </div>       
         </nav>
     </form>    
-</main>  
-<footer>
-    <div class="sinCopyright">
-<div class="primeraParte">
-    <section class= informacionLegal>
-        <h1>INFORMACIÓN LEGAL</h1>
-        <ul>
-            <li><a href=/informacion-legal >Aviso Legal</a></li>
-            <li><a href=/informacion-legal >Politica de privacidad</a></li>
-            <li><a href=/informacion-legal >Politica de cookies</a></li>
-            <li><a href=/informacion-legal >Configuración de cookies</a></li>
-            <li><a href=/informacion-legal >Términos y condiciones</a></li>
-        </ul>
-    </section>
-
-    <section class= "asesoramiento">
-        <h1>ASESORAMIENTO</h1>
-        <ul>
-            <li><a href=/about-us >Quiénes somos</a></li>
-            <li><a href=/ayuda >Ayuda</a></li>
-            <li><a href=/contacto >Contacto</a></li>
-        </ul>
-    </section>
-</div>
-    <section class="redes">
-        <h5>Encontranos también en:</h5>
-        <i class="fab fa-whatsapp"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook"></i>
-    </section>
-</div>
-    <section class="Copyright">
-        
-        <p>Copyright © 2020-2022 GeekStore S.R.L.</p>
-
-    </section>
-    
-</footer>     
+</main> 
+ 
+<%- include("partials/footer.ejs") %>
 </body>
 </html>
 

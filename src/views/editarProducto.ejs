@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/admin.css">
+<body>
+    <%- include("partials/header.ejs") %>
+<main>  
+   
+    <form action="/productos/editar-producto/2" method="GET">
+        <br/>       
+        <nav>
+            <h2>EDITAR PRODUCTO</h2>
+            <form action="/" method="GET">
+            <label>CODIGO:</label>
+            <input placeholder="" type="text" id="codigo" required>          
+            <ul>      
+            <input type="submit" name="submit" id="agregar" value="ENVIAR"> </input>
+            <br/>
+            <input type="reset" name="reset" id="borrar" value="BORRAR"> </input>
+            </ul>
+           </form> 
+        
+        
+</main> 
+ 
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
+
