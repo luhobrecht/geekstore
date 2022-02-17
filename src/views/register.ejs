@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/register.css">
+<body>
+    <%- include("partials/header.ejs") %>
+<main>   
+    <form action="/" method="GET" enctype="multipart/form-data">
+        <br/>       
+        <nav>
+        <h2>¡Registrate acá!</h2>
+        <div class="nombre">         
+            <label for="name"></label>
+            <input placeholder="Nombre y apellido" type="text" name="nombre" id="nombre" pattern="[A-Za-z ]{1,32}">
+            <label for="user"></label>
+            <input placeholder="Nombre de usuario" type="text" name="user" id="user" required>
+            <label></label>
+            <input placeholder="Correo electrónico" type="text" name="email" id="email" required> 
+        </div>                    
+        <div class="fechaNacimiento">
+           <h3>Fecha de Nacimiento</h3>
+            <input placeholder="Fecha de Nacimiento" type="date" name="fechaNacimiento" id="fechaNacimiento" 
+            min="1910-01-01" max="2005-01-01"required>          
+            <br/>         
+            <input placeholder="Domicilio" type="text" name="domicilio" id="domicilio">
+        </div>       
+           
+        </div>
+        <div class="intereses">
+            <h3 class="preg-intereses">¿Cuáles son tus series/pelis favoritas?</h3>    
+            <p><input type="checkbox" id = "sheldom" name="sheldom" value="sheldom" >
+            <label for="sheldom">Big Bang Theory</label></p>            
+            <p><input type="checkbox" id="trones" name="trones" value="trones">
+            <label for="trones">Game Of Thrones</label></p>           
+            <p><input type="checkbox" id="spiderman" name="supiderman" value="spiderman">
+            <label for="spiderman">Spiderman</label></p>            
+            <p><input type="checkbox" id ="superman" name="superman" value="superman">
+            <label for="superman">Superman</label></p>               
+        </div>  
+        <h3 class="foto-user">Foto de usuario</h3>   
+        <div>
+        <input type="file" name="archivo" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+        </div>
+        <div class="clave">
+            <p><input placeholder="Contraseña" type="password" name="password" id="password" required></p>
+            <br/>
+            <p><input placeholder="Confirmar contraseña" type="password" name="password_confirm" id="password_confirm" required></p>  
+        </div>
+        <br/> 
+        <div class="submit">      
+            <input type="submit" name="submit" id="enviar" value="ENVIAR"> </input>
+            <br/>
+            <input type="reset" name="reset" id="borrar" value="BORRAR"> </input>
+            <br/>
+            <a href="/"><button id="vuelvo">Volver a Pagina Principal</button></a>
+        </div>       
+        </nav>
+    </form>    
+</main>  
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
+

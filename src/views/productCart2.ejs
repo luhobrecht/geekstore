@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/productCart2.css">
+<body>
+    <%- include("partials/header.ejs") %>
+<main>
+    <form action="/productos/productCart/confirmCompra" method="GET">
+    <h1>Tu carrito de compras</h1>
+    <div class="subtitulo">
+        <p class="subtitulo-1">Gestiona tus compras</p>
+         <p>Finalizacion de compra</p>
+    </div>
+    <article class="main-article">
+        <img class="producto" src="/img/remera-big-bang.png" alt="Remera" >
+        <nav>
+        <p>Remera Big Bang Theory</p>
+        <p>En Stock</p>
+        <p>Cantidad: 1</p>
+        <h2 class="total">TOTAL: $1000</h2>
+        <button class="boton-comprar" type="submit" >CONFIRMAR COMPRA</button>
+        </nav> 
+    </article>
+    <h3 id="subtitulo-2">Tipo de envío</h3>
+    <article class="tipo-envio">             
+                 <label for="tipo-envio">Premium</label>
+                <input type="radio" name="tipo-envio" value="Premium" required>
+                <label for="tipo-envio">Standard</label>
+                <input type="radio" name="tipo-envio" value="Standard" required>
+    </article>
+    <h3 id="subtitulo-2">Método de pago</h3>
+    <article class="pago">
+        <div id="form">
+             <div>
+                <input type="text" name="banco" placeholder="Entidad financiera" required>  
+            </div>
+            <div>
+                <input type="tel" name="numero" placeholder="Numero de tarjeta " required>  
+            </div>
+            <div>
+                <input type="text" name="nombre" placeholder="Nombre y Apellido del titular" required>  
+            </div>
+            <div>
+                <input type="text" name="cauducidad" placeholder="mm/aa"  required>  
+            </div>
+            <div>
+                <input type="text" name="codigo-seguridad" placeholder="CCV" required>  
+            </div>
+        </div>
+    </article>
+</form>
+</main>
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
