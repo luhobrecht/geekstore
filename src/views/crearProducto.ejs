@@ -5,7 +5,7 @@
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/" method="GET">
+    <form action="/productos/crear-producto" method="POST">
         <br/>       
         <nav>
         <h2>Crear producto</h2>
@@ -14,11 +14,10 @@
             <input placeholder="Nombre del producto" type="text" name="nombre" id="nombre">
             <label for="description"></label>
             <textarea placeholder="Descripción del producto" name="description" id="description"></textarea>
-        </div>                    
-        </div>  
+        </div>                     
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
-        <input type="file" name="archivo" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
         </div>
         <label>Categoria:</label> 
             <select name="categoria">

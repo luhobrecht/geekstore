@@ -1,0 +1,134 @@
+[
+        {
+                "id": "0",
+                "nombre": "Remera GoT",
+                "precio": "1000",
+                "descripcion": "Remera de Game of Thrones",
+                "categoria": "Game Of Thrones",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/remeraGOT.png",
+                "descuento": 20
+        },
+        {
+                "id": 1,
+                "nombre": "Gorra GoT",
+                "precio": "800",
+                "descripcion": "Gorra de Game of Thrones",
+                "categoria": "Game Of Thrones",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/gorraGoT1.png",
+                "descuento": 15
+        },
+        {
+                "id": 2,
+                "nombre": "Mate GoT",
+                "precio": "1200",
+                "descripcion": "Mate de Game of Thrones",
+                "categoria": "Game Of Thrones",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/mateGoT.png",
+                "descuento": 10
+        },
+        {
+                "id": 3,
+                "nombre": "Remera BigBang",
+                "precio": "1000",
+                "descripcion": "Remera de The Big Bang Theory",
+                "categoria": "The Big Bang Theory",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/remera-big-bang.png",
+                "descuento": 20
+        },
+        {
+                "id": 4,
+                "nombre": "Gorra BigBang",
+                "precio": "800",
+                "descripcion": "Gorra de The Big Bang Theory",
+                "categoria": "The Big Bang Theory",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/gorraBigBang.png",
+                "descuento": 15
+        },
+        {
+                "id": 5,
+                "nombre": "Mate BigBang",
+                "precio": "1200",
+                "descripcion": "Mate de The Big Bang Theory",
+                "categoria": "The Big Bang Theory",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/mateBigBang.png",
+                "descuento": 10
+        },
+        {
+                "id": 6,
+                "nombre": "Remera Spiderman",
+                "precio": "1000",
+                "descripcion": "Remera de Spiderman",
+                "categoria": "Spiderman",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/remeraSpiderman.png",
+                "descuento": 20
+        },
+        {
+                "id": 7,
+                "nombre": "Gorra Spiderman",
+                "precio": "800",
+                "descripcion": "Gorra de Spiderman",
+                "categoria": "Spiderman",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/gorraSpiderman.png",
+                "descuento": 15
+        },
+        {
+                "id": 8,
+                "nombre": "Mate Spiderman",
+                "precio": "1200",
+                "descripcion": "Mate de Spiderman",
+                "categoria": "Spiderman",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/mateSpiderman.png",
+                "descuento": 10
+        },
+        {
+                "id": 9,
+                "nombre": "Remera Superman",
+                "precio": "1000",
+                "descripcion": "Remera de Superman",
+                "categoria": "Superman",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/remeraSuperman.png",
+                "descuento": 20
+        },
+        {
+                "id": 10,
+                "nombre": "Gorra Superman",
+                "precio": "800",
+                "descripcion": "Gorra de Superman",
+                "categoria": "Superman",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/gorraSuperman.png",
+                "descuento": 15
+        },
+        {
+                "id": 11,
+                "nombre": "Mate Superman",
+                "precio": "1200",
+                "descripcion": "Mate de Superman",
+                "categoria": "Superman",
+                "colores": "azul",
+                "talles": "xl",
+                "img": "./img/mateSuperman.png",
+                "descuento": 10
+        }
+]
