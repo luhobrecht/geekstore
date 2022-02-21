@@ -10,20 +10,21 @@
             <button type="submit" aria-placeholder="fa fa-search"><i class="fa fa-search"></i></button>                
         </div>
     </section>    
-    <br>
+    <b>
     <section class="productosRelacionados">
         <h3 class="subtitulo">Nuestros productos:</h3>
         <div class="productos">
             <% productos.forEach(function(producto){ %>
+        <article class="product1">
             <button id="producto"><a href="/productos/productDetail/<%= producto.id%>">
-        <article class="product">
             <img src= "<%= producto.img%> ">
             <div class="articulo">
             <p class="precio">$ <%= producto.precio%></p>
-            <p class="descuento"><%= producto.descuento%> %</p>
+            <p class="descuento"><%= producto.descuento%> % OFF</p>
             <h4 class="descripciones"> <%= producto.descripcion%></h4>
             </div>
         </article>    
+        </a></button> 
         <% }) %>  
         </div>
     </section>

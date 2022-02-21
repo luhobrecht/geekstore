@@ -150,18 +150,19 @@ div.burger-menu i{
 }
 /*termina el header*/
 /*empieza el main*/
-main{
-    width: 100%;
-    height: 10%;
-    display: flex; 
-    justify-content: center;
-}
 
 main nav h2{
-    font-size: 20px;
+    font-size: 25px;
     color: #E07A5F;
-    text-align: left;   
-    padding-right: 20px; 
+    text-align: center;   
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+main form {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main nav {
@@ -171,6 +172,7 @@ main nav {
     padding: 60px;
     background-color:#FFF;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    justify-content: center;
 }
 
 main nav div.loginU{
@@ -189,7 +191,7 @@ main nav div.loginU #user{
     border-radius: 10px;
     color: #383536;
     background-color:#F4F1DE;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 main nav div.loginU #password{
@@ -200,6 +202,7 @@ main nav div.loginU #password{
     border-radius: 10px;
     color: #383536;
     background-color:#F4F1DE;
+    margin-bottom: 20px;
 }
 
  main nav div.submitMasEnviar{    
@@ -227,18 +230,23 @@ main nav div.loginU #password{
     border: 1px solid #9EE8A1;
     background-color: #9EE8A1;
 }
-#vuelvo{      
-    width: 100%;  
-    height: auto;  
+
+main a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+main #vuelvo{      
     font-size: 1rem;
     border-radius: 5px;  
-    text-align: center; 
     background-color: #f2cc8f;        
     color:white;   
     border: 1px solid #f2cc8f;
-    padding: 10px;
-    align-self:center;
+    padding: 10px;  
+    margin-bottom: 30px;
 }
+
 #vuelvo:hover{
     border: 1px solid #f0c175;
     background-color: #f0c175;
@@ -248,14 +256,17 @@ main nav div.loginU #password{
 #boton {
     font-size: 14px;
     color: #FFF;
-    padding: 5px;
+    padding: 10px;
     background-color: white;
+    border: none
 }
 
-#boton a {
+#boton a{
     text-decoration: none;
     color:#383536
 }
+
+
 /*empieza el footer*/
  
 footer{
