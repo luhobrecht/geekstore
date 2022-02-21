@@ -13,7 +13,7 @@
             <label for="name"></label>
             <input placeholder="Nombre del producto" type="text" name="nombre" id="nombre">
             <label for="description"></label>
-            <textarea placeholder="Descripción del producto" name="description" id="description"></textarea>
+            <textarea placeholder="Descripción del producto" name="descripcion" id="description"></textarea>
         </div>                     
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
@@ -53,7 +53,9 @@
             <label for="xl">XL</label></p>              
         <br/>         
             <label for="precio"></label>
-            <input placeholder="Precio" type="text" name="precio" id="precio">
+            <input placeholder="Precio" type="number" name="precio" id="precio">
+            <input placeholder="Descuento" type="number" name="descuento" id="descuento" min="0" max="100" >
+
         <div class="agregar">      
             <input type="submit" name="submit" id="agregar" value="CREAR PRODUCTO"> </input>
             <br/>

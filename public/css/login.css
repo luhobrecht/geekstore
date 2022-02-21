@@ -266,7 +266,12 @@ main #vuelvo{
     color:#383536
 }
 
-
+h3{
+    color: darkblue;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 5px;
+}
 /*empieza el footer*/
  
 footer{

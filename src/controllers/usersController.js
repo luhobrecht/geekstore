@@ -3,7 +3,7 @@ const path = require ("path");
 const fs= require("fs");
 
 function findAll(){
-    let data = fs.readFileSync(path.join(__dirname, "../data/user.json"), "utf-8")
+    let data = fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8")
     let usuarios = JSON.parse(data);
     return usuarios;
 }
@@ -12,7 +12,12 @@ function writeFile(array){
     let string = JSON.stringify(array, null, 8);
     fs.writeFileSync(path.join(__dirname, "../data/users.json"), string);
 }
-const userController = {
+
+const usersController = {
+    index: (req,res) => {
+        const users = findAll();
+        res.render("usuarios", {users: users})
+    },
     crear: (req, res) => {
         res.render("register");
     },
@@ -20,7 +25,7 @@ const userController = {
         res.render("login");
     },
 
-    guardar:(req,res) =>{
+    guardar: (req, res) => {
 
             let users = findAll();
     
@@ -31,19 +36,22 @@ const userController = {
                 email: req.body.email,
                 birthDate: req.body.birthdate,
                 domicilio: req.body.domicilio,
-                img: req.body.archivo,
+                ciudad: req.body.ciudad,
+                provincia: req.body.provincia,
+                img: req.body.img,
                 password: req.body.password,
-                passwordConfirm: req.body.password_confirm
+                passwordConfirm: req.body.password_confirm,
+                intereses: req.body.intereses
             }
     
             users.push(newUser);
             
             writeFile(users);
     
-            res.redirect("/login")
+            res.redirect("/users/login")
     }
 }
 
 
 
-module.exports = userController;
+module.exports = usersController;

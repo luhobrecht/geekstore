@@ -26,8 +26,8 @@ const productController = {
 
         let newProduct = {
             id: products.length + 1,
-            nombre: req.body.name,
-            descripcion: req.body.description,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
             categoria: req.body.categoria,
             colores: req.body.color,
             talles: req.body.talle,

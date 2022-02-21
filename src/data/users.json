@@ -1,56 +1,46 @@
 [
-
-{
-    "id":1,
-    "Nombre":"Maria",
-    "Apellido":"Gonzalez",
-    "Nombre de usuariio":"ARYA.STARKGOD",
-    "Correo electronico":"mari.gonzalez@hotmail.com",
-    "Fecha de nacimiento":"25/08/90",
-    "Provincia":"Mendoza",
-    "Ciudad":"Capital",
-    "Serie favorita":"Game of Thrones",
-    "Contraseña":"Mari123"    
-},
-
-{   "id":1,
-    "Nombre":"Manuel",
-    "Apellido":"Gomez",
-    "Nombre de usuariio":"manug@yahoo.com.ar",
-    "Correo electronico":"manug@yahoo.com.ar",
-    "Fecha de nacimiento":"05/04/93",
-    "Provincia":"Buenos Aires",
-    "Ciudad":"Suipacha",
-    "Serie/peli favorita":"Spider Man",
-    "Contraseña":"DoctorOctopus"
-},
-
-{   "id":3,
-    "Nombre":"Francisco",
-    "Apellido":"Lombardo",
-    "Nombre de usuariio":"Lomba123",
-    "Correo electronico":"F.Lombardo@gmail.com",
-    "Fecha de nacimiento":"14/07/88",
-    "Provincia":"Buenos Aires",
-    "Ciudad":"Cañuelas",
-    "Serie/peli favorita":"Big Ban Theory",
-    "Contraseña":"Sheldon123"
-},
-
-{
-
-    "id":4,
-    "Nombre":"Estefania",
-    "Apellido":"Martinez",
-    "Nombre de usuariio":"DarkSuperWoman",
-    "Correo electronico":"estefania_m@hotmail.com",
-    "Fecha de nacimiento":"09/07/95",
-    "Provincia":"Buenos Aires",
-    "Ciudad":"Navarro",
-    "Serie/peli favorita":"Superman",
-    "Contraseña":"Marvel123"
-
-}
-
-
+        {
+                "id": 1,
+                "name": "Maria Gonzalez",
+                "user": "ARYA.STARKGOD",
+                "email": "mari.gonzalez@hotmail.com",
+                "birthDate": "25/08/90",
+                "provincia": "Mendoza",
+                "ciudad": "Capital",
+                "intereses": "Game of Thrones",
+                "password": "Mari123"
+        },
+        {
+                "id": 2,
+                "name": "Manuel Gomez",
+                "user": "manug@yahoo.com.ar",
+                "email": "manug@yahoo.com.ar",
+                "birthDate": "05/04/93",
+                "provincia": "Buenos Aires",
+                "ciudad": "Suipacha",
+                "intereses": "Spiderman",
+                "password": "Marvel123"
+        },
+        {
+                "id": 3,
+                "name": "Francisco Lombardo",
+                "user": "Lomba123",
+                "email": "F.lombardo@gmail.com",
+                "birthDate": "14/07/88",
+                "provincia": "Buenos Aires",
+                "ciudad": "Cañuelas",
+                "intereses": "Big Bang",
+                "password": "Sheldon123"
+        },
+        {
+                "id": 4,
+                "name": "Estefania Martinez",
+                "user": "DarkSuperWoman",
+                "email": "estefania_m@hotmail.com",
+                "birthDate": "09/07/95",
+                "provincia": "Buenos Aires",
+                "ciudad": "Navarro",
+                "intereses": "Superman",
+                "password": "estefi001"
+        }
 ]

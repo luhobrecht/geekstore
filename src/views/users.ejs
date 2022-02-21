@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/register.css">
+<body>
+    <%- include("partials/header.ejs") %>
+<main>   
+    <section class="search-bar">
+        <div class="form" action="#" method="GET">
+            <input type="search" name="busqueda" placeholder="Buscar productos, licencias y más">
+            <button type="submit" aria-placeholder="fa fa-search"><i class="fa fa-search"></i></button>                
+        </div>
+    </section>    
+    <section class="userList">
+        <h3 class="subtitulo">Usuarios:</h3>
+        <div class="users">
+            <% users.forEach(function(user){ %>
+        <article>
+            <button id="boton"><a href="/productos/productDetail/<%= user.id%>">
+            <img src= "<%= user.img%> ">
+            <div class="user1">
+            <p class="Nombre y Apellido">Nombre y apellido: <%= user.name%></p>
+            <p class="email">Correo Electrónico: <%= user.email%></p>
+            <p class="nacimiento"> Fecha de Nacimiento: <%= user.birthDate%></p>
+            <p class="direccion"> Dirección: <%= user.domicilio%></p>
+            <p class="ciudad"> Ciudad: <%= user.ciudad%></p>
+            <p class="provincia"> Provincia: <%= user.provincia%></p>
+            <p class="intereses"> Intereses: <%= user.intereses%></p>
+            <p class="user"> Usuario: <%= user.user%></p>
+            <p class="password"> Contraseña: <%= user.password %></p>
+
+            </div>
+        </article>    
+        </a></button> 
+        <% }) %>  
+        </div>
+    </section>
+</main>  
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
+

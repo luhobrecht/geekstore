@@ -260,7 +260,7 @@ h2{
 
 
 
-#nombre, #precio{
+#nombre, #precio, #descuento{
     width: 70%;  
     height: auto;
     margin-top: 5px;

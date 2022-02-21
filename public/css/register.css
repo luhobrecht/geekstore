@@ -197,7 +197,7 @@ h2{
   margin-bottom: 20px;
 }
 
-#nombre, #user, #email, #domicilio, #fechaNacimiento, #password, #password_confirm {
+#ciudad, #provincia, #name, #user, #email, #domicilio, #fechaNacimiento, #password, #password_confirm {
     width: 70%;  
     height: auto;
     margin-top: 5px;

@@ -5,42 +5,45 @@
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/register" method="post" enctype="multipart/form-data">
+    <form action="/users/register" method="POST">
         <br/>       
         <nav>
         <h2>¡Registrate acá!</h2>
         <div class="nombre">         
             <label for="name"></label>
-            <input placeholder="Nombre y apellido" type="text" name="name" id="name" pattern="[A-Za-z ]{1,32}">
-            <label for="user"></label>
-            <input placeholder="Nombre de usuario" type="text" name="user" id="user" required>
+            <input placeholder="Nombre y apellido" type="text" name="name" id="name" >
             <label></label>
             <input placeholder="Correo electrónico" type="text" name="email" id="email" required> 
         </div>                    
         <div class="fechaNacimiento">
            <h3>Fecha de Nacimiento</h3>
-            <input placeholder="Fecha de Nacimiento" type="date" name="birthdate" id="birthdate" 
+            <input placeholder="Fecha de Nacimiento" type="date" name="birthDate" id="birthdate" 
             min="1910-01-01" max="2005-01-01"required>          
             <br/>         
             <input placeholder="Domicilio" type="text" name="domicilio" id="domicilio">
+            <input placeholder="Ciudad" type="text" name="ciudad" id="ciudad">
+            <input placeholder="Provincia" type="text" name="provincia" id="provincia">
+
         </div>       
            
         </div>
         <div class="intereses">
             <h3 class="preg-intereses">¿Cuáles son tus series/pelis favoritas?</h3>    
-            <p><input type="checkbox" id = "sheldon" name="sheldom" value="sheldom" >
+            <p><input type="checkbox" id = "sheldon" name="intereses" value="Big Bang" >
             <label for="sheldom">Big Bang Theory</label></p>            
-            <p><input type="checkbox" id="trones" name="trones" value="trones">
+            <p><input type="checkbox" id="trones" name="intereses" value="Game of Thrones">
             <label for="trones">Game Of Thrones</label></p>           
-            <p><input type="checkbox" id="spiderman" name="supiderman" value="spiderman">
+            <p><input type="checkbox" id="spiderman" name="intereses" value="Spiderman">
             <label for="spiderman">Spiderman</label></p>            
-            <p><input type="checkbox" id ="superman" name="superman" value="superman">
+            <p><input type="checkbox" id ="superman" name="intereses" value="Superman">
             <label for="superman">Superman</label></p>               
         </div>  
         <h3 class="foto-user">Foto de usuario</h3>   
         <div>
-        <input type="file" name="archivo" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
         </div>
+        <label for="user"></label>
+            <input placeholder="Nombre de usuario" type="text" name="user" id="user" required>
         <div class="clave">
             <p><input placeholder="Contraseña" type="password" name="password" id="password" required></p>
             <br/>
