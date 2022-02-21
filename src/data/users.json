@@ -1,0 +1,56 @@
+[
+
+{
+    "id":1,
+    "Nombre":"Maria",
+    "Apellido":"Gonzalez",
+    "Nombre de usuariio":"ARYA.STARKGOD",
+    "Correo electronico":"mari.gonzalez@hotmail.com",
+    "Fecha de nacimiento":"25/08/90",
+    "Provincia":"Mendoza",
+    "Ciudad":"Capital",
+    "Serie favorita":"Game of Thrones",
+    "Contraseña":"Mari123"    
+},
+
+{   "id":1,
+    "Nombre":"Manuel",
+    "Apellido":"Gomez",
+    "Nombre de usuariio":"manug@yahoo.com.ar",
+    "Correo electronico":"manug@yahoo.com.ar",
+    "Fecha de nacimiento":"05/04/93",
+    "Provincia":"Buenos Aires",
+    "Ciudad":"Suipacha",
+    "Serie/peli favorita":"Spider Man",
+    "Contraseña":"DoctorOctopus"
+},
+
+{   "id":3,
+    "Nombre":"Francisco",
+    "Apellido":"Lombardo",
+    "Nombre de usuariio":"Lomba123",
+    "Correo electronico":"F.Lombardo@gmail.com",
+    "Fecha de nacimiento":"14/07/88",
+    "Provincia":"Buenos Aires",
+    "Ciudad":"Cañuelas",
+    "Serie/peli favorita":"Big Ban Theory",
+    "Contraseña":"Sheldon123"
+},
+
+{
+
+    "id":4,
+    "Nombre":"Estefania",
+    "Apellido":"Martinez",
+    "Nombre de usuariio":"DarkSuperWoman",
+    "Correo electronico":"estefania_m@hotmail.com",
+    "Fecha de nacimiento":"09/07/95",
+    "Provincia":"Buenos Aires",
+    "Ciudad":"Navarro",
+    "Serie/peli favorita":"Superman",
+    "Contraseña":"Marvel123"
+
+}
+
+
+]

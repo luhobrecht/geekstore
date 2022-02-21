@@ -5,13 +5,13 @@
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/" method="GET" enctype="multipart/form-data">
+    <form action="/register" method="post" enctype="multipart/form-data">
         <br/>       
         <nav>
         <h2>¡Registrate acá!</h2>
         <div class="nombre">         
             <label for="name"></label>
-            <input placeholder="Nombre y apellido" type="text" name="nombre" id="nombre" pattern="[A-Za-z ]{1,32}">
+            <input placeholder="Nombre y apellido" type="text" name="name" id="name" pattern="[A-Za-z ]{1,32}">
             <label for="user"></label>
             <input placeholder="Nombre de usuario" type="text" name="user" id="user" required>
             <label></label>
@@ -19,7 +19,7 @@
         </div>                    
         <div class="fechaNacimiento">
            <h3>Fecha de Nacimiento</h3>
-            <input placeholder="Fecha de Nacimiento" type="date" name="fechaNacimiento" id="fechaNacimiento" 
+            <input placeholder="Fecha de Nacimiento" type="date" name="birthdate" id="birthdate" 
             min="1910-01-01" max="2005-01-01"required>          
             <br/>         
             <input placeholder="Domicilio" type="text" name="domicilio" id="domicilio">

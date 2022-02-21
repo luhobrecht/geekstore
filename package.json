@@ -12,5 +12,18 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "GEEK STORE",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luhobrecht/grupo_6_geekstore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luhobrecht/grupo_6_geekstore/issues"
+  },
+  "homepage": "https://github.com/luhobrecht/grupo_6_geekstore#readme"
 }
