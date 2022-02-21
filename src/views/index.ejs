@@ -51,36 +51,18 @@
     <section class="productosRelacionados">
         <h3 class="subtitulo">Algunos de nuestros productos:</h3>
         <div class="productos">
-                <button id="producto"><a href="/productos/productDetail/1">
-            <article class="spider">
-                <img src="/img/gorraSpiderman.png" alt="Imágen de una gorra de Spiderman">
+            <% productos.forEach(function(producto){ %>
+            <article class="product">
+                <button id="producto"><a href="/productos/productDetail/<%= producto.id%>">
+                <img src="<%= producto.img%>" >
             <div class="articulo">
-                <p class="precio">$1000</p>
-                <p class="descuento">20% OFF</p>
-                <h4 class="descripciones">Gorra de Spiderman</h4>
+                <p class="precio">$ <%= producto.precio%></p>
+                <p class="descuento"><%= producto.descuento%> % OFF</p>
+                <h4 class="descripciones"><%= producto.descripcion%></h4>
             </div>
             </article>
-                </a></button>  
-                <button id="producto"><a href="/productos/productDetail/2">
-            <article>
-                <img src="/img/mateBigBang.png" alt="Imagen de un mate de Big Bang Theory">
-            <div class="articulo">
-                <p class="precio">$1000</p>
-                <p class="descuento">20% OFF</p>
-                <h4 class="descripciones">Mate de Big Bang Theory</h4>
-            </div>
-            </article>
-            </a></button> 
-            <button id="producto"><a href="/productos/productDetail/3">
-            <article>
-                <img src="/img/remeraGOT.png" alt="Imágen de una remer de Game Of Thrones">
-            <div class="articulo">
-                <p class="precio">$800</p>
-                <p class="descuento">10% OFF</p>
-                <h4 class="descripciones">Remera de Game Of Thrones</h4>
-            </div>
-            </article> 
-            </a></button>        
+            </a></button>  
+            <% }) %>
         </div>
     </section>
     </main>

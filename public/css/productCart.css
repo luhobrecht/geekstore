@@ -153,6 +153,13 @@
     margin: 0 auto
   }
 
+  main h1{
+    font-size: 25px;
+    padding: 40px 0px;
+    font-weight: 300;
+    text-align: center;
+  }
+
   main .subtitulo{
     display:flex;
     font-size: 10px   
@@ -175,12 +182,10 @@
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     padding-bottom: 20px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-evenly
   }
 
-  main .main-article .producto{
-    width: 50%
-  }
+
 
   main .main-article p{
     padding-bottom: 15px
@@ -188,7 +193,6 @@
 
   main .main-article nav{
     align-self: center;
-    width: 40%;
   }
 
   main .main-article .total{
@@ -210,12 +214,12 @@
     }
 
   main .main-article .boton-comprar:hover{
-    padding:20px;
+    padding:15px;
     border-radius: 5px;
     background-color: #9EE8A1;
     color:white;
     border: #9EE8A1;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     margin-top: 20px
     }
@@ -373,6 +377,15 @@
     main .productosRelacionados article{
     width: 100%;
     }
+    main .main-article{
+      flex-direction: column;
+    }
+    main .main-article img{
+      align-self: center;
+      padding-bottom: 40px;
+      width: 100%;
+    }
+
   }
 
 
