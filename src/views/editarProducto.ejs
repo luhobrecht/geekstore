@@ -5,7 +5,7 @@
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/productos/editar-producto/<%= producto.id %>" method="POST">
+    <form action="/productos/<%= producto.id %>/editar?_method=PUT" method="POST">
         <br/>       
         <nav>
         <h2>EDITAR PRODUCTO</h2>
@@ -13,14 +13,14 @@
             <label for="name"></label>
             <input placeholder="Nombre del producto" type="text" name="nombre" id="nombre" value="<%= producto.nombre %>">
             <label for="description"></label>
-            <textarea name="description"  id="description"><%= producto.descripción %></textarea>
+            <textarea name="description"  id="description"><%= producto.descripcion%></textarea>
         </div>                    
         </div>  
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
         <input type="file" value= "<%= producto.img %>" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
         </div>
-        <label>Categoria:</label> 
+        <label class="categoria">Categoria:</label> 
             <select name="categoria" >
                  <option value="Mates">Mates</option>
                  <option value="Gorras">Gorras</option>
@@ -53,8 +53,11 @@
             <p><input type="checkbox" id = "talle" name="talle" value="xl" >
             <label for="xl">XL</label></p>              
         <br/>         
-            <label for="precio"></label>
-            <input placeholder="Precio" type="text" name="precio" id="precio" value="<%= producto.precio %>">
+            <label for="precio" class="precio"> Precio </label>
+            <input placeholder="Precio" type="number" name="precio" id="precio" value="<%= producto.precio %>">
+            <label for="descuento" class="descuento"> Descuento </label>
+            <input placeholder="Descuento" type="number" name="descuento" id="descuento" value="<%= producto.descuento %>">
+
         <div class="agregar">      
             <input type="submit" name="submit" id="agregar" value="CREAR PRODUCTO"> </input>
             <br/>

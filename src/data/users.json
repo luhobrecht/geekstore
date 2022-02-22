@@ -4,11 +4,16 @@
                 "name": "Maria Gonzalez",
                 "user": "ARYA.STARKGOD",
                 "email": "mari.gonzalez@hotmail.com",
-                "birthDate": "25/08/90",
+                "domicilio": "Kings Landing 2",
                 "provincia": "Mendoza",
                 "ciudad": "Capital",
-                "intereses": "Game of Thrones",
-                "password": "Mari123"
+                "intereses": [
+                        "Big Bang",
+                        "Spiderman"
+                ],
+                "password": "Mari123",
+                "img": "",
+                "direccion": "Kings Landing 2"
         },
         {
                 "id": 2,
@@ -16,10 +21,12 @@
                 "user": "manug@yahoo.com.ar",
                 "email": "manug@yahoo.com.ar",
                 "birthDate": "05/04/93",
+                "domicilio": "Calle araña 1",
                 "provincia": "Buenos Aires",
                 "ciudad": "Suipacha",
                 "intereses": "Spiderman",
-                "password": "Marvel123"
+                "password": "Marvel123",
+                "img": ""
         },
         {
                 "id": 3,
@@ -27,10 +34,12 @@
                 "user": "Lomba123",
                 "email": "F.lombardo@gmail.com",
                 "birthDate": "14/07/88",
+                "domicilio": "Avenida Koothrapali 5",
                 "provincia": "Buenos Aires",
                 "ciudad": "Cañuelas",
                 "intereses": "Big Bang",
-                "password": "Sheldon123"
+                "password": "Sheldon123",
+                "img": ""
         },
         {
                 "id": 4,
@@ -38,9 +47,11 @@
                 "user": "DarkSuperWoman",
                 "email": "estefania_m@hotmail.com",
                 "birthDate": "09/07/95",
+                "domicilio": "Avenida Corrientes 56",
                 "provincia": "Buenos Aires",
                 "ciudad": "Navarro",
                 "intereses": "Superman",
-                "password": "estefi001"
+                "password": "estefi001",
+                "img": ""
         }
 ]
