@@ -16,7 +16,16 @@ function writeFile(array){
 const usersController = {
     index: (req,res) => {
         const users = findAll();
-        res.render("usuarios", {users: users})
+        res.render("users", {users: users})
+    },
+    detalle: (req, res) => {
+        let users = findAll();
+
+        let userFound = users.find(function(user){
+           return user.id == req.params.id
+        });
+
+        res.render("userDetail", {user: userFound});
     },
     crear: (req, res) => {
         res.render("register");
@@ -34,8 +43,8 @@ const usersController = {
                 name: req.body.name,
                 user: req.body.user,
                 email: req.body.email,
-                birthDate: req.body.birthdate,
-                domicilio: req.body.domicilio,
+                birthDate: req.body.birthDate,
+                direccion: req.body.domicilio,
                 ciudad: req.body.ciudad,
                 provincia: req.body.provincia,
                 img: req.body.img,
@@ -49,7 +58,39 @@ const usersController = {
             writeFile(users);
     
             res.redirect("/users/login")
-    }
+    },
+    editar: (req,res) => {
+        let users = findAll();
+
+        let userFound = users.find(function(user){
+            return user.id == req.params.id
+         });
+
+        res.render("editUser", {user : userFound})
+    },
+    actualizar: (req, res) => {
+        let users = findAll();
+
+        let userUpdate = users.map(function(user){
+            if(user.id == req.params.id){
+                user.name = req.body.name;
+                user.user = req.body.user;
+                user.email = req.body.email;
+                user.birthDate = req.body.birthDate;
+                user.domicilio = req.body.domicilio;
+                user.ciudad = req.body.ciudad;
+                user.provincia = req.body.provincia;
+                user.img = req.body.img;
+                user.password = req.body.password;
+                user.intereses = req.body.intereses;
+            }
+            return user;
+        })
+
+        writeFile(users);
+
+        res.redirect ("/users")
+     }        
 }
 
 

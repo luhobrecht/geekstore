@@ -12,9 +12,8 @@
         </div>
     </section>    
     <section class="userList">
-        <h3 class="subtitulo">Todos los usuarios:</h3>
+        <h3 class="subtitulo">Detalle de usuario #<%= user.id %>:</h3>
         <div class="users">
-            <% users.forEach(function(user){ %>
         <article>
             <button id="boton"><a href="/users/<%= user.id%>">
             <div class="fotoUser">
@@ -61,7 +60,6 @@
             </div>
         </article>    
         </a></button> 
-        <% }) %>  
         </div>
     </section>
 </main>  

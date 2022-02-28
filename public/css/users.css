@@ -1,4 +1,3 @@
-
 *{
     margin: 0px;
     padding: 0px;    
@@ -24,15 +23,6 @@
    color: #383536;
    font-size: 1.5em;
    background-color: #E07A5F;
-  }
-  
-  .productos #producto{
-    border: 1px solid #F4F1DE;
-    background-color: #F4F1DE;
-  }
-  
-  .productos #producto a{
-   background-color: #F4F1DE;
   }
   
   header .up-bar{
@@ -153,293 +143,223 @@
     align-items: center;
     width: 25%;
   }
-/*termina el header*/
-/*empieza el main*/
-main{
-    width: 100%;
-    height: 10%;
-    display: flex; 
-    justify-content: center;
-}
+  
+  main{
+    width: 90%;
+    margin: 0 auto;
+  }
 
-main #form{          
-    display: flex;
-    flex-direction:column;
-    background-color: #FFF;
-    width: 60%;
-    margin: 30px;
-    padding: 40px;
-    flex-wrap: wrap;    
-    align-items: center;   
+  .userList h3{
+    padding-top: 20px;
+    color: #3D405B;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .userList .users article {
+      align-self: center;
+      background-color: white;  
+      border-radius: 5px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+  .userList .users article button:hover {
+    border: 1px white solid;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    padding-bottom: 10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-main #form nav{   
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin:auto;      
-}
-
-main nav #codigo{
-  width: 70%;  
-  height: auto;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  color:#383536;
-  font-size: 14px;
-  border: 1px solid #F4F1DE;
-  background-color: #F4F1DE;
-  padding:10px;
-}
-
-main #form div{   
-    margin-top: 12px;
-    margin-bottom: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}   
-
-#form{
-    margin: 0px 2rem 0px 2rem; 
-}
-
-label {
-    color:#a19e9e
-}
-
-div.fechaNacimiento{
-    flex-direction: column;
-}
-
-div.perfil{
-    flex-direction:column;
-}
-
-div.intereses{
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: nowrap;
-    flex-direction: column;  
-}
-
-div.clave, div.submit{
-    flex-direction:column;
-}
-
-#colores, #talles{
-    margin-bottom: 10px;
-}    
-
-h3{
-    color:#E07A5F;
-    text-align: left;
-    font-weight: 300;
-    margin-bottom: 0px;
-}
-
-main nav div .preg-colores{
-    margin-bottom: 25px;
-}
-
-main nav div .preg-talles{
-    margin-bottom: 25px;
-}
-
-main nav .foto-archivo{
-    margin-bottom: 10px;
-    margin-top: 25px;
-}
-
-h2{
-  color:#E07A5F;
-  margin-bottom: 20px;
-}
-
-.preg-colores{
-  padding-top: 15px;
-}
-
-.categoria{
-  padding-bottom: 15px;
-}
-
-#nombre, #precio, #descuento{
-    width: 70%;  
-    height: auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    color:#383536;
-    font-size: 14px;
-    border: 1px solid #F4F1DE;
-    background-color: #F4F1DE;
-    padding:20px;
-}
-
-.precio, .descuento {
-  color:#E07A5F;
-  text-align: left;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-#archivo{
+  .userList .users article button {
+    border: 1px white solid;
     width: 100%;
-    height: auto;
-    color: white;
-    font-weight: bold; 
+    background-color: white;
     border-radius: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #6EDD72;
-    padding: 5px;
+    padding-bottom: 10px;
 }
 
-#agregar, #borrar{    
-    background-color: #6EDD72;
-    width: 60%;
-    height: auto;
-    color: white;
-    font-weight: bold; 
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #6EDD72;
-    padding: 10px;
+.fotoUser{
+    margin-top: 10px;
+    width: 30%;
 }
 
-#agregar:hover , #borrar:hover{
-    border: 1px solid #9EE8A1;
-    background-color: #9EE8A1;
+.user1{
+    width: 50%;
+
 }
 
-#vuelvo{      
-    width: 100%;  
-    height: auto;  
-    font-size: 1rem;
-    border-radius: 5px;  
-    text-align: center; 
-    background-color: #f2cc8f;        
-    color:white;   
-    border: 1px solid #f2cc8f;
-    padding: 10px;
-    align-self:center;
+#title1 {
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: left;
 }
 
-#vuelvo:hover{
-    border: 1px solid #f0c175;
-    background-color: #f0c175;
-    color:#383536
+#info{
+    font-weight: 300;
+    font-size: 12px;
+    color: #383536;
+    text-align: center;
+    text-align: left;
 }
 
-#borrarProducto{
-  align-self: flex-end;
-  position: absolute;
-  margin: 40px;
+.userList .users article button a{
+    align-self: center;
+    background-color: white;
+    border: 1px white solid;
+    text-decoration: none;
+    color:#383536;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#borrarProducto #eliminar{
-  background-color: #a19e9e;
-  border: #a19e9e 1px solid;
-  border-radius: 5px;
-  padding: 5px;
-  color:#FFF;
-  font-size: 12px;
-}
 
-#borrarProducto #eliminar:hover{
+  main .search-bar {
   background-color: #383536;
-  border: #383536 1px solid;
+  padding: 10px;
   border-radius: 5px;
-  padding: 5px;
-  color:#FFF;
-  font-size: 12px;
-}
+  margin-top: 20px;
+  }
+  
+  main .search-bar .form{
+  width: 100%;
+  text-align: center;
+  }
+  
+  main .search-bar input{
+  width: 80%;
+  border: 1px solid #F4F1DE;
+  border-radius: 5px;
+  padding: 10px;
+  }
+  
+  main .search-bar button{
+  width: 5%;
+  border: 1px solid #F4F1DE;
+  border-radius: 5px;
+  padding: 10px;
+  }
+  
+  main .search-bar input:hover{
+    background-color: #ebebeb;
+  }
+  
+  main .search-bar button:hover{
+    background-color: #E07A5F;
+  }
 
-footer{
+
+  
+  footer{
     background-color: #3D405B;
     color: #F4F1DE;
     padding: 20px;
-}
+  }
   
-.sinCopyright {
+  .sinCopyright {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+  }
   
-.sinCopyright h1{
+  .sinCopyright h1{
     font-size: 16px;
-    margin-bottom: 10px
-}
+    margin-bottom: 10px;
+  }
   
-.sinCopyright li{
+  .sinCopyright li{
     font-size: 14px;
-}
+  }
   
-.sinCopyright h5{
+  .sinCopyright h5{
     font-size: 15px;
     margin-bottom: 10px;
-    margin-top: 10px
-}
+    margin-top: 10px;
+  }
   
-.sinCopyright section i{
+  .sinCopyright section i{
     font-size: 1.5em;
-    margin-right: 20px
-}
+    margin-right: 20px;
+  }
   
-.sinCopyright .redes{
+  .sinCopyright .redes{
     padding-right: 70px;
-}
+  }
   
-footer .primeraParte{
+  footer .primeraParte{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     width: 50%;
-}
+  }
   
-footer .informacionLegal{
+  footer .informacionLegal{
     margin-bottom: 20px;
-}
-footer .primeraParte a{
+  }
+  footer .primeraParte a{
      text-decoration: none;
      color: #F4F1DE
-}
+  }
   
-.Copyright{
+  .Copyright{
     font-style: italic;
     font-size: 14px;
     text-align: end;
     margin-right: 40px;
     margin-top: 30px;
-}
+  }
   
-.primeraParte ul li{
+  .primeraParte ul li{
     list-style-type: none;
-}
- 
+  }
   
-@media (max-width: 769px){
+  
+  @media (min-width:361px){
+  main section .productos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  }
+  main .productosRelacionados .productos article{
+    width:45%
+  }
+  main .productosRelacionados .productos .product1{
+    width:45%
+  }
+  }
+  @media (max-width: 768px){
     header .mid-bar{
       display:none;
     }
     .navbar ul {
-    display:none
+      display:none;
     }
-}
+  }
   
-@media (min-width: 769px){
+  @media (min-width: 769px){
+    main .productosRelacionados .productos article {
+      width: 22%;
+    }
+    main .productosRelacionados .productos .product1 {
+      width: 30%;
+    }
     header .up-bar{
       display:flex;
       justify-content: space-between;
-      padding: 5px
+      padding: 5px;
     }
     header div.logo{
       width: 20%;
-      padding-left: 40px
+      padding-left: 40px;
     }
     .navbar .burger-menu{
       display:none;
@@ -454,7 +374,7 @@ footer .primeraParte a{
     .navbar{
       justify-content: space-around;
     }
-    .sinCopyright {
+     .sinCopyright {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -469,5 +389,4 @@ footer .primeraParte a{
     header div.login{
       width: 20%;
       align-self: center
-  }
-}
+  }}

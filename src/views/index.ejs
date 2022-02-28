@@ -53,15 +53,17 @@
         <div class="productos">
             <% productos.forEach(function(producto){ %>
             <article class="product">
-                <button id="producto"><a href="/productos/productDetail/<%= producto.id%>">
+                <button id="producto"><a href="/productos/<%= producto.id%>">
                 <img src="<%= producto.img%>" >
             <div class="articulo">
                 <p class="precio">$ <%= producto.precio%></p>
                 <p class="descuento"><%= producto.descuento%> % OFF</p>
                 <h4 class="descripciones"><%= producto.descripcion%></h4>
             </div>
+            </a></button>
+            <button id="carrito"><a href="/productos/productCart">Añadir al carrito</a></button>
             </article>
-            </a></button>  
+             
             <% }) %>
         </div>
     </section>

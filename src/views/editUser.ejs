@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/register.css">
+<body>
+    <%- include("partials/header.ejs") %>
+<main>   
+    <form action="/users/<%= user.id %>/editar?_method=PUT" method="POST">
+        <br/>       
+        <nav>
+        <h2>Editar usuario</h2>
+        <div class="nombre">         
+            <label for="name"></label>
+            <input placeholder="Nombre y apellido" type="text" name="name" id="name" value="<%=user.name %>" >
+            <label></label>
+            <input placeholder="Correo electrónico" type="text" name="email" id="email" value="<%=user.email %>" required> 
+        </div>                    
+        <div class="fechaNacimiento">
+           <h3>Fecha de Nacimiento</h3>
+            <input placeholder="Fecha de Nacimiento" type="date" name="birthDate" id="birthdate" value="<%= user.birthDate %>" 
+            min="1910-01-01" max="2005-01-01"required>          
+            <br/>         
+            <input placeholder="Domicilio" type="text" name="domicilio" id="domicilio" value="<%=user.domicilio %>">
+            <input placeholder="Ciudad" type="text" name="ciudad" id="ciudad" value="<%=user.ciudad %>">
+            <input placeholder="Provincia" type="text" name="provincia" id="provincia" value="<%=user.provincia %>">
+
+        </div>       
+           
+        </div>
+        <div class="intereses">
+            <h3 class="preg-intereses">¿Cuáles son tus series/pelis favoritas?</h3>    
+            <p><input type="checkbox" id = "sheldon" name="intereses" value="Big Bang" >
+            <label for="sheldom">Big Bang Theory</label></p>            
+            <p><input type="checkbox" id="trones" name="intereses" value="Game of Thrones">
+            <label for="trones">Game Of Thrones</label></p>           
+            <p><input type="checkbox" id="spiderman" name="intereses" value="Spiderman">
+            <label for="spiderman">Spiderman</label></p>            
+            <p><input type="checkbox" id ="superman" name="intereses" value="Superman">
+            <label for="superman">Superman</label></p>               
+        </div>  
+        <h3 class="foto-user">Foto de usuario</h3>   
+        <div>
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none" value="<%=user.img %>">        
+        </div>
+        <label for="user"></label>
+            <input placeholder="Nombre de usuario" type="text" name="user" id="user" value="<%=user.user %>" required>
+        <div class="clave">
+            <p><input placeholder="Contraseña" type="password" name="password" id="password" value="<%=user.password %>" required></p>
+
+        </div>
+        <br/> 
+        <div class="submit">      
+            <input type="submit" name="submit" id="enviar" value="ENVIAR"> </input>
+            <br/>
+            <input type="reset" name="reset" id="borrar" value="BORRAR"> </input>
+            <br/>
+            <a href="/"><button id="vuelvo">Volver a Pagina Principal</button></a>
+        </div>       
+        </nav>
+    </form>    
+</main>  
+<%- include("partials/footer.ejs") %>
+</body>
+</html>
+

@@ -154,7 +154,8 @@ main{
 }
 
 main section .productoX{
-  background-color: #fff;    
+  background-color: #fff;  
+  border-radius: 8px;  
   margin: 25px 0px;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
@@ -195,6 +196,15 @@ main .main-view .productoX .detallesProd{
   padding-top: 10px;
 }
 
+#cantidad{
+  font-size: 15px;
+  background-color: #ebebeb;
+  color:#383536;
+  padding:5px;
+  border: none;
+  border-radius: 5px;
+}
+
 main .main-view .productoX .detallesProd form{
   display: flex;
   flex-direction: column;
@@ -215,7 +225,9 @@ main .main-view .productoX .detallesProd form select{
   align-self: stretch;
   background-color: #ebebeb;
   color:#383536;
-  padding:5px
+  padding:5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .detallesProd .total{
@@ -223,7 +235,7 @@ main .main-view .productoX .detallesProd form select{
  font-size: 20px;
  margin-top: 30px;
  margin-bottom: 20px;
- color:#383536
+ color:#383536;
 }
 
 .detallesProd .enviar{

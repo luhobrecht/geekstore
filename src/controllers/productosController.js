@@ -19,6 +19,15 @@ const productController = {
         const productos = findAll();
         res.render("productos", {productos: productos})
     },
+    detalle: (req, res) => {
+        let productos = findAll();
+
+        let productoEncontrado = productos.find(function(producto){
+           return producto.id == req.params.id
+        });
+
+        res.render("productDetail", {producto: productoEncontrado});
+    },
     crear: (req,res) => {
         res.render("crearProducto");
     },
@@ -45,15 +54,6 @@ const productController = {
     },
     ofertas: (req,res) => {
         res.render("ofertas")
-    },
-    detalle: (req, res) => {
-        let productos = findAll();
-
-        let productoEncontrado = productos.find(function(producto){
-           return producto.id == req.params.id
-        });
-
-        res.render("productDetail", {producto: productoEncontrado});
     },
     carrito: (req, res) => {
         res.render("productCart");

@@ -3,11 +3,10 @@ const router = express.Router();
 const productController = require ("../controllers/productosController");
 
 router.get("/", productController.index);
+router.get("/:id", productController.detalle);
 
-router.get("/productDetail/:id", productController.detalle);
-
-router.get("/crear-producto", productController.crear);
-router.post("/crear-producto", productController.guardar);
+router.get("/crear", productController.crear);
+router.post("/crear", productController.guardar);
 
 router.get("/ofertas", productController.ofertas);
 

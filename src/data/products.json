@@ -1,6 +1,6 @@
 [
         {
-                "id": "0",
+                "id": 0,
                 "nombre": "Remera GoT",
                 "precio": "1000",
                 "descripcion": "Remera de Game of Thrones",
@@ -101,11 +101,23 @@
         {
                 "id": 9,
                 "nombre": "Remera Superman",
-                "precio": "1000",
                 "descripcion": "Remera de Superman",
-                "categoria": "Superman",
-                "colores": "azul",
-                "talles": "xl",
+                "precio": "1000",
+                "categoria": "Remeras",
+                "colores": [
+                        "black",
+                        "white",
+                        "grey",
+                        "Red",
+                        "blue"
+                ],
+                "talles": [
+                        "xs",
+                        "s",
+                        "m",
+                        "l",
+                        "xl"
+                ],
                 "img": "/img/remeraSuperman.png",
                 "descuento": 20
         },
