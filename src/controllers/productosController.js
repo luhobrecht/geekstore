@@ -1,4 +1,5 @@
 const express = require("express");
+const res = require("express/lib/response");
 const fs = require("fs");
 const path = require ("path");
 
@@ -100,8 +101,36 @@ const productController = {
 
        writeFile(productos);
 
-       res.redirect ("/productos")
+       res.redirect ("/productos");
+    },
+
+    destroy: function(id){
+        let products = this.findAll();
+
+        let productIndex = products.findIndex((product)=>{
+            return product.id == id
+        })
+
+        products.splice(productIndex, 1);
+
+        this.writeFile(products);
+
+        res.redirect("/productos");
     }
-};
+    /*otra forma mas facil
+    destroy:(req,res)=>{
+
+        let id=req.params.id;
+        let finalProducts = products.filter(product=> product.id != id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
+        res.redirect("/productos");
+
+    }
+
+
+    */
+}
+    
+
 
 module.exports = productController

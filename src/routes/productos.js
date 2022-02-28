@@ -19,6 +19,7 @@ router.get("/productCart/confirmCompra", productController.finalizar);
 
 router.get("/editar-producto/:id", productController.editar);
 router.put("/editar-producto/:id", productController.actualizar);
+router.delete("/delete/:id", productController.destroy);
 
 
 module.exports = router;
