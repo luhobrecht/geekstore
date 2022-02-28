@@ -13,4 +13,4 @@ router.post("/register", usersController.guardar);
 router.get("/:id/editar", usersController.editar);
 router.put("/:id/editar", usersController.actualizar);
 
-module.exports=router;
+module.exports = router;

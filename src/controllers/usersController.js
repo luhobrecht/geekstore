@@ -18,6 +18,7 @@ const usersController = {
         const users = findAll();
         res.render("users", {users: users})
     },
+    
     detalle: (req, res) => {
         let users = findAll();
 
@@ -27,13 +28,14 @@ const usersController = {
 
         res.render("userDetail", {user: userFound});
     },
-    crear: (req, res) => {
-        res.render("register");
-    },
+
     iniciar:(req, res) => {
         res.render("login");
     },
 
+    crear: (req, res) => {
+        res.render("register");
+    },
     guardar: (req, res) => {
 
             let users = findAll();
@@ -44,7 +46,7 @@ const usersController = {
                 user: req.body.user,
                 email: req.body.email,
                 birthDate: req.body.birthDate,
-                direccion: req.body.domicilio,
+                direccion: req.body.direccion,
                 ciudad: req.body.ciudad,
                 provincia: req.body.provincia,
                 img: req.body.img,
@@ -59,6 +61,7 @@ const usersController = {
     
             res.redirect("/users/login")
     },
+    
     editar: (req,res) => {
         let users = findAll();
 
@@ -77,11 +80,12 @@ const usersController = {
                 user.user = req.body.user;
                 user.email = req.body.email;
                 user.birthDate = req.body.birthDate;
-                user.domicilio = req.body.domicilio;
+                user.direccion = req.body.direccion;
                 user.ciudad = req.body.ciudad;
                 user.provincia = req.body.provincia;
                 user.img = req.body.img;
                 user.password = req.body.password;
+                user.password_confirm = req.body.password_confirm,
                 user.intereses = req.body.intereses;
             }
             return user;

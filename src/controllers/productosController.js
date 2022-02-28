@@ -104,16 +104,16 @@ const productController = {
        res.redirect ("/productos");
     },
 
-    destroy: function(id){
-        let products = this.findAll();
+    destroy: function(req, res){
+        let products = findAll();
 
-        let productIndex = products.findIndex((product)=>{
-            return product.id == id
+        let productIndex = products.findIndex(function(product){
+            return product.id == req.params.id
         })
 
         products.splice(productIndex, 1);
 
-        this.writeFile(products);
+        writeFile(products);
 
         res.redirect("/productos");
     }
@@ -124,10 +124,7 @@ const productController = {
         let finalProducts = products.filter(product=> product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
         res.redirect("/productos");
-
     }
-
-
     */
 }
     

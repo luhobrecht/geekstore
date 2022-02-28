@@ -16,9 +16,9 @@ router.get("/productCart/part-2", productController.carrito2);
 
 router.get("/productCart/confirmCompra", productController.finalizar);
 
-router.get("/editar-producto/:id", productController.editar);
-router.put("/editar-producto/:id", productController.actualizar);
-router.delete("/delete/:id", productController.destroy);
+router.get("/:id/editar/", productController.editar);
+router.put("/:id/editar/", productController.actualizar);
+router.delete("/:id/delete", productController.destroy);
 
 
 module.exports = router;
