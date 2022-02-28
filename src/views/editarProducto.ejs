@@ -5,7 +5,7 @@
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/productos/<%= producto.id %>/editar?_method=PUT" method="POST">
+    <form id="form" action="/productos/<%= producto.id %>/editar?_method=PUT" method="POST">
         <br/>       
         <nav>
         <h2>EDITAR PRODUCTO</h2>
@@ -66,7 +66,10 @@
             <a href="/"><button id="vuelvo">Volver a Pagina Principal</button></a>
         </div>       
         </nav>
-    </form>    
+    </form>  
+    <form id="borrarProducto" action="/productos/<%= producto.id %>/editar?_method=DELETE" method="POST">
+        <button id="eliminar">Eliminar producto</button>
+    </form>  
 </main> 
  
 <%- include("partials/footer.ejs") %>

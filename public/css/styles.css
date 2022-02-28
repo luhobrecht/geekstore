@@ -317,7 +317,8 @@ main .productosRelacionados article{
 }
 
 main section article{
-  background-color: #fff;    
+  background-color: #fff;
+  border-radius: 8px;    
   margin: 10px 0px;
 }
 
@@ -364,6 +365,42 @@ main .productosRelacionados h3{
   padding-top: 20px;
   margin-bottom: 40px;
   color: #383536
+ }
+
+ main .productosRelacionados #edit {
+   align-self: flex-end;
+   padding-right: 20px;
+   font-size: 12px;
+
+ }
+
+ main .productosRelacionados #edit a{
+  text-decoration: none;
+  color:#F4F1DE;
+  background-color: #aaaaaa;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+main .productosRelacionados #carrito {
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+main .productosRelacionados #carrito a{
+ text-decoration: none;
+ color:#383536;
+ background-color: #6EDD72;
+ padding: 5px;
+ border-radius: 3px;
+}
+
+main .productosRelacionados #carrito a:hover{
+  text-decoration: none;
+  color:#F4F1DE;
+  background-color: #9EE8A1;
+  padding: 5px;
+  border-radius: 3px;
  }
 
 main .productosRelacionados .productos .product button{

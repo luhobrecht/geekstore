@@ -27,3 +27,23 @@ Cosas a mejorar:
 -No hicimos reuniones periodicas para controlar el avance y unir criterios
 -No nos pusimos de acuerdo para el trabajo en equipo en tareas en común
 -Unificar estilos y diseño del sitio
+
+
+SPRINT 4- RETROSPECTIVA DEL SPRINT 3
+
+1.COMENZAR A HACER:
+-Reuniones periódicas
+
+2.HACER MÁS:
+-Mantener la buena comunicación.
+ 
+3.CONTINUAR HACIENDO:
+-Realizar el sprint con tiempo para poder poner en común y despejar dudas; también nos funciona mucho para entregar a tiempo y trabajar en conjunto.
+-División de tareas al inicio de sprint.
+-Más tareas en conjunto para revisar dudas y ayudarnos mutuamente.
+
+4.HACER MENOS:
+-No repasar el material antes de realizar los ejercicios.
+
+5.DEJAR DE HACER:
+-

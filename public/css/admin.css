@@ -162,19 +162,19 @@ main{
     justify-content: center;
 }
 
-main form{          
+main #form{          
     display: flex;
     flex-direction:column;
     background-color: #FFF;
     width: 60%;
-    margin: 20px;
+    margin: 30px;
     padding: 40px;
     flex-wrap: wrap;    
     align-items: center;   
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-main form nav{   
+main #form nav{   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -194,7 +194,7 @@ main nav #codigo{
   padding:10px;
 }
 
-main form div{   
+main #form div{   
     margin-top: 12px;
     margin-bottom: 12px;
     display: flex;
@@ -202,7 +202,7 @@ main form div{
     flex-direction: column;
 }   
 
-form{
+#form{
     margin: 0px 2rem 0px 2rem; 
 }
 
@@ -326,13 +326,36 @@ h2{
     padding: 10px;
     align-self:center;
 }
+
 #vuelvo:hover{
     border: 1px solid #f0c175;
     background-color: #f0c175;
     color:#383536
 }
 
+#borrarProducto{
+  align-self: flex-end;
+  position: absolute;
+  margin: 40px;
+}
 
+#borrarProducto #eliminar{
+  background-color: #a19e9e;
+  border: #a19e9e 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  color:#FFF;
+  font-size: 12px;
+}
+
+#borrarProducto #eliminar:hover{
+  background-color: #383536;
+  border: #383536 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  color:#FFF;
+  font-size: 12px;
+}
 
 footer{
     background-color: #3D405B;
