@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require ("path");
 const fs= require("fs");
+const { validationResult } = require("express-validator");
 
 
 function findAll(){
@@ -30,15 +31,23 @@ const usersController = {
         res.render("userDetail", {user: userFound});
     },
 
-    iniciar:(req, res) => {
+    acceder:(req, res) => {
         res.render("login");
     },
+    iniciar: (req,res) => {
+        let errors = validationResult(req);
 
+        if (errors.isEmpty()){
+            let 
+        }
+    },   
     crear: (req, res) => {
         res.render("register");
     },
     guardar: (req, res) => {
         let users = findAll();
+        let errors =validationResult(req);
+        if(errors.isEmpty()){
         if(req.file){
         let newUser= {
             id: users.length + 1,
@@ -59,9 +68,13 @@ const usersController = {
             
             writeFile(users);
     
-            res.redirect("/users/login")
+            res.redirect("/users/login");
         }else{
             res.render("register");
+        }
+        }else{
+            res.render("register", {errors: errors.mapped(), old: req.body});
+
         }
     },
     

@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require ("method-override");
+var session = require ("express-session");
 
 var app = express();
 
@@ -24,6 +25,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+app.use(session({secret: "secret"}));
+
 
 app.use("/", rutasMain);
 

@@ -197,11 +197,18 @@ h2{
   margin-bottom: 20px;
 }
 
+#errores{
+    color: #f12727;
+    padding: 10px;
+    font-size: 13px;
+    font-style: italic;
+}
+
 #ciudad, #provincia, #name, #user, #email, #domicilio, #fechaNacimiento, #password, #password_confirm {
     width: 70%;  
     height: auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
     border-radius: 5px;
     color:#383536;
     font-size: 14px;
