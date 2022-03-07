@@ -2,6 +2,7 @@ const express = require("express");
 const path = require ("path");
 const fs= require("fs");
 
+
 function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8")
     let usuarios = JSON.parse(data);
@@ -15,7 +16,7 @@ function writeFile(array){
 
 const usersController = {
     index: (req,res) => {
-        const users = findAll();
+        let users = findAll();
         res.render("users", {users: users})
     },
     
@@ -37,22 +38,21 @@ const usersController = {
         res.render("register");
     },
     guardar: (req, res) => {
-
-            let users = findAll();
-    
-            let newUser= {
-                id: users.length + 1,
-                name: req.body.name,
-                user: req.body.user,
-                email: req.body.email,
-                birthDate: req.body.birthDate,
-                direccion: req.body.direccion,
-                ciudad: req.body.ciudad,
-                provincia: req.body.provincia,
-                img: req.body.img,
-                password: req.body.password,
-                passwordConfirm: req.body.password_confirm,
-                intereses: req.body.intereses
+        let users = findAll();
+        if(req.file){
+        let newUser= {
+            id: users.length + 1,
+            name: req.body.name,
+            user: req.body.user,
+            email: req.body.email,
+            birthDate: req.body.birthDate,
+            direccion: req.body.direccion,
+            ciudad: req.body.ciudad,
+            provincia: req.body.provincia,
+            img: req.file.filename,
+            password: req.body.password,
+            passwordConfirm: req.body.password_confirm,
+            intereses: req.body.intereses
             }
     
             users.push(newUser);
@@ -60,6 +60,9 @@ const usersController = {
             writeFile(users);
     
             res.redirect("/users/login")
+        }else{
+            res.render("register");
+        }
     },
     
     editar: (req,res) => {

@@ -2,10 +2,11 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/register.css">
+    <title>Registrate en Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/users/register" method="POST">
+    <form action="/users/register" method="POST" enctype="multipart/form-data">
         <br/>       
         <nav>
         <h2>¡Registrate acá!</h2>
@@ -40,7 +41,7 @@
         </div>  
         <h3 class="foto-user">Foto de usuario</h3>   
         <div>
-        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif">        
         </div>
         <label for="user"></label>
             <input placeholder="Nombre de usuario" type="text" name="user" id="user" required>

@@ -54,7 +54,7 @@
             <% productos.forEach(function(producto){ %>
             <article class="product">
                 <button id="producto"><a href="/productos/<%= producto.id%>">
-                <img src="<%= producto.img%>" >
+                <img src="/img/products/<%= producto.img%>" >
             <div class="articulo">
                 <p class="precio">$ <%= producto.precio%></p>
                 <p class="descuento"><%= producto.descuento%> % OFF</p>

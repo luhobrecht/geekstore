@@ -2,6 +2,7 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/users.css">
+    <title>Detalles de usuario Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
@@ -18,7 +19,7 @@
             <button id="boton"><a href="/users/<%= user.id%>">
             <div class="fotoUser">
             <label>Foto de usuario</label>
-            <img src= "<%= user.img%> ">
+            <img src= "/img/users/<%= user.img%> ">
             </div>
             <div class="user1">
             <div>
@@ -35,7 +36,7 @@
             </div>
             <div>
             <p id="title1"> Dirección:</p> 
-            <p id="info" ><%= user.domicilio%></p>
+            <p id="info" ><%= user.direccion%></p>
             </div>
             <div>
             <p id="title1"> Ciudad:</p> 

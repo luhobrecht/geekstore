@@ -7,7 +7,7 @@
                 "categoria": "Game Of Thrones",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/remeraGOT.png",
+                "img": "remeraGOT.png",
                 "descuento": 20
         },
         {
@@ -18,7 +18,7 @@
                 "categoria": "Game Of Thrones",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/gorraGoT1.png",
+                "img": "gorraGoT1.png",
                 "descuento": 15
         },
         {
@@ -29,7 +29,7 @@
                 "categoria": "Game Of Thrones",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/mateGoT.png",
+                "img": "mateGoT.png",
                 "descuento": 10
         },
         {
@@ -40,7 +40,7 @@
                 "categoria": "The Big Bang Theory",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/remera-big-bang.png",
+                "img": "remera-big-bang.png",
                 "descuento": 20
         },
         {
@@ -51,7 +51,7 @@
                 "categoria": "The Big Bang Theory",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/gorraBigBang.png",
+                "img": "gorraBigBang.png",
                 "descuento": 15
         },
         {
@@ -62,7 +62,7 @@
                 "categoria": "The Big Bang Theory",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/mateBigBang.png",
+                "img": "mateBigBang.png",
                 "descuento": 10
         },
         {
@@ -73,7 +73,7 @@
                 "categoria": "Spiderman",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/remeraSpiderman.png",
+                "img": "remeraSpiderman.png",
                 "descuento": 20
         },
         {
@@ -84,7 +84,7 @@
                 "categoria": "Spiderman",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/gorraSpiderman.png",
+                "img": "gorraSpiderman.png",
                 "descuento": 15
         },
         {
@@ -95,7 +95,7 @@
                 "categoria": "Spiderman",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/mateSpiderman.png",
+                "img": "mateSpiderman.png",
                 "descuento": 10
         },
         {
@@ -118,7 +118,7 @@
                         "l",
                         "xl"
                 ],
-                "img": "/img/remeraSuperman.png",
+                "img": "remeraSuperman.png",
                 "descuento": 20
         },
         {
@@ -129,7 +129,7 @@
                 "categoria": "Superman",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/gorraSuperman.png",
+                "img": "gorraSuperman.png",
                 "descuento": 15
         },
         {
@@ -140,7 +140,7 @@
                 "categoria": "Superman",
                 "colores": "azul",
                 "talles": "xl",
-                "img": "/img/mateSuperman.png",
+                "img": "mateSuperman.png",
                 "descuento": 10
         }
 ]
