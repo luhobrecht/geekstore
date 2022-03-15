@@ -104,7 +104,7 @@ const productController = {
        res.redirect ("/productos");
     },
 
-    destroy: function(id){
+    /*destroy: function(id){
         let products = this.findAll();
 
         let productIndex = products.findIndex((product)=>{
@@ -116,8 +116,8 @@ const productController = {
         this.writeFile(products);
 
         res.redirect("/productos");
-    }
-    /*otra forma mas facil
+    }*/
+    //otra forma mas facil
     destroy:(req,res)=>{
 
         let id=req.params.id;
@@ -126,9 +126,7 @@ const productController = {
         res.redirect("/productos");
 
     }
-
-
-    */
+    
 }
     
 

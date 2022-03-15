@@ -67,8 +67,8 @@
         </div>       
         </nav>
     </form>  
-    <form id="borrarProducto" action="/productos/<%= producto.id %>/editar?_method=DELETE" method="POST">
-        <button id="eliminar">Eliminar producto</button>
+    <form id="borrarProducto" action="/productos/delete/<%= producto.id %>/editar?_method=DELETE" method="POST">
+        <button type="submit" id="eliminar">Eliminar producto</button>
     </form>  
 </main> 
  
