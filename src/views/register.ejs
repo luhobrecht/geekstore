@@ -6,7 +6,7 @@
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/users/register" method="POST" enctype="multipart/form-data">
+    <form action="/usuarios/registro" method="POST" enctype="multipart/form-data">
         <br/>       
         <nav>
         <h2>¡Registrate acá!</h2>
@@ -29,16 +29,16 @@
            <h3>Fecha de Nacimiento</h3>
             <input placeholder="Fecha de Nacimiento" type="date" name="birthDate" id="birthdate" 
             min="1910-01-01" max="2005-01-01" value="<%= locals.old && old.birthDate ? old.birthDate: "" %>" required>          
-            <input placeholder="Domicilio" type="text" name="direccion" id="domicilio" value="<%= locals.old && old.direccion ? old.direccion: ""%>">
-            <% if (locals.errors && errors.direccion) {%>
+            <input placeholder="Domicilio" type="text" name="adress" id="domicilio" value="<%= locals.old && old.adress ? old.adress: ""%>">
+            <% if (locals.errors && errors.adress) {%>
                 <p id="errores">
-                    <%= errors.direccion.msg %> 
+                    <%= errors.adress.msg %> 
                 </p>   
             <% } %>  
-            <input placeholder="Ciudad" type="text" name="ciudad" id="ciudad" value="<%= locals.old && old.ciudad ? old.ciudad: ""%>">
-            <% if (locals.errors && errors.ciudad) {%>
+            <input placeholder="Ciudad" type="text" name="city" id="ciudad" value="<%= locals.old && old.city ? old.city: ""%>">
+            <% if (locals.errors && errors.city) {%>
                 <p id="errores">
-                    <%= errors.ciudad.msg %> 
+                    <%= errors.city.msg %> 
                 </p>   
             <% } %>  
             <input placeholder="Provincia" type="text" name="provincia" id="provincia" value="<%= locals.old && old.provincia ? old.provincia: ""%>">
@@ -52,13 +52,13 @@
         </div>
         <div class="intereses">
             <h3 class="preg-intereses">¿Cuáles son tus series/pelis favoritas?</h3>    
-            <p><input type="checkbox" id = "sheldon" name="intereses" value="Big Bang" >
+            <p><input type="checkbox" id = "sheldon" name="interest" value="Big Bang" >
             <label for="sheldom">Big Bang Theory</label></p>            
-            <p><input type="checkbox" id="trones" name="intereses" value="Game of Thrones">
+            <p><input type="checkbox" id="trones" name="interest" value="Game of Thrones">
             <label for="trones">Game Of Thrones</label></p>           
-            <p><input type="checkbox" id="spiderman" name="intereses" value="Spiderman">
+            <p><input type="checkbox" id="spiderman" name="interest" value="Spiderman">
             <label for="spiderman">Spiderman</label></p>            
-            <p><input type="checkbox" id ="superman" name="intereses" value="Superman">
+            <p><input type="checkbox" id ="superman" name="interest" value="Superman">
             <label for="superman">Superman</label></p>               
         </div>  
         <h3 class="foto-user">Foto de usuario</h3>   

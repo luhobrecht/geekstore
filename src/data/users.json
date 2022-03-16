@@ -5,27 +5,27 @@
                 "user": "ARYA.STARKGOD",
                 "email": "mari.gonzalez@hotmail.com",
                 "provincia": "Mendoza",
-                "ciudad": "Capital",
-                "intereses": [
+                "city": "Capital",
+                "interest": [
                         "Big Bang",
                         "Spiderman"
                 ],
                 "password": "Mari123",
                 "img": "default.png",
-                "direccion": "Kings Landing 2"
+                "adress": "Kings Landing 2"
         },
         {
                 "id": 2,
                 "name": "Manuel Gomez",
                 "user": "manug@yahoo.com.ar",
                 "email": "manug@yahoo.com.ar",
-                "birthDate": "05/04/93",
-                "direccion": "Calle araña 1",
+                "birthDate": "2004-12-27",
+                "adress": "Calle araña 1",
                 "provincia": "Buenos Aires",
-                "ciudad": "Suipacha",
-                "intereses": "Spiderman",
+                "city": "Suipacha",
                 "password": "Marvel123",
-                "img": ""
+                "img": "profilePicture-1647389714706.png",
+                "interest": "Spiderman"
         },
         {
                 "id": 3,
@@ -33,12 +33,12 @@
                 "user": "Lomba123",
                 "email": "F.lombardo@gmail.com",
                 "birthDate": "14/07/88",
-                "direccion": "Avenida Koothrapali 5",
+                "adress": "Avenida Koothrapali 5",
                 "provincia": "Buenos Aires",
-                "ciudad": "Cañuelas",
-                "intereses": "Big Bang",
+                "city": "Cañuelas",
+                "interest": "Big Bang",
                 "password": "Sheldon123",
-                "img": ""
+                "img": "default.png"
         },
         {
                 "id": 4,
@@ -46,11 +46,25 @@
                 "user": "DarkSuperWoman",
                 "email": "estefania_m@hotmail.com",
                 "birthDate": "09/07/95",
-                "direccion": "Avenida Corrientes 56",
+                "adress": "Avenida Corrientes 56",
                 "provincia": "Buenos Aires",
-                "ciudad": "Navarro",
-                "intereses": "Superman",
+                "city": "Navarro",
+                "interest": "Superman",
                 "password": "estefi001",
-                "img": ""
+                "img": "default.png"
+        },
+        {
+                "id": 5,
+                "name": "Lucia",
+                "user": "lucia",
+                "email": "lu@asd.com",
+                "birthDate": "1992-03-01",
+                "adress": "asd",
+                "city": "asd",
+                "provincia": "asd",
+                "img": "profilePicture-1647390966212.png",
+                "password": "$2b$10$c6lgI34v8a0Vs2RgXKEXMO6MI7J/mPalI1N6UakPSCna..dCZ9yyS",
+                "passwordConfirm": "$2b$10$b3iQtwvRRLVNns49Wq1Q3.IOsz4sUiRfsZbTku/CAgTgB0cx/fPKa",
+                "interest": "Big Bang"
         }
 ]

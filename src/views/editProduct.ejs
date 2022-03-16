@@ -2,26 +2,29 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/admin.css">
-    <title>Crear nuevo producto - Geek Store</title>
+    <title>Editar producto - Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form id="form" action="/productos/crear" method="POST" enctype="multipart/form-data">
+    <form id="form" action="/productos/<%= product.id %>/editar?_method=PUT" method="POST" enctype="multipart/form-data">
         <br/>       
         <nav>
-        <h2>Crear producto</h2>
+        <h2>EDITAR PRODUCTO</h2>
         <div class="nombre">         
             <label for="name"></label>
-            <input placeholder="Nombre del producto" type="text" name="nombre" id="nombre">
+            <input placeholder="Nombre del producto" type="text" name="name" id="nombre" value="<%= product.name %>">
             <label for="description"></label>
-            <textarea placeholder="Descripción del producto" name="descripcion" id="description"></textarea>
-        </div>                     
+            <textarea name="description"  id="description" >
+            <%= product.description%>
+            </textarea>
+        </div>                    
+        </div>  
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
-        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" >        
         </div>
-        <label>Categoria:</label> 
-            <select name="categoria">
+        <label class="categoria">Categoria:</label> 
+            <select name="category" >
                  <option value="Mates">Mates</option>
                  <option value="Gorras">Gorras</option>
                  <option value="Remeras">Remeras</option>
@@ -29,7 +32,7 @@
         </div>
         <div class="colores">
             <h3 class="preg-colores">Colores disponibles:</h3>    
-            <p><input type="checkbox" id ="color" name="color" value="Black" >
+            <p><input type="checkbox" id ="color" name="color"  value="black">
             <label>Negro</label></p>   
             <p><input type="checkbox" id = "color" name="color" value="white" >
             <label>Blanco</label></p>   
@@ -42,30 +45,34 @@
         </div>  
         <div class="talles">
             <h3 class="preg-talles">Talles disponibles:</h3>    
-            <p><input type="checkbox" id ="talle" name="talle" value="xs" >
+            <p><input type="checkbox" id ="talle" name="size" value="xs" >
             <label for="xs">XS</label></p>   
-            <p><input type="checkbox" id = "talle" name="talle" value="s" >
+            <p><input type="checkbox" id = "talle" name="size" value="s" >
             <label for="s">S</label></p>   
-            <p><input type="checkbox" id = "talle" name="talle" value="m" >
+            <p><input type="checkbox" id = "talle" name="size" value="m" >
             <label for="m">M</label></p>   
-            <p><input type="checkbox" id = "talle" name="talle" value="l" >
+            <p><input type="checkbox" id = "talle" name="size" value="l" >
             <label for="l">L</label></p>       
-            <p><input type="checkbox" id = "talle" name="talle" value="xl" >
+            <p><input type="checkbox" id = "talle" name="size" value="xl" >
             <label for="xl">XL</label></p>              
         <br/>         
-            <label for="precio"></label>
-            <input placeholder="Precio" type="number" name="precio" id="precio">
-            <input placeholder="Descuento" type="number" name="descuento" id="descuento" min="0" max="100" >
+            <label for="precio" class="precio"> Precio </label>
+            <input placeholder="Precio" type="number" name="price" id="precio" value="<%= product.price %>">
+            <label for="descuento" class="descuento"> Descuento </label>
+            <input placeholder="Descuento" type="number" name="discount" id="descuento" value="<%= product.discount %>">
 
         <div class="agregar">      
-            <input type="submit" name="submit" id="agregar" value="CREAR PRODUCTO"> </input>
+            <input type="submit" name="submit" id="agregar" value="EDITAR PRODUCTO"> </input>
             <br/>
             <input type="reset" name="reset" id="borrar" value="BORRAR"> </input>
             <br/>
             <a href="/"><button id="vuelvo">Volver a Pagina Principal</button></a>
         </div>       
         </nav>
-    </form>    
+    </form>  
+    <form id="borrarProducto" action="/productos/<%= product.id %>/delete?_method=DELETE" method="POST">
+        <button id="eliminar">Eliminar producto</button>
+    </form>  
 </main> 
  
 <%- include("partials/footer.ejs") %>

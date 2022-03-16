@@ -1,117 +1,114 @@
 [
         {
-                "id": 0,
-                "nombre": "Remera GoT",
-                "precio": "1000",
-                "descripcion": "Remera de Game of Thrones",
-                "categoria": "Game Of Thrones",
-                "colores": "azul",
-                "talles": "xl",
-                "img": "remeraGOT.png",
-                "descuento": 20
-        },
-        {
                 "id": 1,
-                "nombre": "Gorra GoT",
-                "precio": "800",
-                "descripcion": "Gorra de Game of Thrones",
-                "categoria": "Game Of Thrones",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Gorra GoT",
+                "price": "800",
+                "description": "Gorra de Game of Thrones",
+                "category": "Game Of Thrones",
+                "colors": "azul",
+                "size": "xl",
                 "img": "gorraGoT1.png",
-                "descuento": 15
+                "discount": 15,
+                "type": "in-sale"
         },
         {
                 "id": 2,
                 "nombre": "Mate GoT",
-                "precio": "1200",
-                "descripcion": "Mate de Game of Thrones",
-                "categoria": "Game Of Thrones",
-                "colores": "azul",
-                "talles": "xl",
+                "price": "1200",
+                "description": "Mate de Game of Thrones",
+                "category": "Game Of Thrones",
+                "colors": "azul",
+                "size": "xl",
                 "img": "mateGoT.png",
-                "descuento": 10
+                "discount": 10,
+                "type": "visited"
         },
         {
                 "id": 3,
-                "nombre": "Remera BigBang",
-                "precio": "1000",
-                "descripcion": "Remera de The Big Bang Theory",
-                "categoria": "The Big Bang Theory",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Remera BigBang",
+                "price": "1000",
+                "description": "Remera de The Big Bang Theory",
+                "category": "The Big Bang Theory",
+                "colors": "azul",
+                "size": "xl",
                 "img": "remera-big-bang.png",
-                "descuento": 20
+                "discount": 20,
+                "type": "in-sale"
         },
         {
                 "id": 4,
-                "nombre": "Gorra BigBang",
-                "precio": "800",
-                "descripcion": "Gorra de The Big Bang Theory",
-                "categoria": "The Big Bang Theory",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Gorra BigBang",
+                "price": "800",
+                "description": "Gorra de The Big Bang Theory",
+                "category": "The Big Bang Theory",
+                "colors": "azul",
+                "size": "xl",
                 "img": "gorraBigBang.png",
-                "descuento": 15
+                "discount": 15,
+                "type": "visited"
         },
         {
                 "id": 5,
-                "nombre": "Mate BigBang",
-                "precio": "1200",
-                "descripcion": "Mate de The Big Bang Theory",
-                "categoria": "The Big Bang Theory",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Mate BigBang",
+                "price": "1200",
+                "description": "Mate de The Big Bang Theory",
+                "category": "The Big Bang Theory",
+                "colors": "azul",
+                "size": "xl",
                 "img": "mateBigBang.png",
-                "descuento": 10
+                "discount": 10,
+                "type": "in-sale"
         },
         {
                 "id": 6,
-                "nombre": "Remera Spiderman",
-                "precio": "1000",
-                "descripcion": "Remera de Spiderman",
-                "categoria": "Spiderman",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Remera Spiderman",
+                "price": "1000",
+                "description": "Remera de Spiderman",
+                "category": "Spiderman",
+                "colors": "azul",
+                "size": "xl",
                 "img": "remeraSpiderman.png",
-                "descuento": 20
+                "discount": 20,
+                "type": "visited"
         },
         {
                 "id": 7,
-                "nombre": "Gorra Spiderman",
-                "precio": "800",
-                "descripcion": "Gorra de Spiderman",
-                "categoria": "Spiderman",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Gorra Spiderman",
+                "price": "800",
+                "description": "Gorra de Spiderman",
+                "category": "Spiderman",
+                "colors": "azul",
+                "size": "xl",
                 "img": "gorraSpiderman.png",
-                "descuento": 15
+                "discount": 15,
+                "type": "visited"
         },
         {
                 "id": 8,
-                "nombre": "Mate Spiderman",
-                "precio": "1200",
-                "descripcion": "Mate de Spiderman",
-                "categoria": "Spiderman",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Mate Spiderman",
+                "price": "1200",
+                "description": "Mate de Spiderman",
+                "category": "Spiderman",
+                "colors": "azul",
+                "size": "xl",
                 "img": "mateSpiderman.png",
-                "descuento": 10
+                "discount": 10,
+                "type": "in-sale"
         },
         {
                 "id": 9,
-                "nombre": "Remera Superman",
-                "descripcion": "Remera de Superman",
-                "precio": "1000",
-                "categoria": "Remeras",
-                "colores": [
+                "name": "Remera Superman",
+                "description": "Remera de Superman",
+                "price": "1000",
+                "category": "Remeras",
+                "colors": [
                         "black",
                         "white",
                         "grey",
                         "Red",
                         "blue"
                 ],
-                "talles": [
+                "size": [
                         "xs",
                         "s",
                         "m",
@@ -119,28 +116,50 @@
                         "xl"
                 ],
                 "img": "remeraSuperman.png",
-                "descuento": 20
+                "discount": 20,
+                "type": "visited"
         },
         {
                 "id": 10,
-                "nombre": "Gorra Superman",
-                "precio": "800",
-                "descripcion": "Gorra de Superman",
-                "categoria": "Superman",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Gorra Superman",
+                "price": "800",
+                "description": "Gorra de Superman",
+                "category": "Superman",
+                "colors": "azul",
+                "size": "xl",
                 "img": "gorraSuperman.png",
-                "descuento": 15
+                "discount": 15,
+                "type": "in-sale"
         },
         {
                 "id": 11,
-                "nombre": "Mate Superman",
-                "precio": "1200",
-                "descripcion": "Mate de Superman",
-                "categoria": "Superman",
-                "colores": "azul",
-                "talles": "xl",
+                "name": "Mate Superman",
+                "price": "1200",
+                "description": "Mate de Superman",
+                "category": "Superman",
+                "colors": "azul",
+                "size": "xl",
                 "img": "mateSuperman.png",
-                "descuento": 10
+                "discount": 10,
+                "type": "in-sale"
+        },
+        {
+                "id": 12,
+                "name": "RemeraGOT",
+                "description": "Remera de Game of Thrones",
+                "category": "Remeras",
+                "colors": [
+                        "Black",
+                        "grey",
+                        "blue"
+                ],
+                "size": [
+                        "xs",
+                        "m",
+                        "xl"
+                ],
+                "price": "1000",
+                "discount": "20",
+                "img": "product-1647377634941.png"
         }
 ]

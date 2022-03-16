@@ -46,6 +46,7 @@ header div #boton a{
 .productos #producto{
   border: 1px solid #F4F1DE;
   background-color: #F4F1DE;
+  width: auto;
 }
 
 .productos #producto a{
@@ -258,7 +259,7 @@ main .main-view .productoX .detallesProd form select{
   font-weight: 600;
 }
 
-
+/*
 main .productosRelacionados h3{
  font-size: 20px;
  font-weight: 800;
@@ -316,6 +317,121 @@ main .productosRelacionados{
 
 main .productosRelacionados a{
   text-decoration: none;
+}
+*/
+
+main .productosRelacionados article{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+main section article{
+  background-color: #fff;
+  border-radius: 8px;    
+  margin: 10px 0px;
+}
+
+main .productosRelacionados .productos article:hover {
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main .productosRelacionados article img {
+  width: 80%;
+}
+
+main .productosRelacionados p{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #383536
+}
+
+main .productosRelacionados .descuento{
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
+
+main .productosRelacionados .descripciones{
+  font-size: 14px;
+  color: #383536;
+  padding-bottom: 10px;
+}
+
+main .productosRelacionados{
+  margin-bottom: 40px;
+}
+
+main .productosRelacionados a{
+  text-decoration: none;
+}
+
+main .productosRelacionados h3{
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  color: #383536
+ }
+
+ main .productosRelacionados #edit {
+   align-self: flex-end;
+   padding-right: 20px;
+   font-size: 12px;
+
+ }
+
+ main .productosRelacionados #edit a{
+  text-decoration: none;
+  color:#F4F1DE;
+  background-color: #aaaaaa;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+main .productosRelacionados #carrito {
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+main .productosRelacionados #carrito a{
+ text-decoration: none;
+ color:#383536;
+ background-color: #6EDD72;
+ padding: 5px;
+ border-radius: 3px;
+}
+
+main .productosRelacionados #carrito a:hover{
+  text-decoration: none;
+  color:#F4F1DE;
+  background-color: #9EE8A1;
+  padding: 5px;
+  border-radius: 3px;
+ }
+
+main .productosRelacionados .productos .product button{
+  border: 1px #fff solid;
+  background-color: #fff;
+  margin: 10px 0px;
+}
+
+main .productosRelacionados .productos .product1 button{
+  border: 1px #fff solid;
+  background-color: #fff;
+  margin: 10px 0px;
+}
+
+main .productosRelacionados .productos .product button a{
+  background-color: #fff;
+}
+
+main .productosRelacionados .productos .product1 button a{
+  background-color: #fff;
 }
 
 footer{
@@ -382,16 +498,20 @@ footer .primeraParte a{
   list-style-type: none;
 }
 
-
+@media (min-width:361px){
+  main .productosRelacionados .productos article{
+    width:45%
+  }
+  main .productosRelacionados .productos .product1{
+    width:45%
+  }
+  }
 @media (max-width: 769px){
   header .mid-bar{
     display:none;
   }
   .navbar ul {
     display:none;
-  }
-  main .productosRelacionados article{
-  width: 100%;
   }
   main section .productoX .parte1{
     width: 100%;
@@ -435,11 +555,12 @@ footer .primeraParte a{
   main .main-view .productoX .detallesProd{
     width:20%
   }
-  main .productosRelacionados .productos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-   }
+  main .productosRelacionados .productos article {
+    width: 22%;
+  }
+  main .productosRelacionados .productos .product1 {
+    width: 30%;
+  }
    .sinCopyright {
     display: flex;
     flex-direction: row;

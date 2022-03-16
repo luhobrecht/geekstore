@@ -2,7 +2,7 @@ const express = require("express");
 const path = require ("path");
 const fs= require("fs");
 const { validationResult } = require("express-validator");
-
+const bcrypt = require ("bcrypt");
 
 function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8")
@@ -21,7 +21,7 @@ const usersController = {
         res.render("users", {users: users})
     },
     
-    detalle: (req, res) => {
+    detail: (req, res) => {
         let users = findAll();
 
         let userFound = users.find(function(user){
@@ -31,54 +31,71 @@ const usersController = {
         res.render("userDetail", {user: userFound});
     },
 
-    acceder:(req, res) => {
+    login:(req, res) => {
         res.render("login");
     },
-    iniciar: (req,res) => {
+    processLogin: (req,res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()){
-            let 
+            let users= findAll();
+            for ( let i = 0; i < users.length; i++){
+                if (users[i].user == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, users[i].password)){
+                        userTL = users[i];
+                        break;
+                    }
+                }
+            }
+            if (userTL == undefined){
+                res.render ("login", {errors: [
+                    {msg: "Credenciales inválidas"}
+                ] })
+            }
+            req.session.userLoggeado = userTL;
+            if(req.body.recordame != undefined){
+                res.cookie ("recordame", userLoggeado.user, { maxAge: 300000 })
+            }
+            res.redirect("/");
+        }else {
+            res.render ("login", {errors: errors.mapped(), old: req.body })
         }
     },   
-    crear: (req, res) => {
+    create: (req, res) => {
         res.render("register");
     },
-    guardar: (req, res) => {
+    save: (req, res) => {
         let users = findAll();
-        let errors =validationResult(req);
+        let errors = validationResult(req);
         if(errors.isEmpty()){
-        if(req.file){
+            if(req.file){
         let newUser= {
             id: users.length + 1,
             name: req.body.name,
             user: req.body.user,
             email: req.body.email,
             birthDate: req.body.birthDate,
-            direccion: req.body.direccion,
-            ciudad: req.body.ciudad,
+            adress: req.body.adress,
+            city: req.body.city,
             provincia: req.body.provincia,
             img: req.file.filename,
-            password: req.body.password,
-            passwordConfirm: req.body.password_confirm,
-            intereses: req.body.intereses
+            password: bcrypt.hashSync(req.body.password, 10),
+            passwordConfirm: bcrypt.hashSync(req.body.password_confirm, 10),
+            interest: req.body.interest
             }
     
             users.push(newUser);
             
             writeFile(users);
     
-            res.redirect("/users/login");
+            res.redirect("/usuarios/login");
         }else{
             res.render("register");
         }
         }else{
             res.render("register", {errors: errors.mapped(), old: req.body});
-
         }
     },
-    
-    editar: (req,res) => {
+    edit: (req,res) => {
         let users = findAll();
 
         let userFound = users.find(function(user){
@@ -87,30 +104,29 @@ const usersController = {
 
         res.render("editUser", {user : userFound})
     },
-    actualizar: (req, res) => {
+    update: (req, res) => {
         let users = findAll();
-
         let userUpdate = users.map(function(user){
             if(user.id == req.params.id){
                 user.name = req.body.name;
                 user.user = req.body.user;
                 user.email = req.body.email;
                 user.birthDate = req.body.birthDate;
-                user.direccion = req.body.direccion;
-                user.ciudad = req.body.ciudad;
+                user.adress = req.body.adress;
+                user.city = req.body.city;
                 user.provincia = req.body.provincia;
-                user.img = req.body.img;
+                user.img = req.file.filename;
                 user.password = req.body.password;
                 user.password_confirm = req.body.password_confirm,
-                user.intereses = req.body.intereses;
+                user.interest = req.body.interest;
             }
             return user;
         })
 
         writeFile(users);
 
-        res.redirect ("/users")
-     }        
+        res.redirect ("/usuarios")
+        }        
 }
 
 
