@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include("partials/head.ejs") %>
+<title>Nuestros productos - Geek Store</title>
 <body>
 <%- include("partials/header.ejs") %>
 <main>  
@@ -18,7 +19,7 @@
         <article class="product1">
             <button id="edit"><a href="/productos/<%= producto.id%>/editar">Editar</a></button>
             <button id="producto"><a href="/productos/<%= producto.id%>">
-            <img src= "<%= producto.img%> ">
+            <img src= "/img/products/<%= producto.img ? producto.img: 'default.png' %>">
             <div class="articulo">
             <p class="precio">$ <%= producto.precio%></p>
             <p class="descuento"><%= producto.descuento%> % OFF</p>

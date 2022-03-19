@@ -1,5 +1,4 @@
 const express = require("express");
-const res = require("express/lib/response");
 const fs = require("fs");
 const path = require ("path");
 
@@ -33,7 +32,7 @@ const productController = {
     },
     guardar: (req,res) => {
         let products = findAll();
-
+        if(req.file){
         let newProduct = {
             id: products.length + 1,
             nombre: req.body.nombre,
@@ -43,14 +42,17 @@ const productController = {
             talles: req.body.talle,
             precio: req.body.precio,
             descuento: req.body.descuento,
-            img: req.body.img
+            img: req.file.filename
         }
 
         products.push(newProduct);
         
         writeFile(products);
 
-        res.redirect("/productos")
+        res.redirect("/productos");
+    }else{
+        res.render("crearProducto");
+    }
     },
     ofertas: (req,res) => {
         res.render("ofertas")
@@ -107,13 +109,13 @@ const productController = {
     /*destroy: function(id){
         let products = this.findAll();
 
-        let productIndex = products.findIndex((product)=>{
-            return product.id == id
+        let productIndex = products.findIndex(function(product){
+            return product.id == req.params.id
         })
 
         products.splice(productIndex, 1);
 
-        this.writeFile(products);
+        writeFile(products);
 
         res.redirect("/productos");
     }*/
@@ -124,7 +126,6 @@ const productController = {
         let finalProducts = products.filter(product=> product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
         res.redirect("/productos");
-
     }
     
 }

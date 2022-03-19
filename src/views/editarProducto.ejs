@@ -2,6 +2,7 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/admin.css">
+    <title>Editar producto - Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
@@ -18,7 +19,7 @@
         </div>  
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
-        <input type="file" value= "<%= producto.img %>" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+        <input type="file" value= "/img/products/<%= producto.img %>" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
         </div>
         <label class="categoria">Categoria:</label> 
             <select name="categoria" >

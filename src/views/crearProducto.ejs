@@ -2,10 +2,11 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/admin.css">
+    <title>Crear nuevo producto - Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form id="form" action="/productos/crear" method="POST">
+    <form id="form" action="/productos/crear" method="POST" enctype="multipart/form-data">
         <br/>       
         <nav>
         <h2>Crear producto</h2>
@@ -17,7 +18,7 @@
         </div>                     
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
-        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif">        
         </div>
         <label>Categoria:</label> 
             <select name="categoria">

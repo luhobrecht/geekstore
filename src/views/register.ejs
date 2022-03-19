@@ -2,28 +2,51 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/register.css">
+    <title>Registrate en Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
-    <form action="/users/register" method="POST">
+    <form action="/users/register" method="POST" enctype="multipart/form-data">
         <br/>       
         <nav>
         <h2>¡Registrate acá!</h2>
         <div class="nombre">         
             <label for="name"></label>
-            <input placeholder="Nombre y apellido" type="text" name="name" id="name" >
-            <label></label>
-            <input placeholder="Correo electrónico" type="text" name="email" id="email" required> 
+            <input placeholder="Nombre y apellido" type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name: ""%>">
+                <% if (locals.errors && errors.name) {%>
+                <p id="errores">
+                    <%= errors.name.msg %> 
+                </p>   
+                <% } %>                             
+            <input placeholder="Correo electrónico" type="text" name="email" id="email" value="<%= locals.old && old.email ? old.email: ""%>" required> 
+            <% if (locals.errors && errors.email) {%>
+                <p id="errores">
+                    <%= errors.email.msg %> 
+                </p>   
+                <% } %>  
         </div>                    
         <div class="fechaNacimiento">
            <h3>Fecha de Nacimiento</h3>
             <input placeholder="Fecha de Nacimiento" type="date" name="birthDate" id="birthdate" 
-            min="1910-01-01" max="2005-01-01"required>          
-            <br/>         
-            <input placeholder="Domicilio" type="text" name="domicilio" id="domicilio">
-            <input placeholder="Ciudad" type="text" name="ciudad" id="ciudad">
-            <input placeholder="Provincia" type="text" name="provincia" id="provincia">
-
+            min="1910-01-01" max="2005-01-01" value="<%= locals.old && old.birthDate ? old.birthDate: "" %>" required>          
+            <input placeholder="Domicilio" type="text" name="direccion" id="domicilio" value="<%= locals.old && old.direccion ? old.direccion: ""%>">
+            <% if (locals.errors && errors.direccion) {%>
+                <p id="errores">
+                    <%= errors.direccion.msg %> 
+                </p>   
+            <% } %>  
+            <input placeholder="Ciudad" type="text" name="ciudad" id="ciudad" value="<%= locals.old && old.ciudad ? old.ciudad: ""%>">
+            <% if (locals.errors && errors.ciudad) {%>
+                <p id="errores">
+                    <%= errors.ciudad.msg %> 
+                </p>   
+            <% } %>  
+            <input placeholder="Provincia" type="text" name="provincia" id="provincia" value="<%= locals.old && old.provincia ? old.provincia: ""%>">
+            <% if (locals.errors && errors.provincia) {%>
+                <p id="errores">
+                    <%= errors.provincia.msg %> 
+                </p>   
+            <% } %>  
         </div>       
            
         </div>
@@ -40,14 +63,28 @@
         </div>  
         <h3 class="foto-user">Foto de usuario</h3>   
         <div>
-        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif">        
         </div>
         <label for="user"></label>
-            <input placeholder="Nombre de usuario" type="text" name="user" id="user" required>
+            <input placeholder="Nombre de usuario" type="text" name="user" id="user" value="<%= locals.old && old.user ? old.user: ""%>" required>
+            <% if (locals.errors && errors.user) {%>
+                <p id="errores">
+                    <%= errors.user.msg %> 
+                </p>   
+            <% } %>  
         <div class="clave">
             <p><input placeholder="Contraseña" type="password" name="password" id="password" required></p>
-            <br/>
+            <% if (locals.errors && errors.password) {%>
+                <p id="errores">
+                    <%= errors.password.msg %> 
+                </p>   
+            <% } %>  
             <p><input placeholder="Confirmar contraseña" type="password" name="password_confirm" id="password_confirm" required></p>  
+            <% if (locals.errors && errors.password_confirm) {%>
+                <p id="errores">
+                    <%= errors.password_confirm.msg %> 
+                </p>   
+            <% } %>  
         </div>
         <br/> 
         <div class="submit">      

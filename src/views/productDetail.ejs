@@ -2,6 +2,7 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/productDetail.css">
+    <title>Detalle de producto - Geek Store</title>
     <body>
     <%- include("partials/header.ejs") %>
     <main>
@@ -9,7 +10,7 @@
     <div class="productoX">
         <article>
         <div class="parte1">
-            <img src="<%= producto.img%>">
+            <img src="/img/products/<%= producto.img%>">
             <div class= "articulo">
                 <p class="descripcion"><%= producto.descripcion%></p>
             </div>

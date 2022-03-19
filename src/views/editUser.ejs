@@ -2,6 +2,7 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/register.css">
+    <title>Editar usuario - Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
@@ -40,7 +41,7 @@
         </div>  
         <h3 class="foto-user">Foto de usuario</h3>   
         <div>
-        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none" value="<%=user.img %>">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" value="/img/users/<%=user.img %>">        
         </div>
         <label for="user"></label>
             <input placeholder="Nombre de usuario" type="text" name="user" id="user" value="<%=user.user %>" required>
