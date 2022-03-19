@@ -4,27 +4,27 @@ const path = require ("path");
 
 function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
-    let productos = JSON.parse(data);
-    return productos;
+    let products = JSON.parse(data);
+    return products;
 }
 
 const mainControllers = {
     index: (req,res) => {
-        const productos = findAll();
+        const products = findAll();
         
-        res.render("index", {productos: productos})
+        res.render("index", {products: products})
     },
     contact: (req,res) => {
-        res.render("contacto")
+        res.render("contact")
     },
-    nosotros: (req,res) => {
-        res.render("nosotros")
+    aboutUs: (req,res) => {
+        res.render("about-us")
     },
-    legales: (req,res) => {
-        res.render("informacionLegal")
+    legals: (req,res) => {
+        res.render("legals")
     },
-    ayuda: (req,res) => {
-        res.render("ayuda")
+    help: (req,res) => {
+        res.render("help")
     },
 }
 

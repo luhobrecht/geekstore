@@ -15,15 +15,15 @@
     <section class="productosRelacionados">
         <h3 class="subtitulo">Nuestros productos:</h3>
         <div class="productos">
-            <% productos.forEach(function(producto){ %>
+            <% products.forEach(function(product){ %>
         <article class="product1">
-            <button id="edit"><a href="/productos/<%= producto.id%>/editar">Editar</a></button>
-            <button id="producto"><a href="/productos/<%= producto.id%>">
-            <img src= "/img/products/<%= producto.img ? producto.img: 'default.png' %>">
+            <button id="edit"><a href="/productos/<%= product.id%>/editar">Editar</a></button>
+            <button id="producto"><a href="/productos/<%= product.id%>">
+            <img src= "/img/products/<%= product.img ? product.img: 'default.png' %>">
             <div class="articulo">
-            <p class="precio">$ <%= producto.precio%></p>
-            <p class="descuento"><%= producto.descuento%> % OFF</p>
-            <h4 class="descripciones"> <%= producto.descripcion%></h4>
+            <p class="precio">$ <%= product.price%></p>
+            <p class="descuento"><%= product.discount%> % OFF</p>
+            <h4 class="descripciones"> <%= product.description%></h4>
             </div>
             </a></button>
             <button id="carrito"><a href="/productos/productCart">Añadir al carrito</a></button>

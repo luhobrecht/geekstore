@@ -10,9 +10,9 @@
     <div class="productoX">
         <article>
         <div class="parte1">
-            <img src="/img/products/<%= producto.img%>">
+            <img src="/img/products/<%= product.img%>">
             <div class= "articulo">
-                <p class="descripcion"><%= producto.descripcion%></p>
+                <p class="descripcion"><%= product.description%></p>
             </div>
         </div>
             <div class="detallesProd">
@@ -27,7 +27,7 @@
             </select>
 
             <label>Elegí el talle:</label> 
-            <select name="talle">
+            <select name="size">
                  <option value="XS">XS</option>
                  <option value="S">S</option>
                  <option value="M">M</option>
@@ -38,7 +38,7 @@
                 <label>CANTIDAD</label> 
                 <input id="cantidad"type="number" name="cantidad" value="1" min="0" max="10" step="1">
 
-            <h2 class="total">TOTAL: <%= producto.precio%></h2>
+            <h2 class="total">TOTAL: <%= product.price%></h2>
             <h2>
                 <button type="submit" class="enviar">AGREGAR AL CARRITO</button>
             </h2>
@@ -46,6 +46,23 @@
     </form>
     </article>
     </div>
+        </section>
+        <section class="productosRelacionados">
+            <h3 class="subtitulo">Productos relacionados:</h3>
+        <% visited.forEach(function(product){ %>
+        <div class="productos">
+        <button id="producto"><a href="/productos/<%= product.id %>">
+            <article class="spider">
+                <img src= "/img/products/<%= product.img %>">
+            <div class="articulo">
+                <p class="precio">$ <%= product.price %> </p>
+                <p class="descuento"><%= product.discount %> % OFF</p>
+                <h4 class="descripciones"><%= product.description %> </h4>
+            </div>
+            </article>
+        </button>
+        </div>
+        <% }) %>
         </section>
     </main>
     <%- include("partials/footer.ejs") %>

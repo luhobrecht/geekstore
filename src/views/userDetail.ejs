@@ -16,7 +16,7 @@
         <h3 class="subtitulo">Detalle de usuario #<%= user.id %>:</h3>
         <div class="users">
         <article>
-            <button id="boton"><a href="/users/<%= user.id%>">
+            <button id="boton"><a href="/usuarios/<%= user.id%>">
             <div class="fotoUser">
             <label>Foto de usuario</label>
             <img src= "/img/users/<%= user.img%> ">
@@ -36,11 +36,11 @@
             </div>
             <div>
             <p id="title1"> Dirección:</p> 
-            <p id="info" ><%= user.direccion%></p>
+            <p id="info" ><%= user.adress%></p>
             </div>
             <div>
             <p id="title1"> Ciudad:</p> 
-            <p id="info" ><%= user.ciudad%></p>
+            <p id="info" ><%= user.city%></p>
             </div>
             <div>
             <p id="title1"> Provincia:</p> 
@@ -48,7 +48,7 @@
             </div>
             <div>
             <p id="title1"> Intereses:</p> 
-            <p id="info" ><%= user.intereses%></p>
+            <p id="info" ><%= user.interest%></p>
             </div>
             <div>
             <p id="title1"> Usuario:</p> 

@@ -6,11 +6,11 @@ router.get("/", mainController.index)
 
 router.get("/contacto", mainController.contact)
 
-router.get("/about-us", mainController.nosotros)
+router.get("/about-us", mainController.aboutUs)
 
-router.get("/informacion-legal", mainController.legales)
+router.get("/informacion-legal", mainController.legals)
 
-router.get("/ayuda", mainController.ayuda)
+router.get("/ayuda", mainController.help)
 
 
 
