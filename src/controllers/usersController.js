@@ -2,7 +2,7 @@ const express = require("express");
 const path = require ("path");
 const fs= require("fs");
 const { validationResult } = require("express-validator");
-const bcrypt = require ("bcrypt");
+const bcrypt = require ("bcryptjs");
 
 function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8")
@@ -67,7 +67,6 @@ const usersController = {
         let users = findAll();
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            if(req.file){
         let newUser= {
             id: users.length + 1,
             name: req.body.name,
@@ -77,7 +76,7 @@ const usersController = {
             adress: req.body.adress,
             city: req.body.city,
             provincia: req.body.provincia,
-            img: req.file.filename,
+            img: req.file ? req.file.filename: "default.png",
             password: bcrypt.hashSync(req.body.password, 10),
             passwordConfirm: bcrypt.hashSync(req.body.password_confirm, 10),
             interest: req.body.interest
@@ -88,9 +87,6 @@ const usersController = {
             writeFile(users);
     
             res.redirect("/usuarios/login");
-        }else{
-            res.render("register");
-        }
         }else{
             res.render("register", {errors: errors.mapped(), old: req.body});
         }
@@ -115,7 +111,7 @@ const usersController = {
                 user.adress = req.body.adress;
                 user.city = req.body.city;
                 user.provincia = req.body.provincia;
-                user.img = req.file.filename;
+                user.img = req.file ? req.file.filename: "default.png";
                 user.password = req.body.password;
                 user.password_confirm = req.body.password_confirm,
                 user.interest = req.body.interest;

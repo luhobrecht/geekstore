@@ -24,8 +24,11 @@
                 "provincia": "Buenos Aires",
                 "city": "Suipacha",
                 "password": "Marvel123",
-                "img": "profilePicture-1647389714706.png",
-                "interest": "Spiderman"
+                "img": "default.png",
+                "interest": [
+                        "Big Bang",
+                        "Spiderman"
+                ]
         },
         {
                 "id": 3,
@@ -52,19 +55,5 @@
                 "interest": "Superman",
                 "password": "estefi001",
                 "img": "default.png"
-        },
-        {
-                "id": 5,
-                "name": "Lucia",
-                "user": "lucia",
-                "email": "lu@asd.com",
-                "birthDate": "1992-03-01",
-                "adress": "asd",
-                "city": "asd",
-                "provincia": "asd",
-                "img": "profilePicture-1647390966212.png",
-                "password": "$2b$10$c6lgI34v8a0Vs2RgXKEXMO6MI7J/mPalI1N6UakPSCna..dCZ9yyS",
-                "passwordConfirm": "$2b$10$b3iQtwvRRLVNns49Wq1Q3.IOsz4sUiRfsZbTku/CAgTgB0cx/fPKa",
-                "interest": "Big Bang"
         }
 ]
