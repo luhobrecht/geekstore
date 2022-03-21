@@ -1,6 +1,10 @@
-const { body } = require ("express-validator")
+const express = require("express");
+const path = require ("path");
+const fs= require("fs");
+let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8"));
+const { body } = require ("express-validator");
 
-module.exports={
+module.exports = {
     login:[
         body("user")
         .notEmpty()
@@ -15,10 +19,30 @@ module.exports={
         .withMessage("Escribí tu nombre completo. Ej. Sheldon Cooper"),
         body("email")
         .isEmail()
-        .withMessage("Escribí tu email con un formato válido. Ej. sheldon@uncorreo.com"),
+        .withMessage("Escribí tu email con un formato válido. Ej. sheldon@uncorreo.com")
+        .bail()
+        .custom(function(value){
+           let userFound = users.find(function(user){
+                return user.email == value 
+            })
+            if (userFound){
+                throw new Error("Este email ya está registrado")
+            }
+            return true;
+        }),
         body("user")
         .notEmpty()
-        .withMessage("Crea un nombre de usuario. Ej. SheldonCoop"),
+        .withMessage("Crea un nombre de usuario. Ej. SheldonCoop")
+        .bail()
+        .custom(function(value){
+           let userFound = users.find(function(user){
+                return user.user == value 
+            })
+            if (userFound){
+                throw new Error("Este nombre de usuario no está disponible")
+            }
+            return true;
+        }),
         body("adress")
         .notEmpty()
         .withMessage("Escribí tu dirección. Ej. Calle Big Bang 12"),

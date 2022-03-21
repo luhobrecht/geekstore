@@ -55,5 +55,19 @@
                 "interest": "Superman",
                 "password": "estefi001",
                 "img": "default.png"
+        },
+        {
+                "id": 5,
+                "name": "Peter Parker",
+                "user": "spiderman",
+                "email": "peter@spiderman.com",
+                "birthDate": "1992-01-01",
+                "adress": "Una calle 1",
+                "city": "Una ciudad 1",
+                "provincia": "Una provincia 1",
+                "img": "profilePicture-1647905580903.png",
+                "password": "$2a$10$oT9t4vV3CIzSNVll.PDId.Lq8lgLXs5iAf7.zchqRfvdizk0ICe2u",
+                "passwordConfirm": "$2a$10$GNpvVHCQTQQmcwvAYywKBewLAMVP3bmxZdX0Aw/7skAJUTz.eJIgS",
+                "interest": "Spiderman"
         }
 ]
