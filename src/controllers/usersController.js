@@ -1,14 +1,8 @@
-const express = require("express");
-const path = require ("path");
 const fs= require("fs");
-const { validationResult } = require("express-validator");
+const path = require ("path");
 const bcrypt = require ("bcryptjs");
-
-function findAll(){
-    let data = fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8")
-    let usuarios = JSON.parse(data);
-    return usuarios;
-}
+const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")))
+const { validationResult } = require("express-validator");
 
 function writeFile(array){
     let string = JSON.stringify(array, null, 8);
@@ -17,12 +11,10 @@ function writeFile(array){
 
 const usersController = {
     index: (req,res) => {
-        let users = findAll();
         res.render("users", {users: users})
     },
     
     detail: (req, res) => {
-        let users = findAll();
 
         let userFound = users.find(function(user){
            return user.id == req.params.id
@@ -30,41 +22,41 @@ const usersController = {
 
         res.render("userDetail", {user: userFound});
     },
-
     login:(req, res) => {
         res.render("login");
     },
-    processLogin: (req,res) => {
-        let errors = validationResult(req);
-        if (errors.isEmpty()){
-            let users= findAll();
-            for ( let i = 0; i < users.length; i++){
-                if (users[i].user == req.body.email){
-                    if(bcrypt.compareSync(req.body.password, users[i].password)){
-                        userTL = users[i];
-                        break;
-                    }
-                }
-            }
-            if (userTL == undefined){
-                res.render ("login", {errors: [
-                    {msg: "Credenciales inválidas"}
-                ] })
-            }
-            req.session.userLoggeado = userTL;
-            if(req.body.recordame != undefined){
-                res.cookie ("recordame", userLoggeado.user, { maxAge: 300000 })
-            }
-            res.redirect("/");
-        }else {
-            res.render ("login", {errors: errors.mapped(), old: req.body })
+    processLogin: function(req, res){
+        const errors = validationResult(req);   
+        if(errors.errors.length > 0){
+            res.render("login", {errorsLogin: errors.mapped(), old: req.body})
         }
-    },   
+            const userFound = users.find(function(user){
+                return user.user == req.body.user && bcrypt.compareSync(req.body.password, user.password)
+            })
+    
+            if(userFound){
+                //proceso session
+                req.session.userLogueado = userFound;
+    
+                if(req.body.remember){
+                    res.cookie("user", userFound.id, {maxAge: 60000 * 24})
+                }
+    
+                res.redirect("/")
+    
+            }else{
+                res.render("login", {errorMsg: "Error! Credenciales inválidas"})
+            }
+        }, 
+    logout:function(req, res){
+        req.session.destroy();       
+        res.clearCookie("user");
+        res.redirect("/");
+    },
     create: (req, res) => {
         res.render("register");
     },
     save: (req, res) => {
-        let users = findAll();
         let errors = validationResult(req);
         if(errors.isEmpty()){
         let newUser= {
@@ -92,7 +84,6 @@ const usersController = {
         }
     },
     edit: (req,res) => {
-        let users = findAll();
 
         let userFound = users.find(function(user){
             return user.id == req.params.id
@@ -101,7 +92,6 @@ const usersController = {
         res.render("editUser", {user : userFound})
     },
     update: (req, res) => {
-        let users = findAll();
         let userUpdate = users.map(function(user){
             if(user.id == req.params.id){
                 user.name = req.body.name;

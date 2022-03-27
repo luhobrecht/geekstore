@@ -1,16 +1,19 @@
-const express = require("express");
 const path = require ("path");
 const fs= require("fs");
-let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8"));
 const { body } = require ("express-validator");
 
-module.exports = {
+function findAll(){
+    const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")));
+    return users;
+}
+
+const validator = {
     login:[
         body("user")
         .notEmpty()
         .withMessage("Nombre de usuario incorrecto."),
         body("password")
-        .isLength({min:8})
+        .notEmpty()
         .withMessage("Contraseña incorrecta."),
     ],
     register:[
@@ -22,6 +25,7 @@ module.exports = {
         .withMessage("Escribí tu email con un formato válido. Ej. sheldon@uncorreo.com")
         .bail()
         .custom(function(value){
+            let users = findAll();
            let userFound = users.find(function(user){
                 return user.email == value 
             })
@@ -35,6 +39,7 @@ module.exports = {
         .withMessage("Crea un nombre de usuario. Ej. SheldonCoop")
         .bail()
         .custom(function(value){
+            let users= findAll();
            let userFound = users.find(function(user){
                 return user.user == value 
             })
@@ -57,6 +62,8 @@ module.exports = {
         .withMessage("La contraseña debe tener al menos 8 caracteres."),
         body("password_confirm")
         .isLength({min:8})
-        .withMessage("La contraseña debe tener al menos 8 caracteres."),
+        .withMessage("La contraseña debe tener al menos 8 caracteres.")
     ]
 }
+
+module.exports = validator;

@@ -1,23 +1,61 @@
 
 *{
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
     box-sizing: border-box;
-}
+  }
   
-body{
-    font-family: 'Roboto Mono', sans-serif;
+  body{
+    font-family: 'Raleway', sans-serif;
     background-color: #F4F1DE;
-}
+  }
   
-header div.logo img{
+  header div.logo img{
     width: 100px;
     text-align: center;
+  }
+  
+  header div #boton{
+    border: 1px solid #E07A5F;
+    background-color: #E07A5F;
+  }
+  
+  header div #boton a{
+   color: #383536;
+   font-size: 1.5em;
+   background-color: #E07A5F;
+  }
+  
+  header .up-bar{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:2px;
     background-color: #F4F1DE;
-
-}
-
-header div.logo img{
+  }
+  
+  header .mid-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+  }
+  
+  header .mid-bar h2{
+    font-size: 12px;
+    font-weight: 300;
+    color: #383536
+  }
+  
+  header div.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    align-self: center;
+  }
+  
+  header div.logo img{
     background-color: #F4F1DE;
     border:none;
   }
@@ -33,84 +71,42 @@ header div.logo img{
    background-color: #F4F1DE;
   }
   
-  header div #boton{
-    border: 1px solid #E07A5F;
-    background-color: #E07A5F;
-  }
-  
-  header div #boton a{
-   color: #383536;
-   font-size: 1.5em;
-   background-color: #E07A5F;
-  }
-
-  .productos #producto{
-    border: 1px solid #F4F1DE;
-    background-color: #F4F1DE;
-  }
-  
-  .productos #producto a{
-   background-color: #F4F1DE;
-  }
-  
-header .up-bar{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding:2px;
-    background-color: #F4F1DE;
-}
-  
-header .mid-bar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 60%;
-}
-  
-header .mid-bar h2{
-    font-size: 14px;
-    font-weight: 300;
-    color: #383536
-}
-  
-header div.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    align-self: center;
-}
-  
-header div.login{
+  header div.login{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 50%;
     padding-right: 20px;
-}
+  }
   
-header div.login i{
+  header div.login button a{
+    text-decoration: none;
+    color:#383536;
+    border:none;
+    font-size: 1.5em;
+    background-color: #F4F1DE;
+  }
+  header div.login i{
     font-size: 2em;
-}
+  }
   
-.navbar{
+  .navbar{
     display: flex;
     width: 100%;
     justify-content: flex-end;
     background-color: #E07A5F;
     padding: 20px;
     align-items: center
-}
+  }
   
-div.burger-menu{
+  div.burger-menu{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-}
+  }
   
-div.burger-menu i{
+  div.burger-menu i{
     background-color: #3D405B;
     border-radius: 5px;
     color: #FFF;
@@ -119,42 +115,41 @@ div.burger-menu i{
     margin: 10px 0px 20px 0px;
     padding: 10px;
     width: 40px;
-}
+  }
   
-.navbar ul{
+  .navbar ul{
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
     align-items:center;
     width: 60%;
     margin-left: 90px;
-}
-.navbar ul li{
+  }
+  .navbar ul li{
     list-style-type: none;
-}
-.navbar ul li a {
+  }
+  .navbar ul li a {
     text-decoration: none;
     color: #F4F1DE;
     font-weight: 900;
-}
+  }
   
-.navbar div.carrito i{
+  .navbar div.carrito i{
     font-size: 1.5em;
-}
+  }
   
-.navbar div.carrito{
+  .navbar div.carrito{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 25%;
-}
+  }
 /*termina el header*/
 /*empieza el main*/
 
 main nav h2{
     font-size: 25px;
     color: #E07A5F;
-    text-align: center;   
     font-weight: 600;
     padding-bottom: 20px;
 }
@@ -190,7 +185,7 @@ main nav div.loginU{
     font-style: italic;
 }
 
-#recordame{
+#remember{
     display:flex;
     justify-content: flex-start;
     align-items: baseline;
