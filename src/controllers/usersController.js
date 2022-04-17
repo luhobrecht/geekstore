@@ -39,7 +39,7 @@ const usersController = {
         if (errors.isEmpty()){
             let users= findAll();
             for ( let i = 0; i < users.length; i++){
-                if (users[i].user == req.body.email){
+                if (users[i].email == req.body.email){
                     if(bcrypt.compareSync(req.body.password, users[i].password)){
                         userTL = users[i];
                         break;
@@ -51,9 +51,9 @@ const usersController = {
                     {msg: "Credenciales inválidas"}
                 ] })
             }
-            req.session.userLoggeado = userTL;
+            req.session.userLogged= userTL;
             if(req.body.recordame != undefined){
-                res.cookie ("recordame", userLoggeado.user, { maxAge: 300000 })
+                res.cookie ("recordame", userLogged.user, { maxAge: 300000 })
             }
             res.redirect("/");
         }else {
