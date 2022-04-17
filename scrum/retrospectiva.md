@@ -47,3 +47,20 @@ SPRINT 4- RETROSPECTIVA DEL SPRINT 3
 
 5.DEJAR DE HACER:
 -
+
+SPRINT 5- RETROSPECTIVA DEL SPRINT 4
+
+1.COMENZAR A HACER:
+-Reuniones periódicas
+
+2.HACER MÁS:
+-Mantener la buena comunicación.
+-División de tareas al inicio de sprint.
+ 
+3.CONTINUAR HACIENDO:
+-Realizar el sprint con tiempo para poder poner en común y despejar dudas; también nos funciona mucho para entregar a tiempo y trabajar en conjunto.
+
+4.HACER MENOS:
+
+5.DEJAR DE HACER:
+-No repasar el material antes de realizar los ejercicios.

@@ -5,31 +5,13 @@
 }
 
 body{
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: #F4F1DE;
 }
 
 header div.logo img{
   width: 100px;
   text-align: center;
-  background-color: #F4F1DE;
-
-}
-
-header div.logo img{
-  background-color: #F4F1DE;
-  border:none;
-}
-
-header div #home{
-  border: 1px solid #F4F1DE;
-  background-color: #F4F1DE;
-}
-
-header div #home a{
- color: #383536;
- font-size: 1.5em;
- background-color: #F4F1DE;
 }
 
 header div #boton{
@@ -41,16 +23,6 @@ header div #boton a{
  color: #383536;
  font-size: 1.5em;
  background-color: #E07A5F;
-}
-
-.productos #producto{
-  border: 1px solid #F4F1DE;
-  background-color: #F4F1DE;
-  width: auto;
-}
-
-.productos #producto a{
- background-color: #F4F1DE;
 }
 
 header .up-bar{
@@ -69,7 +41,7 @@ header .mid-bar{
 }
 
 header .mid-bar h2{
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #383536
 }
@@ -82,6 +54,22 @@ header div.logo{
   align-self: center;
 }
 
+header div.logo img{
+  background-color: #F4F1DE;
+  border:none;
+}
+
+header div #home{
+  border: 1px solid #F4F1DE;
+  background-color: #F4F1DE;
+}
+
+header div #home a{
+ color: #383536;
+ font-size: 1.5em;
+ background-color: #F4F1DE;
+}
+
 header div.login{
   display: flex;
   justify-content: flex-end;
@@ -90,6 +78,13 @@ header div.login{
   padding-right: 20px;
 }
 
+header div.login button a{
+  text-decoration: none;
+  color:#383536;
+  border:none;
+  font-size: 1.5em;
+  background-color: #F4F1DE;
+}
 header div.login i{
   font-size: 2em;
 }
@@ -367,6 +362,7 @@ main .productosRelacionados{
 
 main .productosRelacionados a{
   text-decoration: none;
+  background-color:#ebebeb
 }
 
 main .productosRelacionados h3{
@@ -385,6 +381,11 @@ main .productosRelacionados h3{
 
  }
 
+ #producto{
+   background-color: #F4F1DE;
+   border:none;
+   width: 100%;
+ }
  main .productosRelacionados #edit a{
   text-decoration: none;
   color:#F4F1DE;

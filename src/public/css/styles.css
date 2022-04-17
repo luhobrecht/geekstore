@@ -5,8 +5,36 @@
 }
 
 body{
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: #F4F1DE;
+}
+
+header .myaccount{
+  text-decoration: none;
+  color:#383536;
+  font-weight: 600;
+}
+
+.nav-item{
+  list-style: none;
+  margin-top: 2px;
+}
+
+header .logout{
+  background-color: #383536;
+  color:#F4F1DE;
+  font-size: 12px;
+  padding:5px;
+  border: 1px solid #383536;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+header .sesion{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
 }
 
 header div.logo img{
@@ -41,7 +69,7 @@ header .mid-bar{
 }
 
 header .mid-bar h2{
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #383536
 }

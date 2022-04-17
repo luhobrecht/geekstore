@@ -24,8 +24,11 @@
                 "provincia": "Buenos Aires",
                 "city": "Suipacha",
                 "password": "Marvel123",
-                "img": "profilePicture-1647389714706.png",
-                "interest": "Spiderman"
+                "img": "default.png",
+                "interest": [
+                        "Big Bang",
+                        "Spiderman"
+                ]
         },
         {
                 "id": 3,
@@ -55,16 +58,42 @@
         },
         {
                 "id": 5,
-                "name": "Lucia",
-                "user": "lucia",
-                "email": "lu@asd.com",
+                "name": "Peter Parker",
+                "user": "spiderman",
+                "email": "peter@spiderman.com",
+                "birthDate": "1992-01-01",
+                "adress": "Una calle 1",
+                "city": "Una ciudad 1",
+                "provincia": "Una provincia 1",
+                "img": "profilePicture-1647905580903.png",
+                "password": "$2a$10$oT9t4vV3CIzSNVll.PDId.Lq8lgLXs5iAf7.zchqRfvdizk0ICe2u",
+                "passwordConfirm": "$2a$10$GNpvVHCQTQQmcwvAYywKBewLAMVP3bmxZdX0Aw/7skAJUTz.eJIgS",
+                "interest": "Spiderman"
+        },
+        {
+                "id": 6,
+                "name": "Hulk",
+                "user": "hulk",
+                "email": "hulk@asd.com",
                 "birthDate": "1992-03-01",
                 "adress": "asd",
                 "city": "asd",
                 "provincia": "asd",
-                "img": "profilePicture-1647390966212.png",
-                "password": "$2b$10$c6lgI34v8a0Vs2RgXKEXMO6MI7J/mPalI1N6UakPSCna..dCZ9yyS",
-                "passwordConfirm": "$2b$10$b3iQtwvRRLVNns49Wq1Q3.IOsz4sUiRfsZbTku/CAgTgB0cx/fPKa",
-                "interest": "Big Bang"
+                "img": "default.png",
+                "password": "123456lu",
+                "passwordConfirm": "$2a$10$pSwzeFd6tj/MMH2p4pzN5OH5CJQbxQleWUFbgusj7MU6U2GuMywpa"
+        },
+        {
+                "id": 7,
+                "name": "lucia",
+                "user": "lucia",
+                "email": "lu@asd.com",
+                "birthDate": "1992-12-01",
+                "adress": "asd",
+                "city": "asd",
+                "provincia": "asd",
+                "img": "default.png",
+                "password": "$2a$10$Rblclb5GHUBbAvgoS0jzuuf2YBujujtqGr5yl7u.HWy24H3kL3WEm",
+                "passwordConfirm": "$2a$10$odLdFLbeyT27/5eQh5CXX.NzldAC.A5oAOOGCK3zPRqcGla7GQRWe"
         }
 ]

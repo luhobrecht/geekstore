@@ -2,7 +2,7 @@
 <html lang="es">
     <%- include("partials/head.ejs") %>
     <link rel="stylesheet" href="/css/users.css">
-    <title>Todos los usuarios - Geek Store</title>
+    <title>Detalles de usuario Geek Store</title>
 <body>
     <%- include("partials/header.ejs") %>
 <main>   
@@ -13,14 +13,13 @@
         </div>
     </section>    
     <section class="userList">
-        <h3 class="subtitulo">Todos los usuarios:</h3>
+        <h3 class="subtitulo">Detalle de usuario #<%= user.id %>:</h3>
         <div class="users">
-            <% users.forEach(function(user){ %>
         <article>
             <button id="boton"><a href="/usuarios/<%= user.id%>">
             <div class="fotoUser">
             <label>Foto de usuario</label>
-            <img src= "/img/users/<%= user.img %>">
+            <img src= "/img/users/<%= user.img%> ">
             </div>
             <div class="user1">
             <div>
@@ -62,7 +61,6 @@
             </div>
         </article>    
         </a></button> 
-        <% }) %>  
         </div>
     </section>
 </main>  

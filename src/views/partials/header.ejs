@@ -19,10 +19,23 @@
             ASESORAMIENTO PERSONALIZADO
         </h2>
     </div>
+    <div class="sesion">
+    <% if(locals.userLocals){ %>
+        <li class="nav-item">
+        <a class="myaccount" href="/usuarios/mi-cuenta"><%= userLocals.name %></a>
+        </li>
+      <% }else{ %>
         <div class="login">
             <button id="home"><a href="/usuarios/login"><i class="fas fa-user-circle"></i></a></button>   
         </div>
+      <% } %> 
+        <% if(locals.userLocals){ %>
+            <form action="/usuarios/logout" method="POST">
+              <button type="submit" class="logout">Cerrar Sesión</button>
+            </form>
+          <% } %> 
     </div> 
+    </div>
     <nav class="navbar">
         <div class="burger-menu">
             <i class="fa fa-bars burger"></i>
