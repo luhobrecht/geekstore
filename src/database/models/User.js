@@ -17,14 +17,8 @@ module.exports = (sequelize, DataTypes)=>{
         email:{
             type: DataTypes.STRING,
         },
-        province:{
-            type:DataTypes.STRING,
-        },
         city: {
             type:DataTypes.STRING,
-        },
-        interests: {
-            type:DataTypes.TEXT,
         },
         password: {
             type:DataTypes.STRING,
@@ -32,9 +26,6 @@ module.exports = (sequelize, DataTypes)=>{
         img: {
             type:DataTypes.STRING,
         },
-        adress:{
-            type:DataTypes.STRING,
-        }
     };
 
     let config ={

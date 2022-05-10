@@ -25,9 +25,9 @@ const productController = {
     },
     detail: (req, res) => {
 
-        db.Products.findByPk()
-        .then(function(products) {
-            return res.render("products", {products: products})
+        db.Products.findByPk(req.params.id)
+        .then(function(product) {
+            return res.render("productDetail", {product: product})
         })
 
         /*let products = findAll();
@@ -98,15 +98,37 @@ const productController = {
         res.render("completePurchase");
     },
     edit: (req,res) => {
-        let products = findAll();
+
+        db.Products.findByPk(req.params.id)
+        .then(function(product){
+            res.render("editProduct", {product: product})
+        })
+
+
+        /*let products = findAll();
         
         let productFound = products.find(function(product){
             return product.id == req.params.id
          });
         res.render("editProduct", {product: productFound})
+        */
     },
     update: (req, res) => {
-        let products = findAll();
+        db.Products.update({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            img: req.file.filename
+        },{
+            where: {
+                id: req.params.id
+            }
+        });
+
+    res.redirect("/productos") 
+    },
+        /*let products = findAll();
 
         let productoActualizado = products.map(function(product){
             if(product.id == req.params.id){
@@ -135,7 +157,7 @@ const productController = {
 
        res.redirect ("/productos");
     },
-
+    */
     destroy: function(req, res){
         let products = findAll();
 

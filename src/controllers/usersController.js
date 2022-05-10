@@ -6,23 +6,35 @@ const { validationResult } = require("express-validator");
 const db = require ("../database/models")
 
 
-function writeFile(array){
+/*function writeFile(array){
     let string = JSON.stringify(array, null, 8);
     fs.writeFileSync(path.join(__dirname, "../data/users.json"), string);
 }
-
+*/
 const usersController = {
     index: (req,res) => {
+        db.Users.findAll()
+        .then(function(users) {
+            return res.render("users", {users: users})
+        })
+
+        /*
         res.render("users", {users: users})
+        */
     },
     
     detail: (req, res) => {
 
-        let userFound = users.find(function(user){
+        db.Users.findByPk(req.params.id)
+        .then(function(user) {
+            return res.render("userDetail", {user: user})
+        })
+       /* let userFound = users.find(function(user){
            return user.id == req.params.id
         });
 
         res.render("userDetail", {user: userFound});
+        */
     },
     login:(req, res) => {
         res.render("login");
@@ -61,7 +73,17 @@ const usersController = {
     save: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-        let newUser= {
+            db.Users.create({
+                name: req.body.name,
+                user: req.body.user,
+                email: req.body.email,
+                city: req.body.city,
+                img: req.file ? req.file.filename: "default.png",
+                password: bcrypt.hashSync(req.body.password, 10),
+            });
+
+        res.redirect("/usuarios/login");
+        /*let newUser= {
             id: users.length + 1,
             name: req.body.name,
             user: req.body.user,
@@ -81,6 +103,7 @@ const usersController = {
             writeFile(users);
     
             res.redirect("/usuarios/login");
+        */
         }else{
             res.render("register", {errors: errors.mapped(), old: req.body});
         }
