@@ -3,6 +3,8 @@ const path = require ("path");
 const bcrypt = require ("bcryptjs");
 const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")))
 const { validationResult } = require("express-validator");
+const db = require ("../database/models")
+
 
 function writeFile(array){
     let string = JSON.stringify(array, null, 8);

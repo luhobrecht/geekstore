@@ -65,10 +65,10 @@
                 "adress": "Una calle 1",
                 "city": "Una ciudad 1",
                 "provincia": "Una provincia 1",
-                "img": "profilePicture-1647905580903.png",
+                "img": "default.png",
                 "password": "$2a$10$oT9t4vV3CIzSNVll.PDId.Lq8lgLXs5iAf7.zchqRfvdizk0ICe2u",
                 "passwordConfirm": "$2a$10$GNpvVHCQTQQmcwvAYywKBewLAMVP3bmxZdX0Aw/7skAJUTz.eJIgS",
-                "interest": "Spiderman"
+                "interest": "Game of Thrones"
         },
         {
                 "id": 6,
