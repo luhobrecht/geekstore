@@ -1,6 +1,8 @@
 const express = require("express");
 const fs = require("fs");
 const path = require ("path");
+const db = require ("../database/models")
+
 
 function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
@@ -10,9 +12,10 @@ function findAll(){
 
 const mainControllers = {
     index: (req,res) => {
-        const products = findAll();
-        
-        res.render("index", {products: products})
+        db.Products.findAll()
+        .then(function(products) {
+            return res.render("index", {products: products})
+        })
     },
     contact: (req,res) => {
         res.render("contact")

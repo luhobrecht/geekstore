@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require ("path");
 const db = require ("../database/models")
 
-function findAll(){
+/*function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
     let products = JSON.parse(data);
     return products;
@@ -12,15 +12,25 @@ function findAll(){
 function writeFile(array){
     let string = JSON.stringify(array, null, 8);
     fs.writeFileSync(path.join(__dirname, "../data/products.json"), string);
-}
+}*/
 
 const productController = {
     index: (req,res) => {
-        const products = findAll();
-        res.render("products", {products: products})
+        db.Products.findAll()
+        .then(function(products) {
+            return res.render("products", {products: products})
+        })
+        //const products = findAll();
+        //res.render("products", {products: products})
     },
     detail: (req, res) => {
-        let products = findAll();
+
+        db.Products.findByPk()
+        .then(function(products) {
+            return res.render("products", {products: products})
+        })
+
+        /*let products = findAll();
 
         let productFound = products.find(function(product){
            return product.id == req.params.id
@@ -31,34 +41,45 @@ const productController = {
         })
 
         res.render("productDetail", {product: productFound, visited});
+        */
     },
     create: (req,res) => {
         res.render("createProduct");
     },
     save: (req,res) => {
-        let products = findAll();
-        if(req.file){
-        let newProduct = {
-            id: products.length + 1,
-            name: req.body.name,
-            description: req.body.description,
-            category: req.body.category,
-            color: req.body.color,
-            size: req.body.size,
-            price: req.body.price,
-            discount: req.body.discount,
-            img: req.file.filename
-        }
+        db.Products.create({
+                    name: req.body.name,
+                    description: req.body.description,
+                    price: req.body.price,
+                    discount: req.body.discount,
+                    img: req.file.filename
+                });
 
-        products.push(newProduct);
-        
-        writeFile(products);
-
-        res.redirect("/productos");
-    }else{
-        res.render("createProduct");
-    }
+            res.redirect("/productos");
     },
+        //let products = findAll();
+        //if(req.file){
+        //let newProduct = {
+        //    id: products.length + 1,
+        //    name: req.body.name,
+        //    description: req.body.description,
+        //    category: req.body.category,
+        //    color: req.body.color,
+        //    size: req.body.size,
+        //    price: req.body.price,
+        //    discount: req.body.discount,
+        //    img: req.file.filename
+        //}
+
+        //products.push(newProduct);
+        
+        //writeFile(products);
+
+       // res.redirect("/productos");
+    //}else{
+      //  res.render("createProduct");
+    //}
+    //},
     offers: (req,res) => {
     const products = findAll();
 

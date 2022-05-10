@@ -32,11 +32,7 @@ CREATE TABLE `products` (
   `name` varchar(50) NOT NULL,
   `price` float NOT NULL,
   `description` text NOT NULL,
-  `category` varchar(50) NOT NULL,
-  `colors` varchar(50) NOT NULL,
-  `size` varchar(50) NOT NULL,
   `discount` int(11) NOT NULL,
-  `type` varchar(50) NOT NULL,
   `img` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -53,7 +49,6 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `province` varchar(50) NOT NULL,
   `city` varchar(50) NOT NULL,
-  `interests` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`interests`)),
   `password` varchar(50) NOT NULL,
   `img` varchar(50) NOT NULL,
   `adress` varchar(50) NOT NULL

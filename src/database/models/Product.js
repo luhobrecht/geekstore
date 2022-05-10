@@ -1,7 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     let alias = "Products";
     let cols = {
-
         id: {
             type: DataTypes.INTEGER,
             primaryKey:true,
@@ -16,24 +15,12 @@ module.exports = (sequelize, DataTypes) => {
         description:{
             type: DataTypes.TEXT,
         },
-        category:{
-            type:DataTypes.STRING,
-        },
-        colors: {
-            type:DataTypes.STRING,
-        },
-        syze: {
-            type:DataTypes.STRING,
-        },
         img: {
             type:DataTypes.STRING,
         },
         discount: {
             type:DataTypes.INTEGER,
         },
-        type: {
-            type:DataTypes.STRING,
-        }
     };
 
     let config = {
