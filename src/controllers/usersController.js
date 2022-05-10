@@ -110,13 +110,34 @@ const usersController = {
     },
     edit: (req,res) => {
 
-        let userFound = users.find(function(user){
+        db.Users.findByPk(req.params.id)
+        .then(function(user){
+            res.render("editUser", {user: user})
+        })
+
+        /*let userFound = users.find(function(user){
             return user.id == req.params.id
          });
 
         res.render("editUser", {user : userFound})
+        */
     },
     update: (req, res) => {
+        db.Users.update({
+            name: req.body.name,
+                user: req.body.user,
+                email: req.body.email,
+                city: req.body.city,
+                img: req.file ? req.file.filename: "default.png",
+                password: bcrypt.hashSync(req.body.password, 10),
+            },{
+            where: {
+                id: req.params.id
+            }
+        });
+
+    res.redirect("/usuarios") 
+        /*
         let userUpdate = users.map(function(user){
             if(user.id == req.params.id){
                 user.name = req.body.name;
@@ -137,6 +158,7 @@ const usersController = {
         writeFile(users);
 
         res.redirect ("/usuarios")
+        */
         }        
 }
 
