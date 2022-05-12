@@ -48,21 +48,12 @@ const validator = {
             }
             return true;
         }),
-        body("adress")
-        .notEmpty()
-        .withMessage("Escribí tu dirección. Ej. Calle Big Bang 12"),
         body("city")
         .notEmpty()
         .withMessage("Escribí tu ciudad."),
-        body("provincia")
-        .notEmpty()
-        .withMessage("Escribí tu provincia."),
         body("password")
         .isLength({min:8})
         .withMessage("La contraseña debe tener al menos 8 caracteres."),
-        body("password_confirm")
-        .isLength({min:8})
-        .withMessage("La contraseña debe tener al menos 8 caracteres.")
     ]
 }
 

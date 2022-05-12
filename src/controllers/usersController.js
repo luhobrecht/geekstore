@@ -1,7 +1,7 @@
 const fs= require("fs");
 const path = require ("path");
 const bcrypt = require ("bcryptjs");
-//const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")))
+const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")))
 const { validationResult } = require("express-validator");
 const db = require ("../database/models")
 
@@ -79,8 +79,9 @@ const usersController = {
                 email: req.body.email,
                 city: req.body.city,
                 img: req.file ? req.file.filename: "default.png",
-                password: bcrypt.hashSync(req.body.password, 10),
+                password: bcrypt.hashSync(req.body.password, 15),
             });
+
 
         res.redirect("/usuarios/login");
         /*let newUser= {
@@ -129,7 +130,7 @@ const usersController = {
                 email: req.body.email,
                 city: req.body.city,
                 img: req.file ? req.file.filename: "default.png",
-                password: bcrypt.hashSync(req.body.password, 10),
+                password: bcrypt.hashSync(req.body.password, 15),
             },{
             where: {
                 id: req.params.id
@@ -159,7 +160,15 @@ const usersController = {
 
         res.redirect ("/usuarios")
         */
-        }        
+        },
+        destroy: function(req, res){
+            db.Users.destroy({
+                where:{
+                    id:req.params.id
+                }
+            })
+            res.redirect("/usuarios");
+        }      
 }
 
 

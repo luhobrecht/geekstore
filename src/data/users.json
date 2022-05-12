@@ -82,18 +82,5 @@
                 "img": "default.png",
                 "password": "123456lu",
                 "passwordConfirm": "$2a$10$pSwzeFd6tj/MMH2p4pzN5OH5CJQbxQleWUFbgusj7MU6U2GuMywpa"
-        },
-        {
-                "id": 7,
-                "name": "lucia",
-                "user": "lucia",
-                "email": "lu@asd.com",
-                "birthDate": "1992-12-01",
-                "adress": "asd",
-                "city": "asd",
-                "provincia": "asd",
-                "img": "default.png",
-                "password": "$2a$10$Rblclb5GHUBbAvgoS0jzuuf2YBujujtqGr5yl7u.HWy24H3kL3WEm",
-                "passwordConfirm": "$2a$10$odLdFLbeyT27/5eQh5CXX.NzldAC.A5oAOOGCK3zPRqcGla7GQRWe"
         }
 ]
