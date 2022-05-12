@@ -185,6 +185,15 @@ const productController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
         res.redirect("/productos");
         */
+    },
+    search: function (req, res){
+        db.Products.findOne({
+            where: {
+                
+            }
+        }).then((result) => {
+            console.log(result)
+        })
     }
     
 }
