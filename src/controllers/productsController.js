@@ -159,7 +159,13 @@ const productController = {
     },
     */
     destroy: function(req, res){
-        let products = findAll();
+        db.Products.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        res.redirect("/productos");
+        /*let products = findAll();
 
         let productIndex = products.findIndex(function(product){
             return product.id == req.params.id
@@ -178,8 +184,9 @@ const productController = {
         let finalProducts = products.filter(product=> product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
         res.redirect("/productos");
+        */
     }
-    */
+    
 }
     
 

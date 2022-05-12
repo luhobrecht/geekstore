@@ -23,14 +23,14 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `products` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `price` float NOT NULL,
   `description` text NOT NULL,
   `discount` int NOT NULL,
   `img` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Remera GOT',1200,'Remera de Game of Thrones',20,'remeraGOT.png'),(2,'Mate GOT',1000,'Mate de Game of Thrones',15,'mateGoT.png'),(3,'Gorra GOT',800,'Gorra de Game of Thrones',10,'gorraGoT.png'),(4,'Remera Big Bang Theory',1200,'Remera de Big Bang Theory',20,'remera-big-bang.png'),(5,'Mate Big Bang',1000,'Mate de Big Bang Theory',15,'mateBigBang.png'),(6,'Gorra Big Bang Theory',800,'Gorra de Big Bang Theory',10,'gorraBigBang.png'),(7,'Remera Spiderman',1200,'Remera de Spiderman',20,'remeraSpiderman.png'),(8,'Mate Spiderman',1000,'Mate de Spiderman',15,'mateSpiderman.png'),(9,'Gorra Spiderman',800,'Gorra de Spiderman',10,'gorraSpiderman.png'),(10,'Remera Superman',1200,'Remera de Superman',20,'remeraSuperman.png'),(11,'Mate Superman',1000,'Mate de Superman',15,'mateSuperman.png'),(12,'Gorra Superman',800,'Gorra de Superman',10,'gorraSuperman.png');
+INSERT INTO `products` VALUES (1,'Remera GOT',1200,'            Remera de Game of Thrones\r\n            ',20,'product-1652357500079.png'),(2,'Mate GOT',1000,'Mate de Game of Thrones',15,'mateGoT.png'),(3,'Gorra GOT',800,'Gorra de Game of Thrones',10,'gorraGoT.png'),(4,'Remera Big Bang Theory',1200,'Remera de Big Bang Theory',20,'remera-big-bang.png'),(5,'Mate Big Bang',1000,'Mate de Big Bang Theory',15,'mateBigBang.png'),(6,'Gorra Big Bang Theory',800,'Gorra de Big Bang Theory',10,'gorraBigBang.png'),(7,'Remera Spiderman',1200,'Remera de Spiderman',20,'remeraSpiderman.png'),(8,'Mate Spiderman',1000,'Mate de Spiderman',15,'mateSpiderman.png'),(9,'Gorra Spiderman',800,'Gorra de Spiderman',10,'gorraSpiderman.png'),(10,'Remera Superman',1200,'Remera de Superman',20,'remeraSuperman.png'),(11,'Mate Superman',1000,'Mate de Superman',15,'mateSuperman.png'),(12,'Gorra Superman',800,'Gorra de Superman',10,'gorraSuperman.png'),(13,'Remera blanca GOT',1200,'Remera blanca de Game of Thrones',20,'product-1652357827268.png');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,4 +84,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-12 14:03:55
+-- Dump completed on 2022-05-12 14:17:38
