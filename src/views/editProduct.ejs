@@ -13,10 +13,20 @@
         <div class="nombre">         
             <label for="name"></label>
             <input placeholder="Nombre del producto" type="text" name="name" id="nombre" value="<%= product.name %>">
+            <% if (locals.errors && errors.name) {%>
+                <p id="errores">
+                    <%= errors.name.msg %> 
+                </p>   
+            <% } %> 
             <label for="description"></label>
             <textarea name="description"  id="description" >
             <%= product.description%>
             </textarea>
+            <% if (locals.errors && errors.description) {%>
+                <p id="errores">
+                    <%= errors.description.msg %> 
+                </p>   
+            <% } %> 
         </div>                    
         </div>  
         <h3 class="foto">Imagen</h3>   

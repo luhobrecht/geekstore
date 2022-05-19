@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require ("path");
 const db = require ("../database/models")
+const { validationResult } = require("express-validator");
 
 /*function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
@@ -47,6 +48,8 @@ const productController = {
         res.render("createProduct");
     },
     save: (req,res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         db.Products.create({
                     name: req.body.name,
                     description: req.body.description,
@@ -56,6 +59,9 @@ const productController = {
                 });
 
             res.redirect("/productos");
+        }else{
+            res.render("createProduct", {errors: errors.mapped(), old: req.body});
+        }
     },
         //let products = findAll();
         //if(req.file){
@@ -114,6 +120,8 @@ const productController = {
         */
     },
     update: (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         db.Products.update({
             name: req.body.name,
             description: req.body.description,
@@ -127,6 +135,9 @@ const productController = {
         });
 
     res.redirect("/productos") 
+    }else{
+    res.render("editProduct", {errors: errors.mapped()});
+}
     },
         /*let products = findAll();
 

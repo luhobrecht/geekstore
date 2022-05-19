@@ -196,6 +196,13 @@ main #form div{
     margin: 0px 2rem 0px 2rem; 
 }
 
+#errores{
+  color: #f12727;
+  padding: 10px;
+  font-size: 13px;
+  font-style: italic
+}
+
 label {
     color:#a19e9e
 }
