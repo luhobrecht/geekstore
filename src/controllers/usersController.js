@@ -1,9 +1,10 @@
 const fs= require("fs");
 const path = require ("path");
 const bcrypt = require ("bcryptjs");
-const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")))
 const { validationResult } = require("express-validator");
 const db = require ("../database/models")
+const logInUser = require('../services/userServices.js')
+
 
 
 /*function writeFile(array){
@@ -43,8 +44,11 @@ const usersController = {
         const errors = validationResult(req);   
         if(errors.errors.length > 0){
             res.render("login", {errorsLogin: errors.mapped(), old: req.body})
+        }else{
+            logInUser(req.body.user, req.body.remember, req, res)
         }
-            const userFound = users.find(function(user){
+    },
+            /*const userFound = users.find(function(user){
                 return user.user == req.body.user && bcrypt.compareSync(req.body.password, user.password)
             })
     
@@ -60,8 +64,8 @@ const usersController = {
     
             }else{
                 res.render("login", {errorMsg: "Error! Credenciales inválidas"})
-            }
-        }, 
+            }*/
+        
     logout:function(req, res){
         req.session.destroy();       
         res.clearCookie("user");

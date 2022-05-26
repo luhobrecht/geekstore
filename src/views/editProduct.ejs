@@ -18,6 +18,7 @@
                     <%= errors.name.msg %> 
                 </p>   
             <% } %> 
+            <p class="nameError errores "></p>
             <label for="description"></label>
             <textarea name="description"  id="description" >
             <%= product.description%>
@@ -26,18 +27,24 @@
                 <p id="errores">
                     <%= errors.description.msg %> 
                 </p>   
-            <% } %> 
+            <% } %>
+            <p class="descriptionError errores "></p> 
         </div>                    
         </div>  
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
-        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" >        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif" >   
+        <p class="fileError errores "></p>     
         </div>           
         <br/>         
             <label for="precio" class="precio"> Precio </label>
             <input placeholder="Precio" type="number" name="price" id="precio" value="<%= product.price %>">
+            <p class="priceError errores "></p>
+
             <label for="descuento" class="descuento"> Descuento </label>
             <input placeholder="Descuento" type="number" name="discount" id="descuento" value="<%= product.discount %>">
+            <p class="discountError errores "></p>
+
 
         <div class="agregar">      
             <input type="submit" name="submit" id="agregar" value="EDITAR PRODUCTO"> </input>
@@ -54,6 +61,7 @@
 </main> 
  
 <%- include("partials/footer.ejs") %>
+<script src="/js/editProduct.js"></script>
 </body>
 </html>
 

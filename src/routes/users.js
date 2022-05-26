@@ -52,5 +52,7 @@ router.get("/:id", usersController.detail);
 router.get("/:id/editar", usersController.edit);
 // Envío de formulario de edición de usuarios
 router.put("/:id/editar", upload.single("img"), usersController.update);
+// Envío de formulario de elminación de usuario
+router.delete("/:id/delete", usersController.destroy);
 
 module.exports = router;

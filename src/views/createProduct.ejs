@@ -18,24 +18,28 @@
                     <%= errors.name.msg %> 
                 </p>   
             <% } %> 
+            <p class="nameError errores"></p>
             <label for="description"></label>
             <textarea placeholder="Descripción del producto" name="description" id="description" value="<%= locals.old && old.description ? old.description: ""%>" >
-            </textarea>
+            Descripción del producto </textarea>
             <% if (locals.errors && errors.description) {%>
                 <p id="errores">
                     <%= errors.description.msg %> 
                 </p>   
             <% } %> 
+            <p class="descriptionError errores"></p>
         </div>                     
         <h3 class="foto">Imagen</h3>   
         <div class="foto-archivo">
-        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif">        
+        <input type="file" name="img" id="archivo" accept=".png, .jpeg, .jpg, .gif">    
+        <p class="fileError errores"></p>    
         </div>  
         <br/>         
             <label for="precio"></label>
             <input placeholder="Precio" type="number" name="price" id="precio">
+            <p class="error"></p>
             <input placeholder="Descuento" type="number" name="discount" id="descuento" min="0" max="100" >
-
+            <p class="priceError errores"></p>
         <div class="agregar">      
             <input type="submit" name="submit" id="agregar" value="CREAR PRODUCTO"> </input>
             <br/>
@@ -48,6 +52,7 @@
 </main> 
  
 <%- include("partials/footer.ejs") %>
+<script src="/js/createProduct.js"></script>
 </body>
 </html>
 

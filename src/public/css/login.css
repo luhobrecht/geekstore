@@ -185,6 +185,18 @@ main nav div.loginU{
     font-style: italic;
 }
 
+.validInput{
+  background-color: rgba(184, 236, 106, 0.8);
+}
+.nonValidInput{
+  background-color: rgba(247, 166, 166, 0.8);
+}
+.errores{
+  color: red;
+  font-style: italic;
+  font-size: 12px;
+}
+
 #remember{
     display:flex;
     justify-content: flex-start;
@@ -205,10 +217,9 @@ main nav div.loginU #user{
     width: 90%;
     padding: 10px;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #E07A5F;
     border-radius: 10px;
     color: #383536;
-    background-color:#F4F1DE;
     margin-bottom: 20px;
 }
 
@@ -216,10 +227,9 @@ main nav div.loginU #password{
     width: 90%;
     padding: 10px;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #E07A5F;
     border-radius: 10px;
     color: #383536;
-    background-color:#F4F1DE;
     margin-bottom: 5px;
 }
 

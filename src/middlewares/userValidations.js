@@ -1,7 +1,7 @@
 const path = require ("path");
 const fs= require("fs");
 const { body } = require ("express-validator");
-const { User } =  require('../database/models')
+const { Users } =  require('../database/models')
 const bcryptjs = require('bcryptjs')
 
 /*function findAll(){
@@ -15,7 +15,7 @@ const userValidations = {
         .notEmpty()
         .withMessage("Escribe tu nombre de usuario")
         .custom((value) => {
-            return User.findOne({raw: true, where: {user : value}})
+            return Users.findOne({raw: true, where: {user : value}})
             .then(user => {
                 return (user != null ? true : Promise.reject() )
             })                      
@@ -24,7 +24,7 @@ const userValidations = {
         .notEmpty()
         .withMessage("Ingrese su contraseña")
         .custom((value, {req}) => {
-            return User.findOne({raw: true, where: {user : req.body.user }})
+            return Users.findOne({raw: true, where: {user : req.body.user }})
                 .then(user => {
                     return bcryptjs.compareSync(value, user.password)
                         .then(passMatch => {
@@ -45,7 +45,7 @@ const userValidations = {
         .withMessage("Escribí tu email con un formato válido. Ej. sheldon@uncorreo.com")
         .bail()
         .custom((value) => {
-            return User.findOne({raw: true, where: {email : value}})
+            return Users.findOne({raw: true, where: {email : value}})
             .then(user => {
                 return (user == null ? true : Promise.reject() )
             });                      
@@ -55,7 +55,7 @@ const userValidations = {
         .withMessage("Crea un nombre de usuario. Ej. SheldonCoop")
         .bail()
         .custom((value) => {
-            return User.findOne({raw: true, where: {user : value}})
+            return Users.findOne({raw: true, where: {user : value}})
             .then(user => {
                 return (user == null ? true : Promise.reject() )
             })                      

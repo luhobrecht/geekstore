@@ -87,12 +87,10 @@ const productController = {
     //}
     //},
     offers: (req,res) => {
-    const products = findAll();
-
-    const inSale = products.filter(function(product){
-	    return product.category == 'in-sale'
-    })
-        res.render("offers", {offers: inSale})
+        db.Products.findAll()
+        .then(function(products) {
+            return res.render("products", {products: products})
+        })
     },
     cart: (req, res) => {
         res.render("productCart");
@@ -133,10 +131,10 @@ const productController = {
                 id: req.params.id
             }
         });
-
     res.redirect("/productos") 
+    
     }else{
-    res.render("editProduct", {errors: errors.mapped()});
+    res.render("editProduct", {errors: errors.mapped(), product: req.body});
 }
     },
         /*let products = findAll();

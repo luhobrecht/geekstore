@@ -271,9 +271,19 @@ h2{
     border-radius: 5px;
     color:#383536;
     font-size: 14px;
-    border: 1px solid #F4F1DE;
-    background-color: #F4F1DE;
+    border: 1px solid #E07A5F;
     padding:20px;
+}
+
+#description{
+  width: 70%;
+  height: auto;
+  border: 1px solid #E07A5F;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color:#383536;
+  padding-bottom: 40px;
 }
 
 .precio, .descuento {
@@ -351,6 +361,18 @@ h2{
   border-radius: 5px;
   padding: 5px;
   color:#FFF;
+  font-size: 12px;
+}
+
+.validInput{
+  background-color: rgba(184, 236, 106, 0.8);
+}
+.nonValidInput{
+  background-color: rgba(247, 166, 166, 0.8);
+}
+.errores{
+  color: red;
+  font-style: italic;
   font-size: 12px;
 }
 
