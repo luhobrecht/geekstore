@@ -56,9 +56,10 @@ const productController = {
                     price: req.body.price,
                     discount: req.body.discount,
                     img: req.file.filename
-                });
-
-            res.redirect("/productos");
+                })
+                .then (function(){
+                    res.redirect("/productos") 
+                })
         }else{
             res.render("createProduct", {errors: errors.mapped(), old: req.body});
         }
@@ -130,8 +131,10 @@ const productController = {
             where: {
                 id: req.params.id
             }
-        });
-    res.redirect("/productos") 
+        })
+        .then (function(){
+            res.redirect("/productos") 
+        })
     
     }else{
     res.render("editProduct", {errors: errors.mapped(), product: req.body});
