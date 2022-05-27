@@ -7,7 +7,7 @@ function remember(req, res, next){
         Users.findOne({                                      
             raw: true,
             where: {
-                id : req.cookies.userCookies.userLogueado
+                id : req.cookies.userCookies.id
             }})
             .then((user)=>{
                 let {id, username} = req.cookies.userCookies

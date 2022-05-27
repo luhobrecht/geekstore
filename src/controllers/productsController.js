@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require ("path");
 const db = require ("../database/models")
 const { validationResult } = require("express-validator");
+const { DefaultSerializer } = require("v8");
 
 /*function findAll(){
     let data = fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
@@ -55,7 +56,7 @@ const productController = {
                     description: req.body.description,
                     price: req.body.price,
                     discount: req.body.discount,
-                    img: req.file.filename
+                    img: req.file ? req.file.filename : "default.png"
                 })
                 .then (function(){
                     res.redirect("/productos") 
@@ -126,16 +127,15 @@ const productController = {
             description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
-            img: req.file.filename
+            img: req.file ? req.file.filename : "default.png"
         },{
             where: {
                 id: req.params.id
             }
         })
-        .then (function(){
+        .then(function(){
             res.redirect("/productos") 
         })
-    
     }else{
     res.render("editProduct", {errors: errors.mapped(), product: req.body});
 }

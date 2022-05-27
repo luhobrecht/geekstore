@@ -2,7 +2,8 @@ const {Users} = require('../database/models')
 
 
 const logInUser =  function(user, remember, req, res){
-    Users.findOne({
+
+   return Users.findOne({
         raw: true,
         where: {
             user : user

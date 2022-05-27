@@ -68,7 +68,7 @@ const usersController = {
         
     logout:function(req, res){
         req.session.destroy();       
-        res.clearCookie("user");
+        res.clearCookie("userCookies");
         res.redirect("/");
     },
     create: (req, res) => {
@@ -84,10 +84,11 @@ const usersController = {
                 city: req.body.city,
                 img: req.file ? req.file.filename: "default.png",
                 password: bcrypt.hashSync(req.body.password, 15),
-            });
+            })
+            .then (function(){
+            res.redirect("/usuarios/login");
+            })
 
-
-        res.redirect("/usuarios/login");
         /*let newUser= {
             id: users.length + 1,
             name: req.body.name,
@@ -139,10 +140,13 @@ const usersController = {
             where: {
                 id: req.params.id
             }
-        });
+        })
+        .then (function(){
+            res.redirect("/usuarios");
+            })
 
-    res.redirect("/usuarios") 
-        /*
+
+            /*
         let userUpdate = users.map(function(user){
             if(user.id == req.params.id){
                 user.name = req.body.name;
@@ -171,7 +175,9 @@ const usersController = {
                     id:req.params.id
                 }
             })
-            res.redirect("/usuarios");
+            .then (function(){
+                res.redirect("/usuarios");
+                })
         }      
 }
 
