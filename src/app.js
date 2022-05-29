@@ -11,7 +11,7 @@ const locals = require ("../src/middlewares/locals");
 const routesProducts = require ("./routes/products");
 const routesMain = require ("./routes/main");
 const routesUsers = require ("./routes/users");
-
+const routesApi = require("./api/apiRoutes")
 const app = express();
 
 // view engine setup
@@ -38,6 +38,8 @@ app.use("/", routesMain);
 app.use("/productos", routesProducts);
 
 app.use("/usuarios", routesUsers);
+
+app.use("/api", routesApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

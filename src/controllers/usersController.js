@@ -13,6 +13,7 @@ const logInUser = require('../services/userServices.js')
 }
 */
 const usersController = {
+
     index: (req,res) => {
         db.Users.findAll()
         .then(function(users) {
@@ -180,7 +181,5 @@ const usersController = {
                 })
         }      
 }
-
-
 
 module.exports = usersController;
