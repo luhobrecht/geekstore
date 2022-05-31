@@ -9,7 +9,6 @@ const apiController = {
             console.log(user)
             return res.status(200).json(
                 {
-                    
                     data: user,
                     URL: `http://${req.get('host')}/img/users/${user.img}`,
                     status: 200
@@ -17,7 +16,7 @@ const apiController = {
         })
     },
     listUsers: (req,res) => {
-        db.Users.findAll({attributes: ['id','name', 'user','email','city','province','birthday']}).then(function(users) {
+        db.Users.findAll({attributes: ['id','name', 'user','email','city']}).then(function(users) {
         
             return res.status(200).json({
     
@@ -34,7 +33,6 @@ const apiController = {
         .then( product => {
             return res.status(200).json(
                 {
-                    
                     data: product,
                     URL: `http://${req.get('host')}/img/products/${product.img}`,
                     status: 200

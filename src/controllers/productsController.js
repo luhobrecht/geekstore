@@ -176,7 +176,9 @@ const productController = {
                 id:req.params.id
             }
         })
-        res.redirect("/productos");
+        .then(function(){
+            res.redirect("/productos");
+        })
         /*let products = findAll();
 
         let productIndex = products.findIndex(function(product){
