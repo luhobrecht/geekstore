@@ -1,9 +1,7 @@
-function guest (req, res, next){
-    if(req.session.userLogueado == undefined){
-        next();
-    }else{
-        res.render("/register")
+function guestMiddleware(req, res, next) {
+    if (!req.session.usuarioLogueado){
+        return next();
     }
+    return res.redirect("/")
 }
-
-module.exports = guest;
+module.exports = guestMiddleware;

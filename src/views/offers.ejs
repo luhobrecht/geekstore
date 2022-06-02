@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include("partials/head.ejs") %>
+<%- include("partials/head.ejs") %>
+<title>Nuestros productos - Geek Store</title>
 <body>
-    <%- include("partials/header.ejs") %>
-<main>   
+<%- include("partials/header.ejs") %>
+<main>  
+    <section class="search-bar">
+        <div class="form" action="#" method="GET">
+            <input type="search" name="busqueda" placeholder="Buscar productos, licencias y más">
+            <button type="submit" aria-placeholder="fa fa-search"><i class="fa fa-search"></i></button>                
+        </div>
+    </section>    
 
-</main>  
+    <section class="productosRelacionados">
+        <h3 class="subtitulo">Ofertas:</h3>
+        <div class="productos">
+            <% products.forEach(function(product){ %>
+        <article class="product1">
+            <button id="producto"><a href="/productos/<%= product.id%>">
+            <img src= "/img/products/<%= product.img ? product.img: 'default.png' %>">
+            <div class="articulo">
+            <p class="precio">$ <%= product.price%></p>
+            <p class="descuento"><%= product.discount%> % OFF</p>
+            <h4 class="descripciones"> <%= product.description%></h4>
+            </div>
+            </a></button>
+            <button id="carrito"><a href="/productos/productCart">Añadir al carrito</a></button>
+        </article>     
+        <% }) %>  
+        </div>
+    </section>
+    </main>
 <%- include("partials/footer.ejs") %>
 </body>
 </html>
+
+
+
 

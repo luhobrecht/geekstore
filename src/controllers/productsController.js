@@ -91,7 +91,7 @@ const productController = {
     offers: (req,res) => {
         db.Products.findAll()
         .then(function(products) {
-            return res.render("products", {products: products})
+            return res.render("offers", {products: products})
         })
     },
     cart: (req, res) => {

@@ -6,6 +6,8 @@ const { body } = require ("express-validator");
 const productController = require ("../controllers/productsController");
 const validations = require ("../middlewares/productValidations");
 
+
+
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
         let folder = path.join(__dirname, "../public/img/products");
