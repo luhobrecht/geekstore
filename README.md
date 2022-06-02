@@ -1,7 +1,7 @@
 # Geek Store 🎮 
 <img src="src/public/img/logo.png" alt="Geek Store" style=" width: 50%;"/>
 
-Geek Store es un sitio web de ecommerce “business to consumer” dedicado a la venta de productos de merchandising de series, películas, videojuegos y lo que refiera al mundo geek. 
+Geek Store es un sitio web de ecommerce dedicado a la venta de productos de merchandising de series, películas, videojuegos y lo que refiera al mundo geek. 
 
 ## Sobre nuestra propuesta 📖
 
@@ -13,8 +13,6 @@ Para reforzar la idea de colección ponemos énfasis en el packaging que acompa�
 Nos orientamos en especial al público adolescentes y jóvenes adultos, así como a pequeñas  y medianas empresas. Somos una compañía incluyente y empática con la diversidad y gustos de la  población. La novedad y la estética geek son nuestras metas.
 
 ## Autores ✒️
-
-_Participantes del proyecto durante el desarollo del sitio:_
 
 * **Lucía Hobrecht** - *Diseño Gráfico / Full-stack developer* - Técnica en Comunicación Audiovisual, amante de los gatos y una buena peli 🎥 [luhobrecht](https://github.com/luhobrecht)
 
