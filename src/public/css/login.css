@@ -9,6 +9,10 @@
     font-family: 'Raleway', sans-serif;
     background-color: #F4F1DE;
   }
+
+  /*===================================
+  ====== COMIENZA EL HEADER =========
+  ===================================*/
   
   header div.logo img{
     width: 100px;
@@ -144,8 +148,10 @@
     align-items: center;
     width: 25%;
   }
-/*termina el header*/
-/*empieza el main*/
+
+  /*=================================
+  ====== COMIENZA EL MAIN =========
+  =================================*/
 
 main nav h2{
     font-size: 25px;
@@ -300,7 +306,10 @@ h3{
     font-weight: 400;
     padding-left: 5px;
 }
-/*empieza el footer*/
+
+/*===================================
+  ====== COMIENZA EL FOOTER =========
+  ===================================*/
  
 footer{
     background-color: #3D405B;
@@ -378,6 +387,10 @@ footer .primeraParte a{
     width: 100%;
     }
 }
+
+/*===================================
+  ========== MEDIA QUERY ============
+  ===================================*/
   
 @media (min-width: 769px){
     main nav {

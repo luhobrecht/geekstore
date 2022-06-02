@@ -9,6 +9,10 @@ body{
   background-color: #F4F1DE;
 }
 
+/*===================================
+  ====== COMIENZA EL HEADER =========
+  ===================================*/
+
 header div.logo img{
   width: 100px;
   text-align: center;
@@ -143,7 +147,10 @@ div.burger-menu i{
   align-items: center;
   width: 25%;
 }
-/*COMIENZA EL MAIN */
+
+/*=================================
+  ====== COMIENZA EL MAIN =========
+  =================================*/
 
 main{
   width: 90%;
@@ -296,6 +303,9 @@ main .main-article .boton-comprar:hover{
         font-weight: 700;
     }
 
+  /*===================================
+  ====== COMIENZA EL FOOTER =========
+  ===================================*/
 
 footer{
   background-color: #3D405B;
@@ -361,8 +371,9 @@ footer .primeraParte a{
   list-style-type: none;
 }
 
-
-
+/*===================================
+  ========== MEDIA QUERY ============
+  ===================================*/
 
 @media (max-width: 769px){
   header .mid-bar{
@@ -384,10 +395,6 @@ footer .primeraParte a{
   }
 
 }
-
-
-
-
 
 @media (min-width: 769px){
   main section .productoX article{

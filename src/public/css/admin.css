@@ -9,6 +9,10 @@ body{
   background-color: #F4F1DE;
 }
 
+/*===================================
+  ====== COMIENZA EL HEADER =========
+  ===================================*/
+
 header div.logo img{
   width: 100px;
   text-align: center;
@@ -144,8 +148,11 @@ div.burger-menu i{
   align-items: center;
   width: 25%;
 }
-/*termina el header*/
-/*empieza el main*/
+
+/*=================================
+  ====== COMIENZA EL MAIN =========
+  =================================*/
+
 main{
     width: 100%;
     height: 10%;
@@ -377,6 +384,10 @@ h2{
   font-size: 12px;
 }
 
+/*===================================
+  ====== COMIENZA EL FOOTER =========
+  ===================================*/
+
 footer{
     background-color: #3D405B;
     color: #F4F1DE;
@@ -440,7 +451,10 @@ footer .primeraParte a{
 .primeraParte ul li{
     list-style-type: none;
 }
- 
+
+/*===================================
+  ========== MEDIA QUERY ============
+  ===================================*/
   
 @media (max-width: 769px){
     header .mid-bar{

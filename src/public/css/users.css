@@ -9,6 +9,10 @@ body{
   background-color: #F4F1DE;
 }
 
+/*===================================
+  ====== COMIENZA EL HEADER =========
+  ===================================*/
+
 header div.logo img{
   width: 100px;
   text-align: center;
@@ -144,6 +148,10 @@ div.burger-menu i{
   width: 25%;
 }
   
+/*=================================
+  ====== COMIENZA EL MAIN =========
+  =================================*/
+
   main{
     width: 90%;
     margin: 0 auto;
@@ -254,7 +262,9 @@ div.burger-menu i{
     background-color: #E07A5F;
   }
 
-
+/*===================================
+  ====== COMIENZA EL FOOTER =========
+  ===================================*/
   
   footer{
     background-color: #3D405B;
@@ -320,7 +330,10 @@ div.burger-menu i{
     list-style-type: none;
   }
   
-  
+  /*===================================
+  ========== MEDIA QUERY ============
+  ===================================*/
+
   @media (min-width:361px){
   main section .productos{
   display: flex;
