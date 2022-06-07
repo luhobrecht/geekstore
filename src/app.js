@@ -7,6 +7,7 @@ const methodOverride = require ("method-override");
 const session = require ("express-session");
 const remember = require ("../src/middlewares/remember");
 const locals = require ("../src/middlewares/locals");
+const cors = require("cors");
 
 const routesProducts = require ("./routes/products");
 const routesMain = require ("./routes/main");
@@ -32,6 +33,7 @@ app.use(methodOverride('_method'));
 app.use(express.static((path.join(__dirname, './public'))));
 app.use(remember);
 app.use(locals);
+app.use(cors());
 
 app.use("/", routesMain);
 

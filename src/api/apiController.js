@@ -18,6 +18,13 @@ const apiController = {
             limit: 5
         })
 
+        let lastTenProducts = await db.Products.findAll({
+            order: [
+                ['id', 'DESC'],
+            ],
+            limit: 10
+        })
+
         products.forEach(product =>{
             product.setDataValue("endpoint", "/api/products/" + product.id);
         })
@@ -26,11 +33,16 @@ const apiController = {
             product.setDataValue("endpoint", "/api/products/" + product.id);
         })
 
+        lastTenProducts.forEach(product => {
+            product.setDataValue("endpoint", "/api/products/" + product.id);
+        })
+
         let jsonProducts = {
             meta:{
                 status: 200,
                 total_products: products.length,
                 lastProducts: lastProducts,
+                lastTenProducts: lastTenProducts,
                 url: "/api/products"
             },
             data:products
@@ -53,6 +65,44 @@ const apiController = {
             res.json(productJson)
         })
     },
+    usersList: async function (req, res){
+
+        let users = await db.Users.findAll({
+            oder:[
+                ["id", "DESC"], 
+            ]
+            
+        })
+
+        let lastUsers = await db.Users.findAll({
+            order: [
+                ['id', 'DESC'],
+            ],
+            limit: 5
+        })
+
+
+        users.forEach(user =>{
+            user.setDataValue("endpoint", "/api/users/" + user.id);
+        })
+        
+        lastUsers.forEach(user => {
+            user.setDataValue("endpoint", "/api/users/" + user.id);
+        })
+
+        let jsonUsers = {
+            meta:{
+                status: 200,
+                total_users: users.length,
+                lastUsers: lastUsers,
+                url: "/api/users"
+            },
+            data:users
+        }
+        res.json(jsonUsers)
+
+    },
+    /*
     usersList: function (req, res){
         db.Users.findAll().then(users => {
             let newData = users.map(user => {
@@ -75,7 +125,7 @@ const apiController = {
             }
             res.json(respuesta) 
         })         
-    },
+    },*/
     userDetail: function (req, res) {
         db.Users.findByPk(req.params.id).then(resultado => {
             let jsonProducto = {
@@ -94,7 +144,7 @@ const apiController = {
             res.json(jsonProducto);
         })
     }
-/*
+    /*
     getUserByID: (req, res)  => {
         db.Users.findByPk(req.params.id,
             {attributes: ['id','name', 'user','email','city', 'img']})
